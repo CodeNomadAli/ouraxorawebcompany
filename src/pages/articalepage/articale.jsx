@@ -53,6 +53,7 @@ function Articles() {
 
       {/* Page Components */}
       <Enginering />
+
       <Customer />
     </>
   );
