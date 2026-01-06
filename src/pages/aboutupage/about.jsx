@@ -1,9 +1,8 @@
 import { Helmet } from "react-helmet-async";
 
 import Architecture from "../../component/aboutcomponent/architect";
-import Bridging from "../../component/aboutcomponent/bridging";
 import Cardabout from "../../component/aboutcomponent/card";
-
+import Bridging from "../../component/aboutcomponent/bridging";
 function About() {
   return (
     <>

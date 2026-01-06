@@ -67,7 +67,7 @@ function Home() {
       <Digitalsection />
       <Bulidsection />
       <Featurepj />
-      <Clientsection />
+      {/* <Clientsection /> */}
       <Clientsay />
       <FAQ />
     </>
