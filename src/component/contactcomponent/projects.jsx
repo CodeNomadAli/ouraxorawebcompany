@@ -1,7 +1,94 @@
-import React from "react";
+"use client"; // For Next.js app directory
+import React, { useState } from "react";
 import { FaClock, FaShieldAlt } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+
+
 
 const Projects = () => {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+
+
+   const sendEmail = async (formData) => {
+  try {
+    // 1️⃣ Send email to Admin
+    const adminResult = await emailjs.send(
+      "service_m80x3cs",
+      "template_nijfdaw",
+      {
+        name: formData.name,
+        email: formData.email,
+        service: formData.service,
+        budget: formData.budget,
+        message: formData.message,
+        time: new Date().toLocaleString(),
+        year: new Date().getFullYear(),
+        reply_to: formData.email,
+      },
+      "w4X8Uw37-EG43JxmX"
+    );
+
+    // 2️⃣ Send Auto-Reply to User
+  const autoReplyResult = await emailjs.send(
+  "service_m80x3cs",
+  "template_yxwtgnl",
+  {
+    name: formData.name,
+    title: formData.service,
+
+  },
+  "w4X8Uw37-EG43JxmX"
+);
+
+console.log("Auto-reply result:", autoReplyResult);
+
+
+    return {
+      success: true,
+      adminResult,
+      autoReplyResult,
+    };
+  } catch (error) {
+    console.error("EmailJS Error:", error);
+    return { success: false, error };
+  }
+};
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+  setSuccess("");
+  setError("");
+
+  const formData = {
+    name: e.target.name.value,
+    email: e.target.email.value,
+    service: e.target.service.value,
+    budget: e.target.budget.value,
+    message: e.target.message.value,
+    privacy: e.target.privacy.checked,
+  };
+
+  if (!formData.privacy) {
+    setError("You must agree to the Privacy Policy.");
+    setLoading(false);
+    return;
+  }
+
+  const res = await sendEmail(formData);
+
+  if (res.success) {
+    setSuccess("Message sent successfully. We’ll contact you shortly.");
+    e.target.reset();
+  } else {
+    setError("Failed to send message. Please try again.");
+  }
+
+  setLoading(false);
+};
+
   return (
     <section className="w-full bg-gray-50 py-32 px-4 sm:px-6 md:px-12 ">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
@@ -51,7 +138,7 @@ const Projects = () => {
 
         {/* Right Form */}
         <div className="bg-white shadow-2xl shadow-blue-200 rounded-xl p-6 sm:p-10">
-          <form className="max-w-lg mx-auto">
+          <form className="max-w-lg mx-auto" onSubmit={handleSubmit}>
             <h1 className="text-xl font-bold mb-6">Tell us about your project</h1>
 
             {/* Name & Email */}
@@ -63,8 +150,10 @@ const Projects = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   placeholder="Ali Hamza"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-slate-50"
+                  required
                 />
               </div>
               <div>
@@ -74,8 +163,10 @@ const Projects = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   placeholder="axoraweb@gmail.com"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-slate-50"
+                  required
                 />
               </div>
             </div>
@@ -88,6 +179,7 @@ const Projects = () => {
                 </label>
                 <select
                   id="service"
+                  name="service"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-slate-50"
                 >
                   <option value="">Service Needed</option>
@@ -103,13 +195,16 @@ const Projects = () => {
                 </label>
                 <select
                   id="budget"
+                  name="budget"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-slate-50"
                 >
                   <option value="">Select price</option>
-                  <option value="$5k-$10k">$5k-$10k</option>
-                  <option value="$10k-$25k">$10k-$25k</option>
-                  <option value="$25k-$50k">$25k-$50k</option>
-                  <option value="$50k+">$50k+</option>
+                  <option value="$5k-$10k">$5-$50</option>
+                  <option value="$10k-$25k">$50-$100</option>
+                  <option value="$25k-$50k">$100-$200</option>
+                  <option value="$50k+">$500+</option>
+                  <option value="0">No Idea </option>
+
                 </select>
               </div>
             </div>
@@ -121,6 +216,7 @@ const Projects = () => {
               </label>
               <textarea
                 id="message"
+                name="message"
                 placeholder="Tell us about your goals, timeline, requirements..."
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                 rows="4"
@@ -129,18 +225,25 @@ const Projects = () => {
 
             {/* Privacy Policy */}
             <div className="flex items-start gap-2 mb-6">
-              <input type="checkbox" id="privacy" />
+              <input type="checkbox" id="privacy" name="privacy" />
               <label htmlFor="privacy" className="text-xs text-gray-400">
                 I agree to the Privacy Policy. Data is 256-bit encrypted.
               </label>
             </div>
 
+            {/* Success / Error Messages */}
+            {success && <p className="text-green-600 mb-2">{success}</p>}
+            {error && <p className="text-red-600 mb-2">{error}</p>}
+
             {/* Submit */}
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors"
+              disabled={loading}
+              className={`w-full ${
+                loading ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-600"
+              } text-white font-bold py-2 px-4 rounded-lg transition-colors`}
             >
-              Send Inquiry
+              {loading ? "Sending..." : "Send Inquiry"}
             </button>
           </form>
         </div>
