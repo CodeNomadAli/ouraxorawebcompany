@@ -6,7 +6,9 @@ const Bulid = () => {
     <section className="w-full mt-20">
       {/* Hero Section */}
       <div className="bg-gray-50 py-20 px-4 sm:px-6 md:px-12 text-center">
-        <button className="text-blue-600 bg-blue-50 text-sm h-8 px-4 border border-red-100 rounded-2xl">
+        <button className="text-blue-600 bg-blue-50 text-sm h-8 px-4 border border-blue-700
+
+-100 rounded-2xl">
           Award Winning Agency
         </button>
 

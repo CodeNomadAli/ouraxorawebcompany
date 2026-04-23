@@ -14,6 +14,7 @@ import Ecommerce from './pages/sercicespage/componentspages/ecommerce';
 import Custom from './pages/sercicespage/componentspages/customesoft';
 import Webdevelop from './pages/sercicespage/componentspages/web-developer';
 import Design from './pages/sercicespage/componentspages/uldesigb';
+import Hosting from './pages/sercicespage/componentspages/hosting';
 
 function App() {
   return (
@@ -73,6 +74,7 @@ function App() {
           <Route path="/services/custom" element={<Custom />} />
           <Route path="/services/web-developer" element={<Webdevelop />} />
           <Route path="/services/Ux-design" element={<Design />} />
+          <Route path="/services/hosting" element={<Hosting />} />
 
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />

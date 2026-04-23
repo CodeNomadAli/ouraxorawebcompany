@@ -131,7 +131,9 @@ const Cardabout = () => {
           <input
             type="email"
             placeholder="Enter your email work..."
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-gray-500 text-white"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 
+focus:ring-blue-500
+ bg-gray-500 text-white"
           />
           <button className="text-white bg-blue-600 rounded-xl text-lg sm:text-xl px-4 py-3 flex justify-center">
             Get the Guide

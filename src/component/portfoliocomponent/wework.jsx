@@ -17,7 +17,9 @@ const Work = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
               {/* Step 1 */}
               <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg mb-6 border-2 border-red-500">
+                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg mb-6 border-2 border-blue-700
+
+-500">
                   <FaSearch className="w-6 h-6 text-gray-500" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Discovery</h3>
@@ -28,7 +30,9 @@ const Work = () => {
 
               {/* Step 2 */}
               <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg mb-6 border-2 border-red-500">
+                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg mb-6 border-2 border-blue-700
+
+-500">
                   <FaPencilRuler className="w-6 h-6 text-amber-500" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Design</h3>
@@ -39,7 +43,9 @@ const Work = () => {
 
               {/* Step 3 */}
               <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg mb-6 border-2 border-red-500">
+                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg mb-6 border-2 border-blue-700
+
+-500">
                   <FaLaptop className="w-6 h-6 text-gray-700" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Development</h3>
@@ -50,7 +56,9 @@ const Work = () => {
 
               {/* Step 4 */}
               <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg mb-6 border-2 border-red-500">
+                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg mb-6 border-2 border-blue-700
+
+-500">
                   <FaRocket className="w-6 h-6 text-blue-700" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Launch</h3>

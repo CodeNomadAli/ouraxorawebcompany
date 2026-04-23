@@ -67,7 +67,9 @@ const Corented = () => {
           was delivered 2 weeks early and under budget."
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center py-4">
-          <div className="w-14 h-14 sm:w-16 sm:h-16 bg-blue-200 rounded-full flex justify-center items-center font-bold text-xl sm:text-2xl border-red-600 border">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 bg-blue-200 rounded-full flex justify-center items-center font-bold text-xl sm:text-2xl border-blue-700
+
+-600 border">
             DS
           </div>
           <div className="text-center sm:text-left">
@@ -106,7 +108,9 @@ const Corented = () => {
           Skip the email tag. Book a 15-minute intro call directly on our calendar.
         </p>
         <a target="_blank" href="https://calendly.com/axoraweb/30min" rel="noreferrer">
-          <button className="border-2 border-gray-400 mt-3 px-5 py-3 rounded-xl font-bold hover:text-blue-600 hover:border-red-600 transition-colors duration-300">
+          <button className="border-2 border-gray-400 mt-3 px-5 py-3 rounded-xl font-bold hover:text-blue-600 hover:border-blue-700
+
+-600 transition-colors duration-300">
             Book a Meeting via Calendly
           </button>
         </a>

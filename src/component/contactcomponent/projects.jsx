@@ -64,7 +64,9 @@ const Projects = () => {
                   type="text"
                   id="name"
                   placeholder="Ali Hamza"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-slate-50"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 
+focus:ring-blue-500
+ bg-slate-50"
                 />
               </div>
               <div>
@@ -75,7 +77,9 @@ const Projects = () => {
                   type="email"
                   id="email"
                   placeholder="axoraweb@gmail.com"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-slate-50"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 
+focus:ring-blue-500
+ bg-slate-50"
                 />
               </div>
             </div>
@@ -88,7 +92,9 @@ const Projects = () => {
                 </label>
                 <select
                   id="service"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-slate-50"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 
+focus:ring-blue-500
+ bg-slate-50"
                 >
                   <option value="">Service Needed</option>
                   <option value="custom-software">Custom Software Development</option>
@@ -103,7 +109,9 @@ const Projects = () => {
                 </label>
                 <select
                   id="budget"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-slate-50"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 
+focus:ring-blue-500
+ bg-slate-50"
                 >
                   <option value="">Select price</option>
                   <option value="$5k-$10k">$5k-$10k</option>
@@ -122,7 +130,9 @@ const Projects = () => {
               <textarea
                 id="message"
                 placeholder="Tell us about your goals, timeline, requirements..."
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 
+focus:ring-blue-500
+"
                 rows="4"
               ></textarea>
             </div>

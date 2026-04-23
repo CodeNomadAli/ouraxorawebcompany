@@ -30,7 +30,9 @@ const FAQ = () => {
   return (
     <section className="bg-gray-50 w-full py-20 px-4 sm:px-6 md:px-12 lg:px-24 flex flex-col items-center text-center">
       
-      <div className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-full border border-red-200 bg-blue-50 text-blue-500 shadow-sm">
+      <div className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-full border border-blue-700
+
+-200 bg-blue-50 text-blue-500 shadow-sm">
         <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
         <span className="text-sm font-medium">Common Queries</span>
       </div>

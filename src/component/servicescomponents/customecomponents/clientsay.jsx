@@ -22,93 +22,100 @@ const Clientsay = () => {
 
   return (
     <section className="w-full">
-      {/* Header */}
-      <div className="pt-24 pb-12 px-4 sm:px-[40px] md:px-[100px] text-center flex flex-col items-center">
-        <div className="inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full border border-red-200 bg-blue-50 text-blue-500 shadow-sm">
-          <span className="w-2 h-2 bg-blue-800 rounded-full"></span>
-          <span className="text-xs font-medium">Trust & Results</span>
-        </div>
+      {/* Main Container - Added for Width Fix */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold py-5">
-          Client Success <span className="text-blue-600">Stories</span>
-        </h1>
+        {/* Header - Original Styles Preserved */}
+        <div className="pt-24 pb-12 text-center flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-blue-500 shadow-sm">
+            <span className="w-2 h-2 bg-blue-800 rounded-full"></span>
+            <span className="text-xs font-medium">Trust & Results</span>
+          </div>
 
-        <p className="text-base sm:text-lg md:text-xl max-w-3xl">
-          Don't just take our word for it. Hear from the founders and directors who have <br className="hidden sm:block" />
-          trusted us with their critical software infrastructure.
-        </p>
-      </div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold py-5">
+            Client Success <span className="text-blue-600">Stories</span>
+          </h1>
 
-      {/* Swiper Testimonials */}
-      <section className="py-10 px-4 sm:px-[40px] md:px-[100px]">
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={20}
-          slidesPerView={1}
-          loop={true}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
-          breakpoints={{
-            640: { slidesPerView: 1, spaceBetween: 20 },
-            768: { slidesPerView: 2, spaceBetween: 25 },
-            1024: { slidesPerView: 3, spaceBetween: 30 },
-            1280: { slidesPerView: 3, spaceBetween: 40 },
-          }}
-          className="mySwiper"
-        >
-          {testimonials.map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className="w-full max-w-[370px] mx-auto h-[400px] border border-gray-300 rounded-lg p-7 group hover:shadow-2xl transition-all transform hover:scale-105">
-                <div className="flex items-center justify-between w-full">
-                  <div className="flex gap-1 text-yellow-400">
-                    {[...Array(5)].map((_, i) => <FaStar key={i} className="w-4 h-4" />)}
-                  </div>
-                  <FaQuoteLeft className="text-6xl p-4 group-hover:text-black text-gray-300 transition-colors" />
-                </div>
-
-                <p
-                  className="text-sm sm:text-base text-gray-500 py-3"
-                  dangerouslySetInnerHTML={{ __html: item.text }}
-                />
-
-                <div className="flex py-7 gap-5 items-center">
-                  <div className="bg-blue-100 text-blue-500 w-12 h-12 flex items-center justify-center rounded-full font-bold text-lg">
-                    {item.initials}
-                  </div>
-                  <div>
-                    <p className="font-bold text-sm sm:text-base">
-                      {item.name} <br />
-                      <span className="text-xs sm:text-sm text-gray-500 font-normal">
-                        {item.title}
-                      </span>
-                    </p>
-                  </div>
-                </div>
-
-                <p className="text-xs sm:text-sm text-gray-500">Project: {item.project}</p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </section>
-
-      {/* CTA */}
-      <section className="px-4 sm:px-[40px] md:px-[100px] py-20">
-        <div className="w-full max-w-3xl mx-auto px-6 md:px-10 flex flex-col items-center justify-center text-center h-auto md:h-[300px] rounded-2xl bg-gray-900">
-          <h2 className="font-bold mb-4 text-2xl sm:text-2xl md:text-3xl text-white">
-            Ready to Write Your Success Story?
-          </h2>
-          <p className="text-gray-400 mb-6 text-sm sm:text-base">
-            Join 300+ companies transforming their business with custom software. Let's discuss your <br className="hidden sm:block" />
-            vision today.
+          <p className="text-base sm:text-lg md:text-xl max-w-3xl">
+            Don't just take our word for it. Hear from the founders and directors who have <br className="hidden sm:block" />
+            trusted us with their critical software infrastructure.
           </p>
-          <Link to="/contact">
-            <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-              Get Your Free Quote
-            </button>
-          </Link>
         </div>
-      </section>
+
+        {/* Swiper Testimonials - Fixed Width & Original Card Styles */}
+        <div className="py-10">
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              640: { slidesPerView: 1, spaceBetween: 20 },
+              768: { slidesPerView: 2, spaceBetween: 25 },
+              1024: { slidesPerView: 3, spaceBetween: 30 },
+            }}
+            className="mySwiper"
+          >
+            {testimonials.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div className="w-full max-w-[370px] mx-auto h-[400px] border border-gray-300 rounded-lg p-7 group hover:shadow-2xl transition-all transform hover:scale-105">
+                  <div className="flex items-center justify-between w-full">
+                    <div className="flex gap-1 text-yellow-400">
+                      {[...Array(5)].map((_, i) => <FaStar key={i} className="w-4 h-4" />)}
+                    </div>
+                    <FaQuoteLeft className="text-6xl p-4 group-hover:text-black text-gray-300 transition-colors" />
+                  </div>
+
+                  <p
+                    className="text-sm sm:text-base text-gray-500 py-3"
+                    dangerouslySetInnerHTML={{ __html: item.text }}
+                  />
+
+                  <div className="flex py-7 gap-5 items-center">
+                    <div className="bg-blue-100 text-blue-500 w-12 h-12 flex items-center justify-center rounded-full font-bold text-lg">
+                      {item.initials}
+                    </div>
+                    <div>
+                      <p className="font-bold text-sm sm:text-base">
+                        {item.name} <br />
+                        <span className="text-xs sm:text-sm text-gray-500 font-normal">
+                          {item.title}
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-gray-500">Project: {item.project}</p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* CTA Section - Fully Responsive Fix */}
+        <div className="py-20 px-4 sm:px-0"> {/* Mobile par thodi side padding di hai */}
+          <div className="w-full max-w-3xl mx-auto px-6 py-12 md:py-0 md:h-[300px] flex flex-col items-center justify-center text-center rounded-2xl bg-gray-900">
+
+            <h2 className="font-bold mb-4 text-2xl sm:text-2xl md:text-3xl text-white leading-tight">
+              Ready to Write Your Success Story?
+            </h2>
+
+            <p className="text-gray-400 mb-8 text-sm sm:text-base max-w-[90%] md:max-w-none">
+              Join 300+ companies transforming their business with custom software. Let's discuss your <br className="hidden sm:block" />
+              vision today.
+            </p>
+
+            <Link to="/contact">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all active:scale-95 shadow-lg">
+                Get Your Free Quote
+              </button>
+            </Link>
+
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

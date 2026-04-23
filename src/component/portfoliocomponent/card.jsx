@@ -7,16 +7,24 @@ const Card = () => {
       <div className="w-full px-4 sm:px-6 md:px-12 text-center py-20 bg-gray-50">
         <h1 className="text-3xl sm:text-4xl md:text-4xl font-bold">Selected Works</h1>
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4 py-5">
-          <button className="text-white bg-black rounded-2xl text-sm px-3 py-2 border-2 border-gray-300 hover:border-red-400">
+          <button className="text-white bg-black rounded-2xl text-sm px-3 py-2 border-2 border-gray-300 hover:border-blue-700
+
+-400">
             All
           </button>
-          <button className="text-black bg-white rounded-2xl text-sm px-3 py-2 border-2 border-gray-300 hover:border-red-400">
+          <button className="text-black bg-white rounded-2xl text-sm px-3 py-2 border-2 border-gray-300 hover:border-blue-700
+
+-400">
             Web Development
           </button>
-          <button className="text-black bg-white rounded-2xl text-sm px-3 py-2 border-2 border-gray-300 hover:border-red-400">
+          <button className="text-black bg-white rounded-2xl text-sm px-3 py-2 border-2 border-gray-300 hover:border-blue-700
+
+-400">
             Mobile App
           </button>
-          <button className="text-black bg-white rounded-2xl text-sm px-3 py-2 border-2 border-gray-300 hover:border-red-400">
+          <button className="text-black bg-white rounded-2xl text-sm px-3 py-2 border-2 border-gray-300 hover:border-blue-700
+
+-400">
             UI/UX Design
           </button>
         </div>
@@ -78,7 +86,9 @@ const Card = () => {
           ].map((card, index) => (
             <div
               key={index}
-              className="relative bg-white border border-gray-300 rounded-2xl overflow-hidden group hover:shadow-xl hover:border-red-300 transition"
+              className="relative bg-white border border-gray-300 rounded-2xl overflow-hidden group hover:shadow-xl hover:border-blue-700
+
+-300 transition"
             >
               <img
                 src={card.img}
@@ -100,7 +110,9 @@ const Card = () => {
                   {card.tags.map((tag, idx) => (
                     <button
                       key={idx}
-                      className="text-black bg-gray-50 rounded-xl text-xs px-2 py-1 border border-gray-300 hover:border-red-400"
+                      className="text-black bg-gray-50 rounded-xl text-xs px-2 py-1 border border-gray-300 hover:border-blue-700
+
+-400"
                     >
                       {tag}
                     </button>
