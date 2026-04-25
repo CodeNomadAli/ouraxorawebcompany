@@ -95,6 +95,7 @@ function Navbar() {
               </li>
 
               <li><Link to="/portfolio" onClick={() => setOpen(false)}>Portfolio</Link></li>
+              <li><Link to="/article" onClick={() => setOpen(false)}>Articles</Link></li>
               <li><Link to="/contact" onClick={() => setOpen(false)} className="block py-1">Contact</Link></li>
               
               <li className="mt-2">
