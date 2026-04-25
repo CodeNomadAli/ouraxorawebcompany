@@ -64,77 +64,119 @@ const Herosection = () => {
             </div>
           </div>
 
-          {/* Right Content - Full width on 768px/1024px */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end order-2">
-            <div className="relative w-full max-w-[480px] lg:max-w-[550px] md:max-w-full lg:max-w-[550px]">
-              <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} className="w-full bg-[#05070A] rounded-[2.5rem] shadow-2xl overflow-hidden border border-gray-800 flex flex-col relative z-20">
-                {/* Browser UI ... (Same as before) */}
-                <div className="h-9 bg-[#0B0E14] flex items-center px-5 gap-1.5 border-b border-gray-800/50">
-                  <div className="w-2.5 h-2.5 bg-blue-600 rounded-full"></div>
-                  <div className="w-2.5 h-2.5 bg-yellow-500 rounded-full"></div>
-                  <div className="w-2.5 h-2.5 bg-[#27C93F] rounded-full"></div>
-                  <div className="flex-1 flex justify-center">
-                    <div className="bg-[#11141C] px-3 py-0.5 rounded text-[8px] text-gray-500 border border-gray-800">dashboard.crm-system.com</div>
-                  </div>
-                </div>
 
-                <div className="flex flex-1 min-h-[340px] sm:min-h-[380px]">
-                  {/* Dashboard Content ... (Same as before) */}
-                  <div className="w-[65px] sm:w-[150px] bg-[#05070A] border-r border-gray-800/50 p-4 flex flex-col items-center sm:items-start gap-8">
-                    <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 bg-blue-600 rounded-md"></div>
-                      <span className="hidden sm:block text-white font-bold text-sm">Nexus</span>
-                    </div>
-                    <div className="flex items-center gap-3 bg-blue-900/20 text-blue-500 p-2.5 rounded-xl border border-blue-800/30 w-full justify-center sm:justify-start">
-                      <FiGrid className="text-xl" />
-                      <span className="hidden sm:block text-xs font-semibold">Dashboard</span>
-                    </div>
-                  </div>
+{/* Right Content - Full width on 768px/1024px */}
+<div className="w-full lg:w-1/2 flex justify-center lg:justify-end order-2">
+  <div className="relative w-full max-w-[480px] lg:max-w-[550px] md:max-w-full">
+    
+    <motion.div 
+      initial={{ opacity: 0, scale: 0.95 }} 
+      animate={{ opacity: 1, scale: 1 }} 
+      transition={{ duration: 0.6 }} 
+      className="w-full bg-[#05070A] rounded-[2.5rem] shadow-2xl overflow-hidden border border-gray-800 flex flex-col relative z-20"
+    >
+      {/* Browser UI */}
+      <div className="h-9 bg-[#0B0E14] flex items-center px-5 gap-1.5 border-b border-gray-800/50">
+        <div className="w-2.5 h-2.5 bg-blue-600 rounded-full"></div>
+        <div className="w-2.5 h-2.5 bg-yellow-500 rounded-full"></div>
+        <div className="w-2.5 h-2.5 bg-[#27C93F] rounded-full"></div>
+        <div className="flex-1 flex justify-center">
+          <div className="bg-[#11141C] px-3 py-0.5 rounded text-[8px] text-gray-500 border border-gray-800">
+            dashboard.axoraweb.com
+          </div>
+        </div>
+      </div>
 
-                  <div className="flex-1 bg-[#0B0E14] p-5 sm:p-7 relative overflow-hidden">
-                    <div className="flex justify-between items-center mb-6">
-                      <h2 className="text-white text-lg sm:text-xl font-bold tracking-tight">Overview</h2>
-                      <div className="w-8 h-8 rounded-full bg-gray-700 border border-gray-600 overflow-hidden">
-                        <img src="/logo.jpg" alt="User Profile" className="w-full h-full object-cover" />
-                      </div>
-                    </div>
+      <div className="flex flex-1 min-h-[340px] sm:min-h-[400px]">
+        {/* Sidebar */}
+        <div className="w-[65px] sm:w-[150px] bg-[#05070A] border-r border-gray-800/50 p-4 flex flex-col items-center sm:items-start gap-8">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 bg-blue-600 rounded-md"></div>
+            <span className="hidden sm:block text-white font-bold text-sm">Nexus</span>
+          </div>
+          <div className="flex items-center gap-3 bg-blue-900/20 text-blue-500 p-2.5 rounded-xl border border-blue-800/30 w-full justify-center sm:justify-start">
+            <FiGrid className="text-xl" />
+            <span className="hidden sm:block text-xs font-semibold">Dashboard</span>
+          </div>
+        </div>
 
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                      <div className="bg-[#11141C] p-4 rounded-2xl border border-gray-800/50">
-                        <p className="text-[9px] text-gray-500 font-bold uppercase mb-1">Total Revenue</p>
-                        <p className="text-sm sm:text-lg font-bold text-white leading-none">$124,500</p>
-                        <div className="w-full h-1 bg-gray-800 rounded-full mt-3 overflow-hidden"><div className="w-[70%] h-full bg-blue-500"></div></div>
-                      </div>
-                      <div className="bg-[#11141C] p-4 rounded-2xl border border-gray-800/50">
-                        <p className="text-[9px] text-gray-500 font-bold uppercase mb-1">New Leads</p>
-                        <p className="text-sm sm:text-lg font-bold text-white leading-none">+482</p>
-                        <div className="w-full h-1 bg-gray-800 rounded-full mt-3 overflow-hidden"><div className="w-[55%] h-full bg-green-500"></div></div>
-                      </div>
-                    </div>
-
-                    <div className="bg-[#11141C] rounded-xl p-4 border border-gray-800/40 space-y-4">
-                      <div className="flex justify-between items-center">
-                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded bg-blue-900/30 flex items-center justify-center text-blue-500 text-[10px] font-bold">A</div>
-                          <div className="space-y-1.5"><div className="w-24 h-1.5 bg-gray-700 rounded-full"></div><div className="w-14 h-1 bg-gray-800 rounded-full"></div></div>
-                        </div>
-                        <div className="bg-green-900/20 text-green-400 text-[8px] px-2 py-0.5 rounded font-bold">Active</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Floating Zap Badge */}
-              <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute -left-4 sm:-left-12 top-[50%] bg-white p-3 sm:p-4 rounded-2xl shadow-2xl border border-gray-100 flex items-center gap-3 z-30">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-600"><FiZap className="text-xl sm:text-2xl" /></div>
-                <div>
-                  <p className="text-[8px] sm:text-[10px] uppercase text-gray-400 font-black tracking-widest leading-none mb-1">Performance</p>
-                  <p className="text-xs sm:text-base font-bold text-gray-900 whitespace-nowrap">Fast & Scalable</p>
-                </div>
-              </motion.div>
+        {/* Main Dashboard Area */}
+        <div className="flex-1 bg-[#0B0E14] p-5 sm:p-7 relative overflow-hidden">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-white text-lg sm:text-xl font-bold tracking-tight">Overview</h2>
+            <div className="w-8 h-8 rounded-full bg-gray-700 border border-gray-600 overflow-hidden">
+              <img src="/logo.jpg" alt="User Profile" className="w-full h-full object-cover" />
             </div>
           </div>
+
+          {/* Stats Cards */}
+          <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="bg-[#11141C] p-4 rounded-2xl border border-gray-800/50">
+              <p className="text-[9px] text-gray-500 font-bold uppercase mb-1">Total Revenue</p>
+              <p className="text-sm sm:text-lg font-bold text-white leading-none">$124,500</p>
+              <div className="w-full h-1 bg-gray-800 rounded-full mt-3 overflow-hidden">
+                <div className="w-[70%] h-full bg-blue-500"></div>
+              </div>
+            </div>
+            <div className="bg-[#11141C] p-4 rounded-2xl border border-gray-800/50">
+              <p className="text-[9px] text-gray-500 font-bold uppercase mb-1">New Leads</p>
+              <p className="text-sm sm:text-lg font-bold text-white leading-none">+482</p>
+              <div className="w-full h-1 bg-gray-800 rounded-full mt-3 overflow-hidden">
+                <div className="w-[55%] h-full bg-green-500"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* List Section (Active & Pending) */}
+          <div className="bg-[#11141C] rounded-xl p-4 border border-gray-800/40 space-y-4">
+            
+            {/* 1. Active Row */}
+            <div className="flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded bg-blue-900/30 flex items-center justify-center text-blue-500 text-[10px] font-bold">A</div>
+                <div className="space-y-1.5">
+                  <div className="w-24 h-1.5 bg-gray-300 rounded-full"></div>
+                  <div className="w-14 h-1 bg-gray-700 rounded-full"></div>
+                </div>
+              </div>
+              <div className="bg-green-900/20 text-green-400 text-[8px] px-2 py-0.5 rounded font-bold border border-green-900/30">Active</div>
+            </div>
+
+            <hr className="border-gray-800/50" />
+
+            {/* 2. Pending Row (Updated) */}
+            <div className="flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded bg-yellow-900/20 flex items-center justify-center text-yellow-500 text-[10px] font-bold">P</div>
+                <div className="space-y-1.5">
+                  <div className="w-20 h-1.5 bg-gray-700 rounded-full"></div>
+                  <div className="w-10 h-1 bg-gray-800 rounded-full"></div>
+                </div>
+              </div>
+              <div className="bg-yellow-900/20 text-yellow-500 text-[8px] px-2 py-0.5 rounded font-bold border border-yellow-900/30">Pending</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </motion.div>
+
+    {/* Floating Zap Badge */}
+    <motion.div 
+      animate={{ y: [0, -15, 0] }} 
+      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} 
+      className="absolute -left-4 sm:-left-12 top-[50%] bg-white p-3 sm:p-4 rounded-2xl shadow-2xl border border-gray-100 flex items-center gap-3 z-30"
+    >
+      <div className="w-9 h-9 sm:w-10 sm:h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-600">
+        <FiZap className="text-xl sm:text-2xl" />
+      </div>
+      <div>
+        <p className="text-[8px] sm:text-[10px] uppercase text-gray-400 font-black tracking-widest leading-none mb-1">Performance</p>
+        <p className="text-xs sm:text-base font-bold text-gray-900 whitespace-nowrap">Fast & Scalable</p>
+      </div>
+    </motion.div>
+  </div>
+</div>
         </div>
       </div>
     </section>

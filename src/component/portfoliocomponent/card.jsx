@@ -49,7 +49,7 @@ const Card = () => {
       filterTag: "Mobile App",
       title: "Grocery Order",
       description: "Secure patient data management system with telemedicine integration.",
-      img: "/food .png",
+      img: "/food.png",
       tags: ["React Native", "Tailwind CSS"],
     },
   ];

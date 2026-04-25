@@ -1,12 +1,12 @@
 import { Helmet } from "react-helmet-async";
 
 import Clientsay from "../../../component/servicescomponents/customecomponents/clientsay";
-import Formsection from "../../../component/servicescomponents/ecommercecomponent/form";
 import Bulit from "../../../component/servicescomponents/webcomponent/bulitsect";
 import Cardweb from "../../../component/servicescomponents/webcomponent/cardweb";
 import Heroweb from "../../../component/servicescomponents/webcomponent/heroweb";
 import Imgcard from "../../../component/servicescomponents/webcomponent/imgcard";
 import Lunch from "../../../component/servicescomponents/webcomponent/lunch";
+import Formcustom from "../../../component/servicescomponents/customecomponents/formcustom";
 
 function Webdeveloper() {
   return (
@@ -63,7 +63,7 @@ function Webdeveloper() {
       <Cardweb />
       <Clientsay />
       <Imgcard />
-      <Formsection />
+      <Formcustom />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaLaptopCode, FaShoppingCart, FaGlobe, FaPenFancy, FaServer } from "react-icons/fa";
 
@@ -19,10 +19,10 @@ function Navbar() {
         <div className="flex items-center justify-between h-20">
 
           {/* LOGO */}
-          <div className="flex items-center gap-3 flex-shrink-0">
+          <Link to="/" className="flex items-center gap-3 flex-shrink-0">
             <img src="/logo.jpg" alt="Logo" className="rounded-full h-12 w-12 md:h-14 md:w-14" />
             <p className="text-lg md:text-xl font-bold">Axoraweb Solutions</p>
-          </div>
+          </Link>
 
           {/* DESKTOP MENU */}
           <ul className="hidden lg:flex items-center gap-6 xl:gap-8 text-gray-600 font-medium">
@@ -47,6 +47,11 @@ function Navbar() {
               </div>
             </li>
 
+            {/* Pricing Link (Corrected) */}
+            <li className="hover:text-blue-500 text-sm whitespace-nowrap">
+              <Link to="/pricing">Pricing</Link>
+            </li>
+
             <li className="hover:text-blue-500 text-sm whitespace-nowrap"><Link to="/portfolio">Portfolio</Link></li>
             <li className="hover:text-blue-500 text-sm whitespace-nowrap"><Link to="/article">Articles</Link></li>
             <li className="hover:text-blue-500 text-sm whitespace-nowrap"><Link to="/about">About Us</Link></li>
@@ -69,6 +74,8 @@ function Navbar() {
           <div className="lg:hidden absolute left-4 right-4 bg-white shadow-xl rounded-2xl p-5 border border-gray-100 top-20 z-50">
             <ul className="flex flex-col gap-3 text-gray-700 font-medium">
               <li><Link to="/" onClick={() => setOpen(false)} className="block py-1">Home</Link></li>
+              
+              {/* Mobile Services */}
               <li>
                 <p className="font-bold text-blue-600">Services</p>
                 <ul className="ml-4 mt-2 space-y-2 border-l-2 border-gray-100 pl-4">
@@ -77,9 +84,19 @@ function Navbar() {
                   ))}
                 </ul>
               </li>
+
               <hr className="my-1 border-gray-50" />
+
+              {/* Mobile Pricing Link */}
+              <li>
+                <Link to="/pricing" onClick={() => setOpen(false)} className="block py-1">
+                  Pricing
+                </Link>
+              </li>
+
               <li><Link to="/portfolio" onClick={() => setOpen(false)}>Portfolio</Link></li>
               <li><Link to="/contact" onClick={() => setOpen(false)} className="block py-1">Contact</Link></li>
+              
               <li className="mt-2">
                 <Link to="/contact" onClick={() => setOpen(false)}>
                   <button className="w-full bg-blue-500 text-white py-3 rounded-xl font-bold shadow-md">Get Free Quote</button>
@@ -92,4 +109,5 @@ function Navbar() {
     </nav>
   );
 }
+
 export default Navbar;

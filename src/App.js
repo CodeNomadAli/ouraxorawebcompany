@@ -15,6 +15,7 @@ import Custom from './pages/sercicespage/componentspages/customesoft';
 import Webdevelop from './pages/sercicespage/componentspages/web-developer';
 import Design from './pages/sercicespage/componentspages/uldesigb';
 import Hosting from './pages/sercicespage/componentspages/hosting';
+import Pricing from './pages/pricinnpage/pricing';
 
 function App() {
   return (
@@ -80,6 +81,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/article" element={<Articles />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/pricing" element={<Pricing />} />
         </Routes>
 
         <Footer />

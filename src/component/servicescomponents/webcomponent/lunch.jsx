@@ -25,28 +25,38 @@ const Lunch = () => {
   ];
 
   return (
-    <section className="w-full">
-      <div className="w-full bg-gray-900 py-16 px-4 sm:px-10 lg:px-24 text-center">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-sm font-bold text-blue-800">How we work</h2>
-          <h1 className="text-4xl font-bold text-white py-5">
+    <section className="w-full bg-gray-900">
+      {/* Container with standard max-width and responsive padding */}
+      <div className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto py-16 md:py-24 px-4 md:px-0 lg:px-8 text-center">
+        
+        {/* Header Section */}
+        <div className="px-4">
+          <h2 className="text-sm font-bold text-blue-500 uppercase tracking-widest">How we work</h2>
+          <h1 className="text-3xl md:text-5xl font-bold text-white py-5">
             From Concept to Launch in 4 Weeks
           </h1>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mt-9">
-            {steps.map((step, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full bg-gray-700 text-white flex items-center justify-center text-2xl font-bold shadow-lg mb-6 border border-gray-500 transition-colors duration-300 hover:bg-blue-600">
-                  {step.number}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed max-w-[200px]">
-                  {step.desc}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
+
+        {/* Steps Grid - Stacked on 768px (md), 4-cols on 1024px (lg) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mt-12 px-4 md:px-0">
+          {steps.map((step, idx) => (
+            <div key={idx} className="flex flex-col items-center text-center group">
+              {/* Number Circle */}
+              <div className="w-20 h-20 rounded-full bg-gray-800 text-white flex items-center justify-center text-2xl font-bold shadow-lg mb-6 border border-gray-700 transition-all duration-300 group-hover:bg-blue-600 group-hover:border-blue-500 group-hover:scale-110">
+                {step.number}
+              </div>
+              
+              {/* Title */}
+              <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
+              
+              {/* Description - Fixed width limit only on large screens */}
+              <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-[280px] lg:max-w-[200px]">
+                {step.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );
