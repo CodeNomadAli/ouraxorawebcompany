@@ -20,7 +20,7 @@ function Navbar() {
 
           {/* LOGO */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-            <img src="/logo.jpg" alt="Logo" className="rounded-full h-12 w-12 md:h-14 md:w-14" />
+            <img src="/axoralogo.png" alt="Logo" className="rounded-full h-12 w-12 md:h-14 md:w-14" />
             <p className="text-lg md:text-xl font-bold">Axoraweb Solutions</p>
           </Link>
 
