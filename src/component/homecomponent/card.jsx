@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; // Link added
 import { motion } from "framer-motion";
 import {
   FaCheck,
@@ -53,7 +53,6 @@ const services = [
 ];
 
 const Card = () => {
-  // --- Standard Premium Animation Settings ---
   const premiumTransition = {
     duration: 2,
     ease: [0.22, 1, 0.36, 1],
@@ -94,7 +93,7 @@ const Card = () => {
             <motion.div
               key={idx}
               variants={itemVariants}
-              whileHover={{ y: -12 }} // Professional Lift on hover
+              whileHover={{ y: -12 }} 
               className="border border-gray-200 px-6 py-8 rounded-[2rem] w-full group transition-all duration-300 hover:border-blue-700 hover:bg-gray-50 hover:shadow-2xl flex flex-col h-full"
             >
               {/* Icon Box */}
@@ -118,9 +117,16 @@ const Card = () => {
                 </div>
               </div>
 
-              <div className="flex mt-8 items-center gap-2 group/btn">
-                <button className="text-blue-500 font-bold hover:underline">Learn more</button>
-                <span className="text-blue-600 font-bold transition-transform group-hover/btn:translate-x-1">→</span>
+              {/* Portfolio Link added here */}
+              <div className="mt-8">
+                <Link to="/portfolio" className="flex items-center gap-2 group/btn inline-flex">
+                  <span className="text-blue-500 font-bold group-hover/btn:underline transition-all">
+                    Learn more
+                  </span>
+                  <span className="text-blue-600 font-bold transition-transform group-hover/btn:translate-x-2">
+                    →
+                  </span>
+                </Link>
               </div>
             </motion.div>
           ))}
@@ -134,7 +140,7 @@ const Card = () => {
           transition={premiumTransition}
           className="w-full flex justify-center py-10 mt-14"
         >
-          <Link to="/services/webdevelop">
+          <Link to="/services">
             <button className="flex items-center text-white bg-blue-600 rounded-xl text-lg px-8 py-4 hover:bg-blue-800 transition-all duration-300 shadow-lg active:scale-95 font-semibold">
               View All Services
               <span className="ml-3 font-bold">→</span>

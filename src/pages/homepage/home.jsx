@@ -19,13 +19,13 @@ function Home() {
       {/* SEO Meta Tags */}
       <Helmet>
         <title>AxoraWeb Solutions | Professional Web & App Development</title>
-        <meta 
-          name="description" 
-          content="AxoraWeb Solutions is a leading web and app development company offering React, Next.js, Node.js, UI/UX design, eCommerce, and custom software solutions for businesses worldwide." 
+        <meta
+          name="description"
+          content="AxoraWeb Solutions is a leading web and app development company offering React, Next.js, Node.js, UI/UX design, eCommerce, and custom software solutions for businesses worldwide."
         />
-        <meta 
-          name="keywords" 
-          content="web development, app development, react developers, next js agency, node js development, UI UX design, ecommerce development, custom software" 
+        <meta
+          name="keywords"
+          content="web development, app development, react developers, next js agency, node js development, UI UX design, ecommerce development, custom software"
         />
         <link rel="canonical" href="https://axorawebsolutions.com/" />
 
@@ -67,8 +67,8 @@ function Home() {
       <Team />
       <Software />
       <Card />
-      <MeetExperts />
       <Digitalsection />
+      <MeetExperts />
       <Bulidsection />
       <Featurepj />
       <Clientsay />
