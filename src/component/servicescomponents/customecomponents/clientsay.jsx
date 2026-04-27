@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,30 +11,59 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 const Clientsay = () => {
-  return (
-    <section className="w-full bg-white overflow-hidden">
-      {/* Main Container - Fixed for 1700px alignment like previous sections */}
-      <div className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
+  // --- Standard Premium Animation Settings ---
+  const premiumTransition = {
+    duration: 2,
+    ease: [0.22, 1, 0.36, 1],
+  };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: premiumTransition,
+    },
+  };
+
+  return (
+    <section className="w-full bg-white overflow-hidden font-sans">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={containerVariants}
+        className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8"
+      >
         {/* Header Section */}
         <div className="pt-24 pb-12 text-center flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-blue-500 shadow-sm">
-            <span className="w-2 h-2 bg-blue-800 rounded-full"></span>
+          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-blue-500 shadow-sm">
+            <span className="w-2 h-2 bg-blue-800 rounded-full animate-pulse"></span>
             <span className="text-xs font-medium uppercase tracking-wider">Trust & Results</span>
-          </div>
+          </motion.div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold py-5 text-gray-900 leading-tight">
+          <motion.h1 variants={itemVariants} className="text-3xl sm:text-4xl md:text-5xl font-bold py-5 text-gray-900 leading-tight">
             Client Success <span className="text-blue-600">Stories</span>
-          </h1>
+          </motion.h1>
 
-          <p className="text-base sm:text-lg md:text-xl max-w-3xl text-gray-600 leading-relaxed font-normal">
+          <motion.p variants={itemVariants} className="text-base sm:text-lg md:text-xl max-w-3xl text-gray-600 leading-relaxed font-normal">
             Don't just take our word for it. Hear from the founders and directors who have <br className="hidden sm:block" />
             trusted us with their critical software infrastructure.
-          </p>
+          </motion.p>
         </div>
 
-        {/* Swiper Testimonials - Fully Manual Implementation */}
-        <div className="py-10">
+        {/* Swiper Testimonials */}
+        <motion.div variants={itemVariants} className="py-10">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={24}
@@ -146,31 +178,33 @@ const Clientsay = () => {
               </div>
             </SwiperSlide>
           </Swiper>
-        </div>
+        </motion.div>
 
-        {/* CTA Section - Ultra-Wide Ready */}
-        <div className="py-20 px-4 sm:px-0">
-          <div className="w-full max-w-4xl mx-auto px-6 py-16 flex flex-col items-center justify-center text-center rounded-[2.5rem] bg-gray-900 shadow-2xl relative overflow-hidden">
-            {/* Background Decorative Elements */}
+        {/* CTA Section */}
+        <motion.div variants={itemVariants} className="py-20 px-4 sm:px-0">
+          <div className="w-full max-w-4xl mx-auto px-6 py-10 md:py-16 flex flex-col items-center justify-center text-center rounded-[2.5rem] bg-gray-900 shadow-2xl relative overflow-hidden">
+            {/* Decorations */}
             <div className="absolute top-0 right-0 w-48 h-48 bg-blue-600 opacity-10 rounded-full -mr-24 -mt-24 blur-2xl"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-500 opacity-10 rounded-full -ml-24 -mb-24 blur-2xl"></div>
-            
-            <h2 className="font-bold mb-6 text-2xl sm:text-3xl md:text-4xl text-white leading-tight">
-              Ready to Write Your Success Story?
-            </h2>
 
-            <p className="text-gray-400 mb-10 text-base sm:text-lg max-w-2xl leading-relaxed">
-              Join 300+ companies transforming their business with custom software. Let's discuss your vision today.
-            </p>
+            <div className="z-10 flex flex-col items-center">
+              <h2 className="font-bold mb-3 text-2xl md:text-4xl text-white leading-tight">
+                Ready to Write Your <br className="hidden md:block" /> Success Story?
+              </h2>
 
-            <Link to="/contact">
-              <button className="bg-blue-600 text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all active:scale-95 shadow-xl shadow-blue-900/30">
-                Get Your Free Quote
-              </button>
-            </Link>
+              <p className="text-gray-400 mb-6 text-sm md:text-lg max-w-[300px] md:max-w-2xl leading-relaxed">
+                Join 300+ companies transforming their business with custom software.
+              </p>
+
+              <Link to="/contact" className="w-full sm:w-auto flex justify-center">
+                <button className="w-[85%] sm:w-auto bg-blue-600 text-white px-6 py-3 md:px-10 md:py-4 rounded-xl md:rounded-2xl font-bold text-sm md:text-lg hover:bg-blue-700 transition-all active:scale-95 shadow-xl shadow-blue-900/30">
+                  Get Your Free Quote
+                </button>
+              </Link>
+            </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

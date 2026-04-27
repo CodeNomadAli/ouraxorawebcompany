@@ -11,6 +11,7 @@ import Clientsection from '../../component/homecomponent/clientsection';
 import Clientsay from '../../component/servicescomponents/customecomponents/clientsay';
 import FAQ from '../../component/homecomponent/faq';
 import PartnersSection from "../../component/homecomponent/PartnersSection";
+import MeetExperts from "../../component/homecomponent/MeetExperts";
 
 function Home() {
   return (
@@ -66,6 +67,7 @@ function Home() {
       <Team />
       <Software />
       <Card />
+      <MeetExperts />
       <Digitalsection />
       <Bulidsection />
       <Featurepj />

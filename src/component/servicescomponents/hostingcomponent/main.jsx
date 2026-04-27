@@ -1,6 +1,9 @@
+"use client";
+
 import React, { useState } from "react";
 import { FaCheckCircle, FaMailBulk } from "react-icons/fa";
 import { FaTrash } from "react-icons/fa6";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Mainsection = () => {
   const [count, setCount] = useState(0);
@@ -10,51 +13,86 @@ const Mainsection = () => {
     setSecondCard(true);
   };
 
+  // --- Global Animation Settings (Same as previous components) ---
+  const premiumTransition = {
+    duration: 1.2,
+    ease: [0.22, 1, 0.36, 1],
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.1 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: premiumTransition },
+  };
+
   return (
     <section className="w-full mt-24">
-      {/* Search Bar Section - Full Width Background with Fixed Inner Width */}
-      <div className="bg-gray-50 w-full border-b border-gray-100 py-6">
+      {/* Search Bar Section */}
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={premiumTransition}
+        className="bg-gray-50 w-full border-b border-gray-100 py-6"
+      >
         <div className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row gap-3">
             <input
               type="search"
-              name="search"
-              className="w-full py-3 border-gray-300 border-[1px] px-3 rounded-md outline-none focus:ring-1 focus:ring-blue-500"
+              className="w-full py-3 border-gray-300 border-[1px] px-3 rounded-md outline-none focus:ring-1 focus:ring-blue-500 transition-all"
               placeholder="Search for hosting and domain services..."
             />
-            <button
-              type="button"
-              className="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 font-bold transition-colors"
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 font-bold transition-colors shadow-md"
             >
               Add
-            </button>
+            </motion.button>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Main Content Container - Consistent Width with Tailored Component */}
-      <div className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      {/* Main Content Container */}
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8 py-10"
+      >
         
         {/* Page Header */}
-        <div className="mb-10">
+        <motion.div variants={itemVariants} className="mb-10">
           <h1 className="text-3xl font-bold text-slate-900">Your Cart</h1>
           <p className="text-gray-500 mt-2">
             GoDaddy is a trusted growth partner to millions of everyday entrepreneurs.
           </p>
-        </div>
+        </motion.div>
 
         {/* Responsive Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           
-          {/* Left Column: Cart Items (8/12 of Grid) */}
-          <div className="lg:col-span-8">
-            <div className="w-full border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
-              
+          {/* Left Column: Cart Items */}
+          <div className="lg:col-span-8 space-y-6">
+            <motion.div 
+              variants={itemVariants}
+              className="w-full border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm"
+            >
               {/* Domain Registration Item */}
               <div className="flex flex-col md:flex-row gap-6 p-6">
-                <div className="bg-blue-600 w-24 h-24 md:w-32 md:h-32 rounded-lg text-white font-bold text-2xl flex items-center justify-center flex-shrink-0 mx-auto md:mx-0">
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-blue-600 w-24 h-24 md:w-32 md:h-32 rounded-lg text-white font-bold text-2xl flex items-center justify-center flex-shrink-0 mx-auto md:mx-0 shadow-lg"
+                >
                   www
-                </div>
+                </motion.div>
 
                 <div className="flex-1 flex flex-col justify-between">
                   <div>
@@ -70,23 +108,27 @@ const Mainsection = () => {
                       <div className="text-right mt-4 md:mt-0 w-full md:w-auto">
                         <h1 className="text-blue-600 font-bold text-2xl">Rs278</h1>
                         <h2 className="line-through text-sm text-gray-500">₨15,447</h2>
-                        <p className="text-blue-600 text-xs font-bold bg-blue-50 px-2 py-0.5 rounded inline-block mt-1">98% off</p>
+                        <motion.p 
+                          animate={{ opacity: [0.5, 1, 0.5] }}
+                          transition={{ repeat: Infinity, duration: 2 }}
+                          className="text-blue-600 text-xs font-bold bg-blue-50 px-2 py-0.5 rounded inline-block mt-1"
+                        >
+                          98% off
+                        </motion.p>
                       </div>
                     </div>
                   </div>
 
                   <div className="flex flex-col sm:flex-row justify-between items-center text-gray-500 py-2 mt-6 pt-4 border-t border-gray-50 gap-4">
-                    <div className="w-full sm:w-auto">
-                      <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 w-full sm:w-auto text-sm cursor-pointer">
-                        <option value="1-year">1 Year</option>
-                        <option value="2-year">2 Years</option>
-                        <option value="3-year">3 Years</option>
-                        <option value="5-year">5 Years</option>
-                      </select>
-                    </div>
-                    <div className="flex items-center gap-6 w-full sm:w-auto justify-between sm:justify-end">
-                      <p className="text-xs">Renews January 2027 for ₨15,447</p>
-                      <FaTrash className="text-xl cursor-pointer hover:text-red-500 transition-colors"/>
+                    <select className="px-4 py-2 border border-gray-300 rounded-lg bg-slate-50 w-full sm:w-auto text-sm cursor-pointer outline-none focus:ring-1 focus:ring-blue-500">
+                      <option value="1-year">1 Year</option>
+                      <option value="2-year">2 Years</option>
+                    </select>
+                    <div className="flex items-center gap-6">
+                      <p className="text-xs">Renews January 2027</p>
+                      <motion.div whileHover={{ scale: 1.2, color: "#ef4444" }}>
+                        <FaTrash className="text-xl cursor-pointer transition-colors"/>
+                      </motion.div>
                     </div>
                   </div>
                 </div>
@@ -96,105 +138,86 @@ const Mainsection = () => {
                 Configure Your Domain
               </div>
 
-              {/* Hosting/Protection Offer */}
+              {/* Hosting Offer */}
               <div className="p-6">
                 <div className="flex flex-col md:flex-row justify-between items-start gap-6">
                   <div className="flex gap-4 items-start">
-                    <div className="w-12 h-6 bg-blue-600 rounded-full flex items-center px-1 shrink-0 mt-1 cursor-pointer">
+                    <div className="w-12 h-6 bg-blue-600 rounded-full flex items-center px-1 shrink-0 mt-1">
                       <div className="w-4 h-4 bg-white rounded-full ml-auto shadow-sm"></div>
                     </div>
-
                     <div className="flex-1">
-                      <div className="flex flex-wrap items-center gap-2 mb-2">
-                        <h2 className="text-lg font-bold text-slate-900 tracking-tight">
-                          Full Domain Protection at Rs167/mo
-                        </h2>
-                        <span className="bg-[#bcffff] text-[#007b7d] text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-wider">
-                          Recommended
-                        </span>
-                      </div>
-                      <div className="bg-gray-100 text-gray-500 text-[10px] font-bold px-2 py-1 inline-block uppercase tracking-tight mb-3">
-                        Chosen by over 225,000 customers each month
-                      </div>
-                      <ul className="space-y-2 text-sm text-gray-600 leading-snug">
-                        <li className="flex items-start gap-2">
-                          <span className="text-blue-500 font-bold">•</span>
-                          Prevents hackers from stealing your domain or making unauthorized changes.
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-blue-500 font-bold">•</span>
-                          Requires 2-factor verification for vital changes like deleting or transferring.
-                        </li>
-                      </ul>
+                      <h2 className="text-lg font-bold text-slate-900">Full Domain Protection</h2>
+                      <p className="text-sm text-gray-600">Prevents hackers from stealing your domain.</p>
                     </div>
                   </div>
-
-                  <div className="text-right shrink-0 w-full md:w-auto">
+                  <div className="text-right">
                     <div className="text-xl font-bold text-slate-900">Rs1,999</div>
-                    <div className="text-sm text-gray-400 line-through">Rs3,299</div>
                     <div className="text-sm font-bold text-blue-500">39% off</div>
                   </div>
                 </div>
               </div>
 
-              <hr className="border-gray-100"/>
-
-              {/* Email Integration Toggle Area */}
-              <div className="p-6 bg-gray-50/30">
-                {!secondCard ? (
-                  <div className="p-6 border-2 border-dashed border-blue-200 bg-white rounded-xl flex flex-col md:flex-row justify-between items-center gap-6 shadow-sm">
-                    <div className="flex gap-4 items-center">
-                      <div className="p-3 bg-blue-50 rounded-lg text-blue-500">
-                        <FaMailBulk size={24}/>
-                      </div>
-                      <div>
-                        <h2 className="text-lg font-bold text-slate-900">Professional Email Pro Light</h2>
-                        <div className="flex items-center gap-2 mt-1">
-                          <span className="text-blue-500 font-bold">Rs219/mo</span>
-                          <span className="text-gray-400 line-through text-xs">Rs349</span>
-                        </div>
-                      </div>
-                    </div>
-                    <button
-                      className="w-full md:w-auto px-10 py-2.5 border-2 border-black text-black font-bold rounded-lg hover:bg-black hover:text-white transition-all text-sm uppercase"
-                      onClick={changecard}
+              {/* Email Section with AnimatePresence for smooth swap */}
+              <div className="p-6 bg-gray-50/30 border-t border-gray-100">
+                <AnimatePresence mode="wait">
+                  {!secondCard ? (
+                    <motion.div 
+                      key="promo"
+                      initial={{ opacity: 0, scale: 0.98 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.98 }}
+                      transition={{ duration: 0.4 }}
+                      className="p-6 border-2 border-dashed border-blue-200 bg-white rounded-xl flex flex-col md:flex-row justify-between items-center gap-6"
                     >
-                      Get It
-                    </button>
-                  </div>
-                ) : (
-                  <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-md">
-                    <div className="flex flex-col md:flex-row gap-6">
-                      <div className="bg-blue-600 w-16 h-16 rounded-lg flex items-center justify-center shrink-0 shadow-lg mx-auto md:mx-0">
-                        <FaMailBulk className="text-2xl text-white" />
+                      <div className="flex gap-4 items-center">
+                        <FaMailBulk size={24} className="text-blue-500"/>
+                        <h2 className="text-lg font-bold text-slate-900">Professional Email Pro Light</h2>
                       </div>
-                      <div className="flex-1 w-full">
-                        <h1 className="text-lg font-bold text-slate-900">Professional Email Pro Light</h1>
-                        <div className="mt-4">
-                          <h3 className="text-xs font-bold text-gray-400 uppercase mb-2">Mailboxes</h3>
-                          <div className="flex items-center gap-4 border border-gray-200 w-full sm:w-36 rounded-lg p-1 bg-gray-50">
-                            <button className="w-10 h-8 flex items-center justify-center bg-white border rounded shadow-sm text-red-500 hover:bg-red-50" onClick={() => setCount(count > 0 ? count - 1 : 0)}>-</button>
-                            <span className="flex-1 text-center font-bold text-slate-800">{count}</span>
-                            <button className="w-10 h-8 flex items-center justify-center bg-white border rounded shadow-sm text-green-500 hover:bg-green-50" onClick={() => setCount(count + 1)}>+</button>
-                          </div>
+                      <motion.button
+                        whileHover={{ scale: 1.05, backgroundColor: "#000", color: "#fff" }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-10 py-2.5 border-2 border-black text-black font-bold rounded-lg transition-all text-sm uppercase"
+                        onClick={changecard}
+                      >
+                        Get It
+                      </motion.button>
+                    </motion.div>
+                  ) : (
+                    <motion.div 
+                      key="details"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="bg-white p-6 rounded-xl border border-gray-200 shadow-md"
+                    >
+                      <div className="flex flex-col md:flex-row gap-6 justify-between items-center">
+                        <div className="flex gap-4 items-center">
+                           <div className="bg-blue-600 p-3 rounded-lg text-white shadow-lg">
+                             <FaMailBulk size={20} />
+                           </div>
+                           <h1 className="text-lg font-bold text-slate-900">Email Pro Light Activated</h1>
                         </div>
+                        <div className="flex items-center gap-4 border border-gray-200 p-1 rounded-lg bg-gray-50">
+                          <button className="w-8 h-8 bg-white border rounded shadow-sm" onClick={() => setCount(Math.max(0, count - 1))}>-</button>
+                          <span className="font-bold w-6 text-center">{count}</span>
+                          <button className="w-8 h-8 bg-white border rounded shadow-sm" onClick={() => setCount(count + 1)}>+</button>
+                        </div>
+                        <motion.div whileHover={{ color: "#ef4444" }}>
+                          <FaTrash onClick={() => setSecondCard(false)} className="text-gray-400 cursor-pointer transition-colors" />
+                        </motion.div>
                       </div>
-                      <div className="text-right w-full md:w-auto">
-                        <div className="text-2xl font-black text-blue-600">₨15,768</div>
-                        <div className="text-sm text-gray-400 line-through">₨25,128</div>
-                        <FaTrash className="inline-block mt-4 text-gray-400 cursor-pointer hover:text-red-500 transition-colors" />
-                      </div>
-                    </div>
-                  </div>
-                )}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
-            </div>
+            </motion.div>
           </div>
 
-          {/* Right Column: Order Summary (4/12 of Grid) */}
-          <div className="lg:col-span-4">
+          {/* Right Column: Order Summary */}
+          <motion.div 
+            variants={itemVariants}
+            className="lg:col-span-4"
+          >
             <div className="sticky top-28 space-y-6">
-              {/* Checkout Card */}
               <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 shadow-sm">
                 <h1 className="text-2xl font-bold text-slate-900 mb-6">Order Summary</h1>
                 <div className="flex justify-between items-center mb-6 pb-6 border-b border-gray-200">
@@ -203,43 +226,38 @@ const Mainsection = () => {
                 </div>
                 
                 <div className="space-y-4">
-                  <div className="bg-green-100 text-green-700 font-bold py-3 px-4 rounded-lg text-center text-sm">
-                    🎉 Nice! You saved ₨24,149 on your order.
-                  </div>
-                  <button className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-100 text-lg uppercase tracking-wide">
-                    Ready for Checkout
-                  </button>
-                  <p className="text-sm text-gray-500 text-center">Subtotal does not include applicable taxes</p>
-                  <p className="text-sm font-bold text-blue-600 underline text-center cursor-pointer">Have a promo code?</p>
+                  <motion.div 
+                    animate={{ scale: [1, 1.02, 1] }}
+                    transition={{ repeat: Infinity, duration: 3 }}
+                    className="bg-green-100 text-green-700 font-bold py-3 px-4 rounded-lg text-center text-sm"
+                  >
+                    🎉 Nice! You saved ₨24,149.
+                  </motion.div>
+                  <motion.button 
+                    whileHover={{ scale: 1.02, backgroundColor: "#1d4ed8" }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-blue-100 text-lg uppercase"
+                  >
+                    Checkout
+                  </motion.button>
                 </div>
               </div>
 
-              {/* Quality/Support Badge */}
-              <div className="bg-white border border-gray-100 p-5 rounded-xl flex items-center gap-4 shadow-sm">
-                <FaCheckCircle className="text-blue-500 text-2xl flex-shrink-0" />
+              {/* Quality Badge */}
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="bg-white border border-gray-100 p-5 rounded-xl flex items-center gap-4 shadow-sm"
+              >
+                <FaCheckCircle className="text-blue-500 text-2xl shrink-0" />
                 <div>
-                  <h1 className="font-bold text-slate-900 text-sm">Quality You Can Trust</h1>
-                  <p className="text-xs text-gray-500">GoDaddy Guides are available 24/7/365 to help you.</p>
+                  <h1 className="font-bold text-slate-900 text-sm">Quality Guaranteed</h1>
+                  <p className="text-xs text-gray-500">24/7/365 support available.</p>
                 </div>
-              </div>
-
-              {/* AI Promo Section */}
-              <div className="bg-[#EEF2FF] p-6 rounded-2xl border border-blue-100">
-                <span className="inline-block bg-[#D8CCFF] text-[10px] font-bold text-gray-700 px-3 py-1 rounded-md mb-4 uppercase">
-                  PLUS
-                </span>
-                <h2 className="text-base font-bold text-gray-900 mb-2">
-                  Get the power of AI with your domain.
-                </h2>
-                <p className="text-xs text-gray-600 leading-relaxed">
-                  GoDaddy Airo™ generates a Coming Soon website, logo, and more in a flash — no tech skills needed.
-                </p>
-              </div>
+              </motion.div>
             </div>
-          </div>
-
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

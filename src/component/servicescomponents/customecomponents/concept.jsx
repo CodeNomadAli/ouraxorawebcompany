@@ -1,6 +1,15 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 const Concept = () => {
+  // --- Snappy & Professional Configuration ---
+  const premiumTransition = {
+    duration: 1.2,
+    ease: [0.22, 1, 0.36, 1],
+  };
+
   const steps = [
     {
       title: "Discovery & Strategy",
@@ -31,11 +40,16 @@ const Concept = () => {
 
   return (
     <section className="w-full bg-gray-50 py-20 overflow-hidden">
-      {/* Master Width Container - 1550px Alignment */}
       <div className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="w-full text-center px-4">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={premiumTransition}
+          className="w-full text-center px-4"
+        >
           <h1 className="text-sm text-blue-600 font-bold uppercase tracking-widest">Our Methodology</h1>
           <h2 className="text-4xl md:text-5xl font-bold py-4 text-slate-900">
             From Concept to <span className="text-blue-700">Code</span>
@@ -44,21 +58,18 @@ const Concept = () => {
             We follow a rigorous, agile-driven process to ensure your custom software
             is delivered on time, on budget, and bug-free.
           </p>
-        </div>
+        </motion.div>
 
         {/* Timeline Container */}
         <div className="relative py-20 mt-10">
           
-          {/* Vertical Line - Hidden on very small screens, visible from md up */}
-          <div
-            className="
-              absolute top-0
-              left-10 md:left-1/2
-              h-full w-0.5
-              bg-gray-200
-              md:-translate-x-1/2
-              z-0
-            "
+          {/* Vertical Line Animation */}
+          <motion.div
+            initial={{ height: 0 }}
+            whileInView={{ height: "100%" }}
+            viewport={{ once: true }}
+            transition={{ duration: 2, ease: "easeInOut" }}
+            className="absolute top-0 left-10 md:left-1/2 h-full w-0.5 bg-gray-200 md:-translate-x-1/2 z-0"
           />
 
           {steps.map((step, index) => {
@@ -70,7 +81,11 @@ const Concept = () => {
                 className="relative grid grid-cols-1 md:grid-cols-2 gap-10 mb-24 last:mb-0"
               >
                 {/* Content Side */}
-                <div
+                <motion.div
+                  initial={{ opacity: 0, x: isEven ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={premiumTransition}
                   className={`
                     pl-20
                     md:pl-0
@@ -86,9 +101,9 @@ const Concept = () => {
                   <p className="text-gray-500 leading-relaxed text-base md:text-lg">
                     {step.description}
                   </p>
-                </div>
+                </motion.div>
 
-                {/* Number Marker (ON THE LINE) */}
+                {/* Number Marker */}
                 <div
                   className="
                     absolute top-0
@@ -97,7 +112,11 @@ const Concept = () => {
                     z-20
                   "
                 >
-                  <div
+                  <motion.div
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ ...premiumTransition, delay: 0.3 }}
                     className={`w-14 h-14 rounded-full flex items-center justify-center font-bold shadow-xl transition-transform hover:scale-110 duration-300 ${
                       step.active
                         ? "bg-blue-600 text-white ring-4 ring-blue-100"
@@ -105,7 +124,7 @@ const Concept = () => {
                     }`}
                   >
                     {step.number}
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             );

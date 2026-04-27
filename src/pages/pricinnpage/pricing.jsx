@@ -1,10 +1,11 @@
+"use client";
 import { Helmet } from "react-helmet-async";
 
 // Updated imports inside src/
-import Clientsay from "../../component/servicescomponents/customecomponents/clientsay";
 import PricingHero from "../../component/pricingcomponents/PricingHero";
 import PricingCards from "../../component/pricingcomponents/PricingCards";
-
+import PricingDetails from "../../component/pricingcomponents/PricingDetails";
+import Formcustom from '../../component/servicescomponents/customecomponents/formcustom';
 function Pricing() {
   return (
     <>
@@ -56,7 +57,8 @@ function Pricing() {
       {/* Page Components */}
       <PricingHero /> 
       <PricingCards />
-      <Clientsay />
+      <PricingDetails />
+       <Formcustom />
     </>
   );
 }

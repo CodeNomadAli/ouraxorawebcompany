@@ -61,20 +61,29 @@ const Clientcard = () => {
       </div>
 
       {/* Call to Action */}
-      <section className="px-4 sm:px-6 md:px-12 py-20">
-        <div className="w-full max-w-3xl px-6 md:px-10 flex flex-col items-center justify-center text-center rounded-2xl bg-gray-900 mx-auto">
-          <h2 className="font-bold mb-4 text-white text-2xl md:text-3xl">
-            Ready to Write Your Success Story?
-          </h2>
-          <p className="text-gray-400 mb-6 text-sm md:text-base">
-            Join 300+ companies transforming their business with custom software.
-            Let's discuss your <br /> vision today.
-          </p>
-          <button className="bg-blue-500 md:px-6 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
-            Get Your Free Quote
-          </button>
-        </div>
-      </section>
+     <section className="px-4 py-12 md:py-20">
+  <div className="w-full max-w-3xl bg-gray-900 rounded-[2.5rem] p-8 md:p-14 flex flex-col items-center text-center shadow-2xl relative overflow-hidden group mx-auto">
+    
+    {/* Decoration (Consistency ke liye same circle use kiya hai) */}
+    <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+    
+    <div className="z-10">
+      <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight">
+        Ready to Write Your <br className="hidden md:block" /> Success Story?
+      </h2>
+      <p className="text-gray-400 mt-4 mb-8 text-base md:text-lg max-w-[300px] md:max-w-none mx-auto">
+        Join 300+ companies transforming their business with custom software. Let's discuss your vision today.
+      </p>
+    </div>
+
+    <div className="z-10 w-full md:w-auto">
+      <button className="w-full md:w-auto bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-900/20 active:scale-95">
+        Get Your Free Quote
+      </button>
+    </div>
+    
+  </div>
+</section>
     </section>
   );
 };

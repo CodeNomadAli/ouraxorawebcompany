@@ -16,19 +16,18 @@ function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/60 backdrop-blur-md shadow-md font-sans">
       <div className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-4 lg:px-8"> 
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 relative">
 
-          {/* LOGO */}
+          {/* LOGO - Left aligned */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-            <img src="/axoralogo.png" alt="Logo" className="rounded-full h-12 w-12 md:h-14 md:w-14" />
-            <p className="text-lg md:text-xl font-bold">Axoraweb Solutions</p>
+            <img src="/axoralogo.png" alt="Logo" className="rounded-full h-12 w-12 md:h-20 md:w-20" />
           </Link>
 
-          {/* DESKTOP MENU */}
-          <ul className="hidden lg:flex items-center gap-6 xl:gap-8 text-gray-600 font-medium">
-            <li className="hover:text-blue-500 text-sm whitespace-nowrap"><Link to="/">Home</Link></li>
+          {/* DESKTOP MENU - Perfectly Centered */}
+          <ul className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-6 xl:gap-8 text-gray-600 font-medium">
+            <li className="hover:text-blue-500 text-sm whitespace-nowrap transition-colors"><Link to="/">Home</Link></li>
             
-            <li className="relative group text-sm hover:text-blue-500 py-7">
+            <li className="relative group text-sm hover:text-blue-500 py-7 transition-colors">
               <span className="cursor-pointer">Services</span>
               <div className="absolute top-[70px] left-1/2 -translate-x-1/2 w-[90vw] max-w-[800px] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
@@ -47,35 +46,34 @@ function Navbar() {
               </div>
             </li>
 
-            {/* Pricing Link (Corrected) */}
-            <li className="hover:text-blue-500 text-sm whitespace-nowrap">
+            <li className="hover:text-blue-500 text-sm whitespace-nowrap transition-colors">
               <Link to="/pricing">Pricing</Link>
             </li>
-
-            <li className="hover:text-blue-500 text-sm whitespace-nowrap"><Link to="/portfolio">Portfolio</Link></li>
-            <li className="hover:text-blue-500 text-sm whitespace-nowrap"><Link to="/article">Articles</Link></li>
-            <li className="hover:text-blue-500 text-sm whitespace-nowrap"><Link to="/about">About Us</Link></li>
-            <li className="hover:text-blue-500 text-sm whitespace-nowrap"><Link to="/contact">Contact</Link></li>
+            <li className="hover:text-blue-500 text-sm whitespace-nowrap transition-colors"><Link to="/portfolio">Portfolio</Link></li>
+            <li className="hover:text-blue-500 text-sm whitespace-nowrap transition-colors"><Link to="/article">Articles</Link></li>
+            <li className="hover:text-blue-500 text-sm whitespace-nowrap transition-colors"><Link to="/about">About Us</Link></li>
+            <li className="hover:text-blue-500 text-sm whitespace-nowrap transition-colors"><Link to="/contact">Contact</Link></li>
           </ul>
 
-          {/* RIGHT SIDE TOGGLE */}
+          {/* RIGHT SIDE BUTTON - Updated Height & Styling */}
           <div className="flex items-center gap-3">
             <Link to="/contact" className="hidden lg:block">
-              <button className="bg-blue-500 text-white px-4 xl:px-6 py-2 rounded-2xl hover:bg-blue-600 transition text-sm font-medium">
+              <button className="bg-blue-600 text-white px-6 py-2.5 rounded-2xl hover:bg-blue-700 hover:shadow-lg transition-all text-sm font-semibold tracking-wide h-11 flex items-center justify-center">
                 Get Free Quote
               </button>
             </Link>
-            <button className="lg:hidden text-3xl p-1" onClick={() => setOpen(!open)}>{open ? "✖" : "☰"}</button>
+            <button className="lg:hidden text-3xl p-1 text-gray-700" onClick={() => setOpen(!open)}>
+              {open ? "✖" : "☰"}
+            </button>
           </div>
         </div>
 
         {/* MOBILE & TABLET MENU */}
         {open && (
-          <div className="lg:hidden absolute left-4 right-4 bg-white shadow-xl rounded-2xl p-5 border border-gray-100 top-20 z-50">
+          <div className="lg:hidden absolute left-4 right-4 bg-white shadow-xl rounded-2xl p-5 border border-gray-100 top-20 z-50 animate-in fade-in zoom-in duration-200">
             <ul className="flex flex-col gap-3 text-gray-700 font-medium">
               <li><Link to="/" onClick={() => setOpen(false)} className="block py-1">Home</Link></li>
               
-              {/* Mobile Services */}
               <li>
                 <p className="font-bold text-blue-600">Services</p>
                 <ul className="ml-4 mt-2 space-y-2 border-l-2 border-gray-100 pl-4">
@@ -85,22 +83,18 @@ function Navbar() {
                 </ul>
               </li>
 
-              <hr className="my-1 border-gray-50" />
+              <hr className="my-1 border-gray-100" />
 
-              {/* Mobile Pricing Link */}
-              <li>
-                <Link to="/pricing" onClick={() => setOpen(false)} className="block py-1">
-                  Pricing
-                </Link>
-              </li>
-
-              <li><Link to="/portfolio" onClick={() => setOpen(false)}>Portfolio</Link></li>
-              <li><Link to="/article" onClick={() => setOpen(false)}>Articles</Link></li>
+              <li><Link to="/pricing" onClick={() => setOpen(false)} className="block py-1">Pricing</Link></li>
+              <li><Link to="/portfolio" onClick={() => setOpen(false)} className="block py-1">Portfolio</Link></li>
+              <li><Link to="/article" onClick={() => setOpen(false)} className="block py-1">Articles</Link></li>
               <li><Link to="/contact" onClick={() => setOpen(false)} className="block py-1">Contact</Link></li>
               
               <li className="mt-2">
                 <Link to="/contact" onClick={() => setOpen(false)}>
-                  <button className="w-full bg-blue-500 text-white py-3 rounded-xl font-bold shadow-md">Get Free Quote</button>
+                  <button className="w-full bg-blue-600 text-white py-3 rounded-2xl font-bold shadow-md active:scale-95 transition-transform">
+                    Get Free Quote
+                  </button>
                 </Link>
               </li>
             </ul>
