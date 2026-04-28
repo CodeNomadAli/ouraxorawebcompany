@@ -30,12 +30,12 @@ const MeetExperts = () => {
   };
 
   const experts = [
-    { 
+   { 
       name: "Ali Hamza", 
       role: "CEO & FOUNDER", 
       desc: "Visionary leader driving the strategic growth and innovation of AppxGlobal, ensuring we deliver world-class digital solutions.",
-      img: "/ali.png" 
-    },
+      img: "/ali.png",
+ },
     { 
       name: "Faqeer Hussain", 
       role: "CTO (CHIEF TECHNOLOGY OFFICER)", 

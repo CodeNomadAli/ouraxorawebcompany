@@ -78,7 +78,7 @@ const Softbulid = () => {
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mt-8">
-              <Link to="/contact">
+              <Link to="/qoute">
                 <button className="bg-blue-600 text-white rounded-xl text-lg px-6 py-3 hover:bg-blue-500 transition-all flex items-center shadow-lg active:scale-95">
                   Start Your Project <span className="ml-2 font-bold">→</span>
                 </button>

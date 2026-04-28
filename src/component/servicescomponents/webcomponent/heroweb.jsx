@@ -82,7 +82,7 @@ const Heroweb = () => {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center mt-7 px-4 sm:px-0"
         >
-          <Link to="/contact">
+          <Link to="/pricing">
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -91,7 +91,7 @@ const Heroweb = () => {
               View Pricing
             </motion.button>
           </Link>
-          <Link to="/portfolio">
+          <Link to="/services">
             <motion.button 
               whileHover={{ scale: 1.05, backgroundColor: "rgba(75, 85, 99, 0.9)" }}
               whileTap={{ scale: 0.95 }}

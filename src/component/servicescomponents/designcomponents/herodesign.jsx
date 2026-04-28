@@ -75,7 +75,7 @@ const Herodesign = () => {
                 See Our Process
               </motion.button>
             </Link>
-            <Link to="/contact" className="w-full sm:w-auto">
+            <Link to="/qoute" className="w-full sm:w-auto">
               <motion.button 
                 whileHover={{ scale: 1.05, backgroundColor: "#f8fafc" }}
                 whileTap={{ scale: 0.95 }}

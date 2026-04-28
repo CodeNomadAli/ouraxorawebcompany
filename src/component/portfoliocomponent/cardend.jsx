@@ -104,20 +104,24 @@ const Cardbulid = () => {
             transition={{ delay: 0.4 }}
             className="flex flex-col sm:flex-row justify-center gap-4 py-4 max-w-md mx-auto sm:max-w-none px-4"
           >
-            <motion.button 
-              whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(59, 130, 246, 0.5)" }}
-              whileTap={{ scale: 0.95 }}
-              className="text-white bg-blue-600 rounded-xl text-lg px-8 py-4 hover:bg-blue-500 transition-all font-semibold shadow-lg shadow-blue-900/20"
-            >
+            <a href="/pricing">
+              <motion.button 
+                whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(59, 130, 246, 0.5)" }}
+                whileTap={{ scale: 0.95 }}
+                className="text-white bg-blue-600 rounded-xl text-lg px-8 py-4 hover:bg-blue-500 transition-all font-semibold shadow-lg shadow-blue-900/20"
+              >
               Get an Estimate
             </motion.button>
-            <motion.button 
-              whileHover={{ scale: 1.05, backgroundColor: "rgba(75, 85, 99, 0.8)" }}
-              whileTap={{ scale: 0.95 }}
-              className="text-white bg-gray-600/50 backdrop-blur-sm border border-gray-500 rounded-xl text-lg px-8 py-4 hover:bg-gray-600 transition-all font-semibold"
-            >
-              Book a Consultation
-            </motion.button>
+            </a>
+            <a href="/contact">
+              <motion.button 
+                whileHover={{ scale: 1.05, backgroundColor: "rgba(75, 85, 99, 0.8)" }}
+                whileTap={{ scale: 0.95 }}
+                className="text-white bg-gray-600/50 backdrop-blur-sm border border-gray-500 rounded-xl text-lg px-8 py-4 hover:bg-gray-600 transition-all font-semibold"
+              >
+                Book a Consultation
+              </motion.button>
+            </a>
           </motion.div>
           
           <motion.p 

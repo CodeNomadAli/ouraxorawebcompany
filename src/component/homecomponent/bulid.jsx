@@ -178,7 +178,7 @@ const Buildsection = () => {
 
         {/* CTA Button */}
         <motion.div variants={itemVariants} className="mt-16 pb-10">
-          <a target="/qoute" rel="" href="/qoute">
+          <a  href="/qoute">
             <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-lg px-8 py-4 flex items-center mx-auto gap-2 transition-all active:scale-95 shadow-lg shadow-blue-100">
               Book an Intro Call
               <span className="font-bold text-xl">→</span>

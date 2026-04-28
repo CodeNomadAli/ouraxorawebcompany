@@ -1,6 +1,7 @@
 import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import WhatsAppButton from './component/WhatsAppButton';
 
 import Home from './pages/homepage/home';
 import Footer from './component/footer';
@@ -87,6 +88,8 @@ function App() {
         </Routes>
 
         <Footer />
+
+         <WhatsAppButton />
       </Router>
     </HelmetProvider>
   );
