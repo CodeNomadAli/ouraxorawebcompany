@@ -7,7 +7,7 @@ import Herodesign from "../../../component/servicescomponents/designcomponents/h
 import Pretty from "../../../component/servicescomponents/designcomponents/pretty";
 import Productsec from "../../../component/servicescomponents/designcomponents/product";
 import Transformation from "../../../component/servicescomponents/designcomponents/transformation";
-import Formsection from "../../../component/servicescomponents/ecommercecomponent/form";
+import Formcustom from "../../../component/servicescomponents/customecomponents/formcustom";
 
 function Design() {
   return (
@@ -65,7 +65,7 @@ function Design() {
       <Transformation />
       <Clientsay />
       <Productsec />
-      <Formsection />
+      <Formcustom />
     </>
   );
 }

@@ -1,10 +1,10 @@
 import { Helmet } from "react-helmet-async";
 
-import Formsection from "../../../component/servicescomponents/ecommercecomponent/form";
 import Hero from "../../../component/servicescomponents/ecommercecomponent/hero";
 import Tailored from "../../../component/servicescomponents/ecommercecomponent/tailored";
 import Transformation from "../../../component/servicescomponents/ecommercecomponent/transformation";
 import Wework from "../../../component/servicescomponents/ecommercecomponent/wework";
+import Formcustom from "../../../component/servicescomponents/customecomponents/formcustom";
 
 function Ecommerce() {
   return (
@@ -58,7 +58,7 @@ function Ecommerce() {
       <Hero />
       <Tailored />
       <Wework />
-      <Formsection />
+      <Formcustom />
       <Transformation />
     </>
   );

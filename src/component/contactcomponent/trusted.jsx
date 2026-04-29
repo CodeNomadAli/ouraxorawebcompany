@@ -1,138 +1,185 @@
 import React from "react";
 import { FaMailBulk, FaMap, FaPhone } from "react-icons/fa";
+import { motion } from "framer-motion"; // Added motion
 
 const Trusted = () => {
+  // --- Animation Settings ---
+  const premiumTransition = {
+    duration: 1.2,
+    ease: [0.22, 1, 0.36, 1],
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: premiumTransition,
+    },
+  };
+
   return (
-    <section className="w-full">
-      {/* Trusted Brands */}
-      <div className="bg-white text-center py-8 px-4 sm:px-6 md:px-12">
-        <h4 className="text-sm font-bold text-gray-400">
-          Trusted by Engineering Teams at
-        </h4>
-        <div className="flex flex-wrap justify-center gap-5 md:gap-10 text-gray-400 font-bold text-lg sm:text-xl py-5">
-          <h4>Google</h4>
-          <h4>Microsoft</h4>
-          <h4>Spotify</h4>
-          <h4>Airbnb</h4>
-          <h4>Stripe</h4>
+    <section className="w-full overflow-hidden">
+      
+      {/* 1. Trusted Brands */}
+      <div className="bg-white text-center py-12">
+        <div className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.h4 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-sm font-bold text-gray-400 uppercase tracking-widest"
+          >
+            Trusted by Engineering Teams at
+          </motion.h4>
+          
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex flex-wrap justify-center gap-8 md:gap-16 text-gray-300 font-bold text-xl sm:text-2xl py-8"
+          >
+            {["Google", "Microsoft", "Spotify", "Airbnb", "Stripe"].map((brand) => (
+              <motion.h4 
+                key={brand}
+                variants={itemVariants}
+                className="hover:text-gray-500 transition-colors cursor-default"
+              >
+                {brand}
+              </motion.h4>
+            ))}
+          </motion.div>
         </div>
       </div>
 
-      {/* Contact Cards */}
-      <div className="bg-gray-50 w-full px-4 sm:px-6 md:px-12 py-16">
-        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 justify-center">
-          {/* Email */}
-          <div className="w-full max-w-sm h-auto border text-center p-7 rounded-xl shadow-xl bg-white border-gray-200 mx-auto">
-            <FaMailBulk className="text-blue-400 w-10 h-10 mx-auto" />
-            <h1 className="text-xl font-bold pt-6">Email Us</h1>
-            <p className="text-sm text-gray-500 py-2">Best for detailed RFPs</p>
-            <a href="mailto:axoraweb@gmail.com">
-              <h1 className="text-blue-600 font-bold cursor-pointer">
-                axoraweb@gmail.com
-              </h1>
-            </a>
-          </div>
+      {/* 2. Contact Cards */}
+      <div className="bg-gray-50 w-full py-20 border-y border-gray-100">
+        <div className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center"
+          >
+            
+            {/* Email Card */}
+            <motion.div 
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
+              className="w-full border text-center p-8 rounded-2xl shadow-xl shadow-gray-200/50 bg-white border-gray-100 transition-all"
+            >
+              <FaMailBulk className="text-blue-500 w-10 h-10 mx-auto" />
+              <h1 className="text-xl font-bold pt-6 text-gray-900">Email Us</h1>
+              <p className="text-sm text-gray-500 py-3">Best for detailed RFPs</p>
+              <a href="mailto:axoraweb@gmail.com" className="inline-block">
+                <h1 className="text-blue-600 font-bold hover:underline">
+                  axoraweb@gmail.com
+                </h1>
+              </a>
+            </motion.div>
 
-          {/* Call */}
-          <div className="w-full max-w-sm h-auto border text-center p-7 rounded-xl shadow-xl bg-white border-gray-200 mx-auto">
-            <FaPhone className="text-blue-400 w-10 h-10 mx-auto" />
-            <h1 className="text-xl font-bold pt-6">Call Us</h1>
-            <p className="text-sm text-gray-500 py-2">Mon-Fri from 8am to 5pm</p>
-            <div className="space-y-1">
-              <a
-                href="https://wa.me/923245237429?text=Hello%20Axoraweb%20Solutions"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <h1 className="text-blue-600 font-bold cursor-pointer">
+            {/* Call Card */}
+            <motion.div 
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
+              className="w-full border text-center p-8 rounded-2xl shadow-xl shadow-gray-200/50 bg-white border-gray-100 transition-all"
+            >
+              <FaPhone className="text-blue-500 w-10 h-10 mx-auto" />
+              <h1 className="text-xl font-bold pt-6 text-gray-900">Call Us</h1>
+              <p className="text-sm text-gray-500 py-3">Mon-Fri from 8am to 5pm</p>
+              <div className="space-y-2">
+                <a href="tel:+923245237429" className="block text-blue-600 font-bold hover:underline">
                   +92 324 5237429
-                </h1>
-              </a>
-              <a
-                href="https://wa.me/923091419331?text=Hello%20Axoraweb%20Solutions"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <h1 className="text-blue-600 font-bold cursor-pointer">
-                  +92 3091419331
-                </h1>
-              </a>
-            </div>
-          </div>
+                </a>
+                <a href="tel:+923091419331" className="block text-blue-600 font-bold hover:underline">
+                  +92 309 1419331
+                </a>
+              </div>
+            </motion.div>
 
-          {/* HQ */}
-          <div className="w-full max-w-sm h-auto border text-center p-7 rounded-xl shadow-xl bg-white border-gray-200 mx-auto">
-            <FaMap className="text-blue-400 w-10 h-10 mx-auto" />
-            <h1 className="text-xl font-bold pt-6">Visit HQ</h1>
-            <p className="text-sm text-gray-500 py-2">Software House</p>
-            <h1 className="text-gray-700 font-bold">
-              Pakistan, Lahore, DHA
-            </h1>
-          </div>
+            {/* HQ Card */}
+            <motion.div 
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
+              className="w-full md:col-span-2 lg:col-span-1 border text-center p-8 rounded-2xl shadow-xl shadow-gray-200/50 bg-white border-gray-100 transition-all"
+            >
+              <FaMap className="text-blue-500 w-10 h-10 mx-auto" />
+              <h1 className="text-xl font-bold pt-6 text-gray-900">Visit HQ</h1>
+              <p className="text-sm text-gray-500 py-3">Software House</p>
+              <h1 className="text-gray-700 font-bold">
+                Pakistan, Lahore, DHA
+              </h1>
+            </motion.div>
+
+          </motion.div>
         </div>
       </div>
 
-      <hr className="border-gray-300" />
-
-      {/* Process Steps */}
-      <div className="w-full bg-white py-10 px-4 sm:px-6 md:px-12">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-slate-900 mb-16">
+      {/* 3. Process Steps */}
+      <div className="w-full bg-white py-20 px-4">
+        <div className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto sm:px-6 lg:px-8">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={premiumTransition}
+            className="text-3xl sm:text-4xl font-bold text-center text-slate-900 mb-20"
+          >
             What Happens After You Click Send?
-          </h2>
+          </motion.h2>
 
           <div className="relative">
-            {/* Horizontal line for desktop */}
-            <div className="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-slate-200 -z-0"></div>
+            {/* Desktop Connector Line Animation */}
+            <motion.div 
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut" }}
+              className="hidden lg:block absolute top-10 left-0 w-full h-0.5 bg-slate-100 -z-0 origin-left"
+            ></motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-4 relative z-10">
-              {/* Step 1 */}
-              <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full bg-[#0B1221] text-white flex items-center justify-center text-2xl font-bold shadow-lg mb-6 outline outline-offset-4 outline-white">
-                  1
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">Internal Review</h3>
-                <p className="text-slate-500 text-sm leading-relaxed max-w-[200px]">
-                  Our tech leads analyze your requirements.
-                </p>
-              </div>
-
-              {/* Step 2 */}
-              <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full bg-[#0B1221] text-white flex items-center justify-center text-2xl font-bold shadow-lg mb-6 outline outline-offset-4 outline-white">
-                  2
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">Discovery Call</h3>
-                <p className="text-slate-500 text-sm leading-relaxed max-w-[200px]">
-                  We meet to discuss scope and strategy.
-                </p>
-              </div>
-
-              {/* Step 3 */}
-              <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full bg-[#0B1221] text-white flex items-center justify-center text-2xl font-bold shadow-lg mb-6 outline outline-offset-4 outline-white">
-                  3
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">Proposal</h3>
-                <p className="text-slate-500 text-sm leading-relaxed max-w-[200px]">
-                  You receive a timeline and fixed-price quote.
-                </p>
-              </div>
-
-              {/* Step 4 */}
-              <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full bg-blue-500 text-white flex items-center justify-center text-2xl font-bold shadow-lg mb-6 outline outline-offset-4 outline-white">
-                  4
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">Kickoff</h3>
-                <p className="text-slate-500 text-sm leading-relaxed max-w-[200px]">
-                  We sign the contract and start coding.
-                </p>
-              </div>
-            </div>
+            <motion.div 
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10"
+            >
+              {[
+                { id: 1, title: "Internal Review", desc: "Our tech leads analyze your requirements.", color: "bg-[#0B1221]" },
+                { id: 2, title: "Discovery Call", desc: "We meet to discuss scope and strategy.", color: "bg-[#0B1221]" },
+                { id: 3, title: "Proposal", desc: "You receive a timeline and fixed-price quote.", color: "bg-[#0B1221]" },
+                { id: 4, title: "Kickoff", desc: "We sign the contract and start coding.", color: "bg-blue-600" }
+              ].map((step) => (
+                <motion.div 
+                  key={step.id} 
+                  variants={itemVariants}
+                  className="flex flex-col items-center text-center group"
+                >
+                  <div className={`w-20 h-20 rounded-full ${step.color} text-white flex items-center justify-center text-2xl font-bold shadow-xl mb-6 outline outline-offset-4 outline-white transition-transform group-hover:scale-110`}>
+                    {step.id}
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed max-w-[220px]">
+                    {step.desc}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </div>
+
     </section>
   );
 };

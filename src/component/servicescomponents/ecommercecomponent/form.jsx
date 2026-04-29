@@ -68,8 +68,10 @@ const Formsection = () => {
                   <input
                     type="text"
                     id="name"
-                    placeholder="John Doe"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-slate-50"
+                    placeholder="Ali Hamza"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 
+focus:ring-blue-500
+ bg-slate-50"
                   />
                 </div>
 
@@ -82,8 +84,10 @@ const Formsection = () => {
                     <input
                       type="email"
                       id="email"
-                      placeholder="johncompany@gmail.com"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-slate-50"
+                      placeholder="axorawebsolution.com"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 
+focus:ring-blue-500
+ bg-slate-50"
                     />
                   </div>
                   <div>
@@ -93,8 +97,11 @@ const Formsection = () => {
                     <input
                       type="tel"
                       id="phone"
-                      placeholder="+1-(555)000-0000"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-slate-50"
+                      placeholder="+92 3091419331"
+
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 
+focus:ring-blue-500
+ bg-slate-50"
                     />
                   </div>
                 </div>
@@ -107,7 +114,9 @@ const Formsection = () => {
                     </label>
                     <select
                       id="service"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-slate-50"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 
+focus:ring-blue-500
+ bg-slate-50"
                     >
                       <option value="">Select Service</option>
                       <option value="custom-software">Custom Software Development</option>
@@ -126,7 +135,9 @@ const Formsection = () => {
                       type="text"
                       id="budget"
                       placeholder="e.g. $10k-$25k"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-slate-50"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 
+focus:ring-blue-500
+ bg-slate-50"
                     />
                   </div>
                 </div>
@@ -139,7 +150,9 @@ const Formsection = () => {
                   <textarea
                     id="message"
                     placeholder="Tell us about your goals, timeline, requirements..."
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 
+focus:ring-blue-500
+"
                     rows="4"
                   ></textarea>
                 </div>

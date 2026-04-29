@@ -6,11 +6,6 @@ import Card from "../../component/portfoliocomponent/card";
 import Cardbulid from "../../component/portfoliocomponent/cardend";
 import Featured from "../../component/portfoliocomponent/featured";
 import Work from "../../component/portfoliocomponent/wework";
-import Clientsay from "../../component/servicescomponents/customecomponents/clientsay";
-import Conversion from "../../component/servicescomponents/designcomponents/conversion";
-import Diamondsec from "../../component/servicescomponents/designcomponents/diamond";
-import Herodesign from "../../component/servicescomponents/designcomponents/herodesign";
-import Pretty from "../../component/servicescomponents/designcomponents/pretty";
 
 function Portfolio() {
   return (
@@ -61,16 +56,12 @@ function Portfolio() {
       </Helmet>
 
       {/* Page Components */}
-      <Herodesign />
-      <Conversion />
-      <Pretty />
-      <Diamondsec />
+   
       <Bulid />
       <Card />
       <Featured />
       <Work />
       <Cardbulid />
-      <Clientsay />
     </>
   );
 }

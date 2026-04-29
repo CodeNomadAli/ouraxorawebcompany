@@ -10,6 +10,8 @@ import Featurepj from '../../component/homecomponent/featurepj';
 import Clientsection from '../../component/homecomponent/clientsection';
 import Clientsay from '../../component/servicescomponents/customecomponents/clientsay';
 import FAQ from '../../component/homecomponent/faq';
+import PartnersSection from "../../component/homecomponent/PartnersSection";
+import MeetExperts from "../../component/homecomponent/MeetExperts";
 
 function Home() {
   return (
@@ -17,13 +19,13 @@ function Home() {
       {/* SEO Meta Tags */}
       <Helmet>
         <title>AxoraWeb Solutions | Professional Web & App Development</title>
-        <meta 
-          name="description" 
-          content="AxoraWeb Solutions is a leading web and app development company offering React, Next.js, Node.js, UI/UX design, eCommerce, and custom software solutions for businesses worldwide." 
+        <meta
+          name="description"
+          content="AxoraWeb Solutions is a leading web and app development company offering React, Next.js, Node.js, UI/UX design, eCommerce, and custom software solutions for businesses worldwide."
         />
-        <meta 
-          name="keywords" 
-          content="web development, app development, react developers, next js agency, node js development, UI UX design, ecommerce development, custom software" 
+        <meta
+          name="keywords"
+          content="web development, app development, react developers, next js agency, node js development, UI UX design, ecommerce development, custom software"
         />
         <link rel="canonical" href="https://axorawebsolutions.com/" />
 
@@ -61,13 +63,14 @@ function Home() {
 
       {/* Page Components */}
       <HeroSection />
+      <PartnersSection />
       <Team />
       <Software />
       <Card />
       <Digitalsection />
+      <MeetExperts />
       <Bulidsection />
       <Featurepj />
-      {/* <Clientsection /> */}
       <Clientsay />
       <FAQ />
     </>

@@ -1,75 +1,167 @@
-import React from "react";
-import { FaBug, FaTractor, FaLeaf, FaGamepad, FaTools } from "react-icons/fa";
+"use client";
+
+import React, { useEffect, useRef } from 'react';
+import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
+import { 
+  Truck, Wind, Building2, Server, ShoppingCart, 
+  Briefcase, Gamepad2, ShoppingBag, Mountain, 
+  Baby, Utensils, TrendingUp 
+} from 'lucide-react';
+
+// --- Standardized Number Counter Sub-Component ---
+const Counter = ({ value, duration = 2 }) => {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+
+  useEffect(() => {
+    if (isInView) {
+      animate(count, value, { duration: duration, ease: [0.22, 1, 0.36, 1] });
+    }
+  }, [isInView, value, count, duration]);
+
+  return <motion.span ref={ref}>{rounded}</motion.span>;
+};
 
 const Team = () => {
-  const teams = [
-    { name: "Bright Way", icon: <FaTractor />, subtitle: "Logistics" },
-    { name: "Remlyo", icon: <FaBug />, subtitle: "Harnessing nature powered by AI" },
-    { name: "Construct Hub", icon: <FaTools />, subtitle: "" },
-    { name: "HOST ETHICS", subtitle: "hosting your online success" },
-    { name: "Hello Shop", subtitle: "" },
-    { name: "SMART CAS", subtitle: "" },
-    { name: "COESS", icon: <FaGamepad />, subtitle: "" },
-    { name: "OMROLO", icon: <FaLeaf />, subtitle: "" },
-    { name: "Summit Estate", subtitle: "" },
-    { name: "NUG CRAZE", subtitle: "" },
-    { name: "Taste Bites", subtitle: "" },
-    { name: "AS", subtitle: "" },
+  // --- Standard Premium Animation Settings ---
+  const premiumTransition = {
+    duration: 2,
+    ease: [0.22, 1, 0.36, 1],
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: premiumTransition,
+    },
+  };
+
+  const partners = [
+    { name: "Brightway", sub: "Logistics", icon: <Truck className="w-5 h-5 md:w-6 md:h-6" />, style: "font-sans font-bold" },
+    { name: "Remlyo", sub: "Harnessing Nature, Powered by AI", icon: <Wind className="w-5 h-5 md:w-6 md:h-6" />, style: "font-sans font-bold" },
+    { name: "Construct Hub", sub: "BUILDING TOMORROW'S FOUNDATIONS", icon: <Building2 className="w-5 h-5 md:w-6 md:h-6" />, style: "font-sans font-bold uppercase" },
+    { name: "HOST ETHICS", sub: "Hosting your online success", icon: <Server className="w-5 h-5 md:w-6 md:h-6" />, style: "font-sans font-black italic tracking-tighter" },
+    { name: "Hello Shop", sub: "", icon: <ShoppingCart className="w-5 h-5 md:w-6 md:h-6" />, style: "font-serif italic text-lg md:text-xl" },
+    { name: "SMARTCASE", sub: "manager", icon: <Briefcase className="w-4 h-4 md:w-5 md:h-5" />, hasLine: true, style: "font-sans tracking-widest font-light" },
+    { name: "CCESS", icon: <Gamepad2 className="w-5 h-5 md:w-6 md:h-6" />, sub: "A LEADING GAMING BRAND", style: "font-sans font-black italic" },
+    { name: "OMROLO", sub: "", icon: <ShoppingBag className="w-5 h-5 md:w-6 md:h-6" />, style: "font-sans font-black text-lg md:text-xl tracking-tighter" },
+    { name: "Summit Estates", sub: "", icon: <Mountain className="w-5 h-5 md:w-6 md:h-6" />, style: "font-serif italic" },
+    { name: "SNUG CRAZE", sub: "", icon: <Baby className="w-5 h-5 md:w-6 md:h-6" />, style: "font-sans font-black italic" },
+    { name: "Taste Bites", sub: "", icon: <Utensils className="w-5 h-5 md:w-6 md:h-6" />, style: "font-serif italic font-semibold" },
+    { name: "AS", sub: "", icon: <TrendingUp className="w-5 h-5 md:w-6 md:h-6" />, style: "font-serif italic border-b border-gray-600 group-hover:border-blue-500" },
   ];
 
   return (
-    <section className="mt-20 px-[100px]">
-      <div className="text-center mb-10">
-        <h1 className="text-xl font-bold">Trusted by Innovative Teams</h1>
-        <h2 className="text-3xl font-extrabold mt-2">
-          Powering the Next Generation of <span className="text-blue-600">Industry Leaders</span>
-        </h2>
-      </div>
+    <section className="bg-[#0a0f1c] py-12 md:py-20 px-4 min-h-screen w-full overflow-hidden font-sans">
+      <div className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-2 md:px-8">
+        
+        {/* Header Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={premiumTransition}
+          className="text-center mb-10 md:mb-16"
+        >
+          <p className="text-gray-500 uppercase tracking-[0.3em] text-[8px] md:text-[10px] mb-3 font-bold italic">Trusted by Innovative Teams</p>
+          <h2 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+            Powering the Next Generation of <span className="text-blue-500">Industry Leaders</span>
+          </h2>
+        </motion.div>
 
-      {/* Team Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
-        {teams.map((team, index) => (
-          <div
-            key={index}
-            className="group hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center justify-center text-center py-5 h-[100px] w-[250px] rounded-lg bg-gray-50 border border-gray-200"
-          >
-            {team.icon && (
-              <div className="text-3xl mb-2 text-gray-500 group-hover:text-blue-500 transition-colors duration-300">
-                {team.icon}
+        {/* Grid Container */}
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5"
+        >
+          {partners.map((p, i) => (
+            <motion.div 
+              key={i}
+              variants={itemVariants}
+              whileHover={{ scale: 1.02, backgroundColor: "#1c273d" }}
+              className="group bg-[#161f32]/60 border border-[#242d41] rounded-lg h-24 md:h-32 flex items-center justify-center p-3 md:p-6 
+                         transition-all duration-300 cursor-pointer
+                         hover:border-blue-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.1)]"
+            >
+              <div className="flex flex-row items-center gap-2 md:gap-4 transition-all duration-300 opacity-40 group-hover:opacity-100 w-full justify-center">
+                <div className="text-gray-400 transition-colors duration-300 group-hover:text-blue-400 shrink-0">
+                  {p.icon}
+                </div>
+                <div className={`flex flex-col ${p.hasLine ? 'border-t border-gray-600 group-hover:border-blue-400 pt-1' : ''}`}>
+                  <span className={`text-gray-200 transition-colors duration-300 group-hover:text-white text-xs md:text-lg leading-none ${p.style}`}>
+                    {p.name}
+                  </span>
+                  {p.sub && (
+                    <span className="text-[6px] md:text-[9px] text-gray-500 uppercase mt-1 tracking-widest font-bold group-hover:text-blue-200 transition-colors leading-tight">
+                      {p.sub}
+                    </span>
+                  )}
+                </div>
               </div>
-            )}
-            <h1 className="text-gray-500 group-hover:text-gray-800 font-extrabold text-xl transition-colors duration-300">
-              {team.name}
-            </h1>
-            {team.subtitle && (
-              <span className="text-xs text-gray-500 group-hover:text-green-400 transition-colors duration-300">
-                {team.subtitle}
-              </span>
-            )}
-          </div>
-        ))}
-      </div>
+            </motion.div>
+          ))}
+        </motion.div>
 
-      <hr className="my-14" />
+        {/* Bottom Stats Section with Increase Animation */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, delay: 0.5 }}
+          className="mt-16 pt-10 border-t border-gray-800/40"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 text-center">
+            
+            <motion.div 
+              variants={itemVariants}
+              className="flex flex-col gap-1"
+            >
+              <h3 className="text-blue-500 text-2xl md:text-4xl font-extrabold tracking-tighter">
+                <Counter value={50} />+
+              </h3>
+              <p className="text-gray-500 text-[8px] md:text-[10px] uppercase tracking-[0.2em] font-bold">Enterprise Clients</p>
+            </motion.div>
+            
+            <motion.div 
+              variants={itemVariants}
+              className="flex flex-col gap-1 md:border-x border-gray-800/30 px-4"
+            >
+              <h3 className="text-blue-500 text-2xl md:text-4xl font-extrabold tracking-tighter">
+                $<Counter value={100} />M+
+              </h3>
+              <p className="text-gray-500 text-[8px] md:text-[10px] uppercase tracking-[0.2em] font-bold">Revenue Enabled</p>
+            </motion.div>
+            
+            <motion.div 
+              variants={itemVariants}
+              className="flex flex-col gap-1"
+            >
+              <h3 className="text-blue-500 text-2xl md:text-4xl font-extrabold tracking-tighter">
+                <Counter value={98} />%
+              </h3>
+              <p className="text-gray-500 text-[8px] md:text-[10px] uppercase tracking-[0.2em] font-bold">Retention Rate</p>
+            </motion.div>
 
-      {/* Stats Section */}
-      <div className="mb-24 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-          <div>
-            <h1 className="text-4xl font-extrabold text-blue-600">50+</h1>
-            <p className="mt-2 font-bold text-xl">Enterprise Clients</p>
           </div>
+        </motion.div>
 
-          <div>
-            <h1 className="text-4xl font-extrabold text-blue-600">$100M+</h1>
-            <p className="mt-2 font-bold text-xl">Revenue Enabled</p>
-          </div>
-
-          <div>
-            <h1 className="text-4xl font-extrabold text-blue-600">98%</h1>
-            <p className="mt-2 font-bold text-xl">Retention Rate</p>
-          </div>
-        </div>
       </div>
     </section>
   );
