@@ -102,7 +102,7 @@ const Trusted = () => {
                   +92 324 5237429
                 </a>
                 <a href="tel:+923091419331" className="block text-blue-600 font-bold hover:underline">
-                  +92 309 1419331
+                  +92 3245237429
                 </a>
               </div>
             </motion.div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaLaptopCode, FaShoppingCart, FaGlobe, FaPenFancy, FaServer } from "react-icons/fa";
+import { FaLaptopCode, FaShoppingCart, FaGlobe, FaPenFancy, FaServer ,FaPhoneAlt} from "react-icons/fa";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -24,7 +24,7 @@ function Navbar() {
           </Link>
 
           {/* DESKTOP MENU - Perfectly Centered */}
-          <ul className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-6 xl:gap-8 text-gray-600 font-medium">
+          <ul className="hidden lg:flex absolute left-[45%] -translate-x-1/2 items-center gap-6 xl:gap-10 text-gray-600 font-medium">
             <li className="hover:text-blue-500 text-sm whitespace-nowrap transition-colors"><Link to="/">Home</Link></li>
             
             <li className="relative group text-sm hover:text-blue-500 py-7 transition-colors">
@@ -56,16 +56,30 @@ function Navbar() {
           </ul>
 
           {/* RIGHT SIDE BUTTON - Updated Height & Styling */}
-          <div className="flex items-center gap-3">
-            <Link to="/contact" className="hidden lg:block">
-              <button className="bg-blue-600 text-white px-6 py-2.5 rounded-2xl hover:bg-blue-700 hover:shadow-lg transition-all text-sm font-semibold tracking-wide h-11 flex items-center justify-center">
-                Get Free Quote
-              </button>
-            </Link>
-            <button className="lg:hidden text-3xl p-1 text-gray-700" onClick={() => setOpen(!open)}>
-              {open ? "✖" : "☰"}
-            </button>
-          </div>
+          {/* RIGHT SIDE BUTTON - Updated */}
+<div className="flex items-center gap-4">
+
+  {/* Phone Number */}
+  <a
+  href="tel:+923242537429"
+  className="hidden lg:flex items-center gap-2 text-sm font-semibold  hover:text-blue-600 transition"
+>
+  <FaPhoneAlt className="text-blue-600 text-xl" />
+  +92 324 2537429
+</a>
+  <Link to="/contact" className="hidden lg:block">
+    <button className="bg-blue-600 text-white px-6 py-2.5 rounded-2xl hover:bg-blue-700 hover:shadow-lg transition-all text-sm font-semibold tracking-wide h-11 flex items-center justify-center">
+      Get Free Quote
+    </button>
+  </Link>
+
+  <button
+    className="lg:hidden text-3xl p-1 text-gray-700"
+    onClick={() => setOpen(!open)}
+  >
+    {open ? "✖" : "☰"}
+  </button>
+</div>
         </div>
 
         {/* MOBILE & TABLET MENU */}
