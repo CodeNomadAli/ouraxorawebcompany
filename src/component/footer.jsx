@@ -81,7 +81,7 @@ const Footer = () => {
               <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923245237429?text=Hello%20Axoraweb%20Solutions">
                 <p className="text-gray-400 py-1 text-[13px] hover:text-blue-500 cursor-pointer transition">+92 324 5237429</p>
               </a>
-              <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923091419331?text=Hello%20Axoraweb%20Solutions">
+              <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923245237429?text=Hello%20Axoraweb%20Solutions">
                 <p className="text-gray-400 py-1 text-[13px] hover:text-blue-500 cursor-pointer transition">+92 3091419331</p>
               </a>
               <a href="mailto:axoraweb@gmail.com">

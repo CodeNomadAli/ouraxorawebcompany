@@ -33,7 +33,7 @@ const MeetExperts = () => {
    { 
       name: "Ali Hamza", 
       role: "CEO & FOUNDER", 
-      desc: "Visionary leader driving the strategic growth and innovation of AppxGlobal, ensuring we deliver world-class digital solutions.",
+      desc: "Visionary leader driving the strategic growth and innovation of Axoraweb Solutions, ensuring we deliver world-class digital solutions.",
       img: "/ali.png",
  },
     { 
@@ -71,7 +71,7 @@ const MeetExperts = () => {
         <motion.div variants={itemVariants} className="flex justify-center mb-6">
           <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-100 bg-blue-50 text-blue-600 shadow-sm">
             <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-pulse"></span>
-            <span className="text-[10px] font-bold uppercase tracking-wider">The Minds Behind AppxGlobal</span>
+            <span className="text-[10px] font-bold uppercase tracking-wider">The Minds Behind Axoraweb Solutions</span>
           </div>
         </motion.div>
 

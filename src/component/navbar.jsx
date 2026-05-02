@@ -65,7 +65,7 @@ function Navbar() {
   className="hidden lg:flex items-center gap-2 text-sm font-semibold  hover:text-blue-600 transition"
 >
   <FaPhoneAlt className="text-blue-600 text-xl" />
-  +92 324 2537429
+  +92 324 5237429
 </a>
   <Link to="/contact" className="hidden lg:block">
     <button className="bg-blue-600 text-white px-6 py-2.5 rounded-2xl hover:bg-blue-700 hover:shadow-lg transition-all text-sm font-semibold tracking-wide h-11 flex items-center justify-center">
