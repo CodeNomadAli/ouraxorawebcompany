@@ -36,21 +36,21 @@ const Footer = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.linkedin.com/in/your-profile"
+                href="https://www.linkedin.com/in/axorawebsolutionsdotcom/"
                 className="group"
               >
                 <FaLinkedin className="text-2xl text-blue-400 group-hover:text-white transition-colors duration-300" />
               </a>
 
               {/* GitHub */}
-              <a
+              {/* <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://github.com/your-username"
                 className="group"
               >
                 <FaGithub className="text-2xl text-blue-400 group-hover:text-white transition-colors duration-300" />
-              </a>
+              </a> */}
 
               {/* Email */}
               <a href="mailto:axoraweb@gmail.com" className="group">
