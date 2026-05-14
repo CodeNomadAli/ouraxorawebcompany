@@ -155,7 +155,7 @@ const Corented = () => {
           >
             <FAQItem
               question="What is your typical project minimum?"
-              answer="Our typical engagements start at $5,000 for small components or MVP planning. Full-scale development projects usually range from $15,000 to $100,000+."
+              answer="Our typical engagements start at $500 for small components or MVP planning. Full-scale development projects usually range from $1500 to $1000+."
             />
             <FAQItem
               question="Do you provide post-launch support?"

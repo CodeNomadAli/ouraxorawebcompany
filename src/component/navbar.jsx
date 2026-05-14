@@ -20,7 +20,7 @@ function Navbar() {
 
           {/* LOGO - Left aligned */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-            <img src="/axoralogo.png" alt="Logo" className="rounded-full h-12 w-12 md:h-20 md:w-20" />
+            <img src="/logo.png" alt="Logo" className="rounded-full h-12 w-12 md:h-20 md:w-24" />
           </Link>
 
           {/* DESKTOP MENU - Perfectly Centered */}

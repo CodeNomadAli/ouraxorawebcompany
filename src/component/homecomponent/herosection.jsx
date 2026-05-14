@@ -137,7 +137,7 @@ const Herosection = () => {
                     <div className="flex justify-between items-center mb-6">
                       <h2 className="text-white text-lg font-bold">Overview</h2>
                       <div className="w-8 h-8 rounded-full bg-gray-700 overflow-hidden">
-                        <img src="/axoralogo.png" alt="User" className="w-full h-full object-cover" />
+                        <img src="/logo.png" alt="User" className="w-full h-full object-cover" />
                       </div>
                     </div>
 

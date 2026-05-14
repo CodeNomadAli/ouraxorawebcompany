@@ -46,7 +46,7 @@ const Architecture = () => {
           className="inline-flex items-center gap-2 mt-4 px-3 sm:px-5 py-1 sm:py-2 rounded-full border border-gray-100 bg-white text-gray-800 shadow-sm text-xs sm:text-sm"
         >
           <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-          <span className="font-medium">Established 2018 • 150+ Projects Shipped</span>
+          <span className="font-medium">Established 2020 • 150+ Projects Shipped</span>
         </motion.div>
 
         {/* Title */}

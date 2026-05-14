@@ -149,7 +149,7 @@ const Transformation = () => {
               <div className="flex-grow">
                 <h3 className="font-bold text-xl text-white">Product Redesign</h3>
                 <p className="text-xs text-gray-400 py-3">Complete visual overhaul.</p>
-                <h2 className="text-4xl font-bold py-4 text-white">$4,500+</h2>
+                <h2 className="text-4xl font-bold py-4 text-white">$45+</h2>
                 <div className="space-y-4 mt-4">
                   {["Full Figma File", "User Research Phase", "Dark/Light Mode", "Design System", "Developer Handoff"].map((text, i) => (
                     <div key={i} className="flex items-center gap-3">

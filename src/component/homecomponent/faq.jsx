@@ -125,7 +125,7 @@ const FAQ = () => {
           />
           <FAQItem
             question="6. How much does it cost to develop a custom application?"
-            answer="Costs depend on the project’s scope and complexity. Basic applications start at $5,000, while advanced systems like CRM or HRM may range from $20,000 to $100,000+. Contact us for a tailored quote based on your needs."
+            answer="Costs depend on the project’s scope and complexity. Basic applications start at $500, while advanced systems like CRM or HRM may range from $20,000 to $1000+. Contact us for a tailored quote based on your needs."
           />
         </div>
 

@@ -73,7 +73,7 @@ const Cardweb = () => {
             <div>
               <h1 className="font-bold text-xl text-gray-900">High-Convert Lander</h1>
               <p className="text-sm text-gray-400 py-3 font-medium">For ads campaigns & single products.</p>
-              <h1 className="text-4xl py-4 font-bold text-slate-900">$1,800</h1>
+              <h1 className="text-4xl py-4 font-bold text-slate-900">$10</h1>
 
               <div className="space-y-4 mt-6">
                 {["Single Long-Scroll Page", "Copywriting Assistance", "Contact Form Integration", "1 Week Turnaround"].map((item, i) => (
@@ -103,7 +103,7 @@ const Cardweb = () => {
             <div>
               <h1 className="font-bold text-xl text-gray-900">Corporate Website</h1>
               <p className="text-sm text-gray-400 py-3 font-medium">Full brand presence for businesses.</p>
-              <h1 className="text-4xl py-4 font-bold text-slate-900">$4,500</h1>
+              <h1 className="text-4xl py-4 font-bold text-slate-900">$45</h1>
 
               <div className="space-y-4 mt-6">
                 {["5-8 Custom Pages", "CMS Implementation", "Basic On-Page SEO", "Blog / News Section", "Google Analytics Setup"].map((item, i) => (
@@ -132,7 +132,7 @@ const Cardweb = () => {
             <div>
               <h1 className="font-bold text-xl text-gray-900">Web App / E-Comm</h1>
               <p className="text-sm text-gray-400 py-3 font-medium">Complex functionality & stores.</p>
-              <h1 className="text-4xl py-4 font-bold text-slate-900">$8,000+</h1>
+              <h1 className="text-4xl py-4 font-bold text-slate-900">$100+</h1>
 
               <div className="space-y-4 mt-6">
                 {["E-commerce Functionality", "User Accounts / Logins", "3rd Party API Integrations", "Advanced Search & Filtering"].map((item, i) => (
