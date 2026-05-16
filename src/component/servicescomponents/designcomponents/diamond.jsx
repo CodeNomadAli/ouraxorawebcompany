@@ -24,7 +24,7 @@ const Diamondsec = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-sm text-blue-600 font-bold uppercase tracking-wider"
+            className="text-sm text-[#00b4ff] font-bold uppercase tracking-wider"
           >
             How We Design
           </motion.h1>
@@ -81,7 +81,7 @@ const Diamondsec = () => {
             </div>
             <div className="hidden md:flex justify-start">
               <motion.div whileHover={{ scale: 1.1, rotate: 5 }} className="w-16 h-16 bg-gray-800/50 border border-gray-700 mt-2 rounded-xl flex items-center justify-center">
-                <FaSearch className="text-blue-500 w-6 h-6" />
+                <FaSearch className="text-[#00b4ff] w-6 h-6" />
               </motion.div>
             </div>
             <div className="absolute left-[18px] md:left-1/2 top-1.5 md:top-3 -translate-x-1/2">

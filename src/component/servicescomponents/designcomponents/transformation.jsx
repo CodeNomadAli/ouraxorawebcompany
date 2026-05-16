@@ -37,7 +37,7 @@ const Transformation = () => {
             transition={premiumTransition}
             className="text-center mb-12"
           >
-            <h2 className="text-sm font-bold text-blue-600 uppercase tracking-widest">Visual Evidence</h2>
+            <h2 className="text-sm font-bold text-[#00b4ff] uppercase tracking-widest">Visual Evidence</h2>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold py-4 text-gray-900">
               Transformation Gallery
             </h1>
@@ -67,10 +67,10 @@ const Transformation = () => {
                   className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 group-hover:opacity-100"
                 />
               </div>
-              <h3 className="text-2xl font-bold mt-6 text-gray-900 group-hover:text-blue-600 transition-colors">FinTech Analytics Platform</h3>
+              <h3 className="text-2xl font-bold mt-6 text-gray-900 group-hover:text-[#00b4ff] transition-colors">FinTech Analytics Platform</h3>
               <p className="text-gray-500 mt-2 leading-relaxed">
                 We transformed a complex manual spreadsheet process into a real-time dashboard.
-                <span className="text-blue-700 font-bold ml-1">Reduced user error rate by 45%.</span>
+                <span className="text-[#00b4ff] font-bold ml-1">Reduced user error rate by 45%.</span>
               </p>
             </motion.div>
 
@@ -88,10 +88,10 @@ const Transformation = () => {
                   className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 group-hover:opacity-100"
                 />
               </div>
-              <h3 className="text-2xl font-bold mt-6 text-gray-900 group-hover:text-blue-600 transition-colors">E-Commerce Checkout Flow</h3>
+              <h3 className="text-2xl font-bold mt-6 text-gray-900 group-hover:text-[#00b4ff] transition-colors">E-Commerce Checkout Flow</h3>
               <p className="text-gray-500 mt-2 leading-relaxed">
                 Reimagined a 5-page web form into a seamless 3-step mobile experience.
-                <span className="text-blue-700 font-bold ml-1">Increased cart completion by 22%.</span>
+                <span className="text-[#00b4ff] font-bold ml-1">Increased cart completion by 22%.</span>
               </p>
             </motion.div>
           </motion.div>
@@ -145,7 +145,7 @@ const Transformation = () => {
               variants={itemVariants} 
               className="w-full flex flex-col p-8 rounded-[2rem] bg-gray-900 shadow-2xl relative border-2 border-blue-600 lg:scale-105 z-10"
             >
-              <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-5 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Most Popular</span>
+              <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00b4ff] text-white px-5 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Most Popular</span>
               <div className="flex-grow">
                 <h3 className="font-bold text-xl text-white">Product Redesign</h3>
                 <p className="text-xs text-gray-400 py-3">Complete visual overhaul.</p>
@@ -153,13 +153,13 @@ const Transformation = () => {
                 <div className="space-y-4 mt-4">
                   {["Full Figma File", "User Research Phase", "Dark/Light Mode", "Design System", "Developer Handoff"].map((text, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <FaCheck className="w-4 h-4 text-blue-500 shrink-0" />
+                      <FaCheck className="w-4 h-4 text-[#00b4ff] shrink-0" />
                       <p className="text-sm text-gray-300 font-bold">{text}</p>
                     </div>
                   ))}
                 </div>
               </div>
-              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full mt-10 py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg">Select Package</motion.button>
+              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full mt-10 py-4 bg-[#00b4ff] text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg">Select Package</motion.button>
             </motion.div>
 
             {/* Card 3 */}

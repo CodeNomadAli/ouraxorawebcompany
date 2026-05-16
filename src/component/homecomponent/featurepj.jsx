@@ -49,13 +49,13 @@ const Featurepj = () => {
         className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8 text-center"
       >
         {/* Header Badge */}
-        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-blue-500 shadow-sm">
-          <span className="w-2 h-2 bg-blue-800 rounded-full animate-pulse"></span>
+        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-[#00b4ff] shadow-sm">
+          <span className="w-2 h-2 bg-[#00b4ff] rounded-full animate-pulse"></span>
           <span className="text-xs font-medium uppercase tracking-wider">Selected Work</span>
         </motion.div>
 
         <motion.h1 variants={itemVariants} className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 text-gray-900 leading-tight">
-          Featured <span className="text-blue-600 relative">
+          Featured <span className="text-[#00b4ff] relative">
             Projects
             <motion.div
               initial={{ width: 0 }}
@@ -102,7 +102,7 @@ const Featurepj = () => {
               </div>
 
               <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">Billonary Club</h1>
-              <p className="text-sm text-blue-600 font-bold uppercase tracking-tight">Financial SaaS Platform</p>
+              <p className="text-sm text-[#00b4ff] font-bold uppercase tracking-tight">Financial SaaS Platform</p>
 
               <p className="text-base sm:text-lg text-gray-600 py-2 leading-relaxed">
                 We engineered a robust financial supply chain platform that transformed how users manage high-volume transactions. By streamlining complex user flows and optimizing architecture, we helped secure significant funding.
@@ -140,7 +140,7 @@ const Featurepj = () => {
               </div>
 
               <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">Ecommerce Solutions</h1>
-              <p className="text-sm text-blue-600 font-bold uppercase tracking-tight">Digital Storefront Transformation</p>
+              <p className="text-sm text-[#00b4ff] font-bold uppercase tracking-tight">Digital Storefront Transformation</p>
 
               <p className="text-base sm:text-lg text-gray-600 py-2 leading-relaxed">
                 A modern, high-performance e-commerce experience featuring advanced WebGL product interactions. Designed to position the brand as an industry innovator.
@@ -206,7 +206,7 @@ const Featurepj = () => {
               </div>
 
               <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">Video Player</h1>
-              <p className="text-sm text-blue-600 font-bold uppercase tracking-tight">High-Conversion Experience</p>
+              <p className="text-sm text-[#00b4ff] font-bold uppercase tracking-tight">High-Conversion Experience</p>
 
               <p className="text-base sm:text-lg text-gray-600 py-2 leading-relaxed">
                 A scientifically optimized landing page designed to capture early adopters. Driving massive growth by clarifying the value proposition and simplifying sign-ups.
@@ -230,7 +230,7 @@ const Featurepj = () => {
         {/* View All Button */}
         <motion.div variants={itemVariants} className="mt-10 flex justify-center pb-10">
           <Link to="/portfolio">
-            <button className="text-white bg-blue-600 font-bold rounded-2xl text-lg px-8 py-4 flex items-center hover:bg-blue-700 transition-all active:scale-95 shadow-xl shadow-blue-100">
+            <button className="text-white bg-[#00b4ff] font-bold rounded-2xl text-lg px-8 py-4 flex items-center hover:bg-blue-700 transition-all active:scale-95 shadow-xl shadow-blue-100">
               View All Projects <span className="ml-3 font-bold">→</span>
             </button>
           </Link>

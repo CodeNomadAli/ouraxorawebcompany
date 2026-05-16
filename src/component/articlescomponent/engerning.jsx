@@ -46,7 +46,7 @@ const Enginering = () => {
             variants={itemVariants}
             className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight"
           >
-            Insights & <span className="text-blue-600">Engineering</span>
+            Insights & <span className="text-[#00b4ff]">Engineering</span>
           </motion.h1>
           
           <motion.p 

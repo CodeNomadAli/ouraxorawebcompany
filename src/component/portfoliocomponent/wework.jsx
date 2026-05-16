@@ -24,7 +24,7 @@ const Work = () => {
 
   const techList = [
     { name: "Laravel", color: "hover:text-red-500" },
-    { name: "React", color: "hover:text-blue-500" },
+    { name: "React", color: "hover:text-[#00b4ff]" },
     { name: "Tailwind", color: "hover:text-sky-400" },
     { name: "Python", color: "hover:text-yellow-500" },
     { name: "AWS", color: "hover:text-orange-500" },
@@ -114,7 +114,7 @@ const Work = () => {
               {/* Step 4 */}
               <motion.div variants={stepVariants} className="flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group">
                 <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-xl mb-0 lg:mb-6 border-2 border-blue-700 shrink-0 z-10 transition-all group-hover:scale-110 group-hover:bg-blue-700 duration-300">
-                  <FaRocket className="w-6 h-6 text-blue-700 group-hover:text-white transition-colors" />
+                  <FaRocket className="w-6 h-6 text-[#00b4ff] group-hover:text-white transition-colors" />
                 </div>
                 <div className="ml-8 lg:ml-0">
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Launch</h3>

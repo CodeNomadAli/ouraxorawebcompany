@@ -71,7 +71,7 @@ const PricingHero = () => {
           className="text-center mb-16"
         >
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Transparent Pricing for <span className="text-blue-600">Every Project</span>
+            Transparent Pricing for <span className="text-[#00b4ff]">Every Project</span>
           </h1>
           <p className="mt-6 text-gray-500 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
             Select your service and requirements to get an instant estimate. All prices are customizable based on your specific needs.
@@ -86,7 +86,7 @@ const PricingHero = () => {
           className="flex flex-col md:flex-row justify-between items-end mb-8 gap-4"
         >
           <h2 className="text-2xl font-bold text-slate-900">Select Your Service</h2>
-          <div className="flex items-center gap-2 text-blue-600 font-semibold text-[13px] bg-blue-50 px-4 py-2 rounded-lg border border-blue-100">
+          <div className="flex items-center gap-2 text-[#00b4ff] font-semibold text-[13px] bg-blue-50 px-4 py-2 rounded-lg border border-blue-100">
             <Zap size={14} className="fill-current" />
             <span>Most Popular: Web Development</span>
           </div>
@@ -115,14 +115,14 @@ const PricingHero = () => {
             >
               <div className={`mb-3 p-3 rounded-xl transition-all duration-300 
                 ${selectedService === service.name 
-                  ? "bg-blue-600 text-white shadow-md shadow-blue-200" 
-                  : "bg-slate-200/50 text-slate-500 group-hover:bg-blue-100 group-hover:text-blue-600"
+                  ? "bg-[#00b4ff] text-white shadow-md shadow-blue-200" 
+                  : "bg-slate-200/50 text-slate-500 group-hover:bg-blue-100 group-hover:text-[#00b4ff]"
                 }`}>
                 {service.icon}
               </div>
 
               <span className={`text-[10px] font-bold uppercase tracking-widest text-center leading-tight
-                ${selectedService === service.name ? "text-blue-600" : "text-slate-500 group-hover:text-blue-600"}`}>
+                ${selectedService === service.name ? "text-[#00b4ff]" : "text-slate-500 group-hover:text-[#00b4ff]"}`}>
                 {service.name}
               </span>
             </motion.button>

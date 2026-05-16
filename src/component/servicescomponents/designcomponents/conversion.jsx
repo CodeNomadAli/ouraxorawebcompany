@@ -75,12 +75,12 @@ const Conversion = () => {
                   whileInView={{ rotate: 0 }}
                   className="w-12 h-12 bg-blue-100 flex items-center justify-center rounded-xl"
                 >
-                  <FaTriangleExclamation className="text-2xl text-blue-500" />
+                  <FaTriangleExclamation className="text-2xl text-[#00b4ff]" />
                 </motion.div>
                 <p className="font-bold text-lg text-gray-900">The "Frustration Gap"</p>
               </div>
               <p className="text-sm sm:text-base text-gray-500 leading-relaxed">
-                Every extra click, slow loader, or unclear label drops your conversion rate by <span className="text-blue-600 font-bold">20%</span>. We close that gap.
+                Every extra click, slow loader, or unclear label drops your conversion rate by <span className="text-[#00b4ff] font-bold">20%</span>. We close that gap.
               </p>
             </motion.div>
           </motion.div>
@@ -95,7 +95,7 @@ const Conversion = () => {
           >
             {/* Stat 1: 300% */}
             <motion.div variants={cardVariants} className="flex flex-col items-center justify-center p-6 border border-gray-100 bg-white shadow-sm rounded-2xl h-36 w-full">
-              <h1 className="text-4xl lg:text-5xl font-extrabold text-blue-600">
+              <h1 className="text-4xl lg:text-5xl font-extrabold text-[#00b4ff]">
                 <Counter value={300} />%
               </h1>
               <p className="text-xs sm:text-sm font-semibold text-gray-500 mt-2 uppercase tracking-wide text-center px-2">ROI on UX Design</p>
@@ -103,7 +103,7 @@ const Conversion = () => {
 
             {/* Stat 2: 50ms */}
             <motion.div variants={cardVariants} className="flex flex-col items-center justify-center p-6 border border-gray-100 bg-white shadow-sm rounded-2xl h-36 w-full">
-              <h1 className="text-4xl lg:text-5xl font-extrabold text-blue-600">
+              <h1 className="text-4xl lg:text-5xl font-extrabold text-[#00b4ff]">
                 <Counter value={50} />ms
               </h1>
               <p className="text-xs sm:text-sm font-semibold text-gray-500 mt-2 uppercase tracking-wide text-center px-2">Time to Impress</p>
@@ -111,7 +111,7 @@ const Conversion = () => {
 
             {/* Stat 3: 88% */}
             <motion.div variants={cardVariants} className="flex flex-col items-center justify-center p-6 border border-gray-100 bg-white shadow-sm rounded-2xl h-36 w-full">
-              <h1 className="text-4xl lg:text-5xl font-extrabold text-blue-600">
+              <h1 className="text-4xl lg:text-5xl font-extrabold text-[#00b4ff]">
                 <Counter value={88} />%
               </h1>
               <p className="text-xs sm:text-sm font-semibold text-gray-500 mt-2 uppercase tracking-wide text-center px-2">Churn after bad XP</p>
@@ -121,7 +121,7 @@ const Conversion = () => {
             <motion.div 
               variants={cardVariants}
               whileHover={{ scale: 1.05 }}
-              className="flex flex-col items-center justify-center p-6 border border-blue-800 bg-blue-600 shadow-lg rounded-2xl h-36 w-full"
+              className="flex flex-col items-center justify-center p-6 border border-blue-800 bg-[#00b4ff] shadow-lg rounded-2xl h-36 w-full"
             >
               <h1 className="text-5xl font-extrabold text-white">∞</h1>
               <p className="text-xs sm:text-sm font-semibold text-blue-50 mt-2 uppercase tracking-wide text-center px-2">Value of Trust</p>

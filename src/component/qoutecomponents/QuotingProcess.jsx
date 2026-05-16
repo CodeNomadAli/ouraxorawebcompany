@@ -17,7 +17,7 @@ const QuotingProcess = () => {
 
   const processSteps = [
     { number: "1", title: "Request", desc: "You submit requirements.", color: "text-red-600", border: "border-red-100" },
-    { number: "2", title: "Analysis", desc: "We scope the technical needs.", color: "text-blue-600", border: "border-blue-100" },
+    { number: "2", title: "Analysis", desc: "We scope the technical needs.", color: "text-[#00b4ff]", border: "border-blue-100" },
     { number: "3", title: "Proposal", desc: "Delivery within 24-48 hours.", color: "text-gray-900", border: "border-gray-100" },
   ];
 
@@ -44,7 +44,7 @@ const QuotingProcess = () => {
         >
           <motion.p
             variants={fadeInUp}
-            className="text-[11px] font-black uppercase text-blue-600 tracking-[0.25em] mb-16"
+            className="text-[11px] font-black uppercase text-[#00b4ff] tracking-[0.25em] mb-16"
           >
             OUR QUOTING PROCESS
           </motion.p>
@@ -78,7 +78,7 @@ const QuotingProcess = () => {
 
                 {/* Text Content */}
                 <div className="z-10 bg-white px-4">
-                    <h3 className="text-xl font-black text-gray-900 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl font-black text-gray-900 group-hover:text-[#00b4ff] transition-colors">
                     {step.title}
                     </h3>
                     <p className="text-gray-500 text-sm font-medium leading-relaxed max-w-[200px] mt-2">
@@ -119,10 +119,10 @@ const QuotingProcess = () => {
                   onClick={() => toggleFAQ(index)}
                   className="w-full p-6 md:p-8 flex items-center justify-between text-left group"
                 >
-                  <span className={`text-lg md:text-[20px] font-bold transition-colors ${activeFAQ === index ? 'text-blue-600' : 'text-gray-800'}`}>
+                  <span className={`text-lg md:text-[20px] font-bold transition-colors ${activeFAQ === index ? 'text-[#00b4ff]' : 'text-gray-800'}`}>
                     {faq.q}
                   </span>
-                  <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${activeFAQ === index ? 'bg-blue-600 rotate-180' : 'bg-gray-100 group-hover:bg-blue-50'}`}>
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${activeFAQ === index ? 'bg-[#00b4ff] rotate-180' : 'bg-gray-100 group-hover:bg-blue-50'}`}>
                     <ChevronDown size={20} className={activeFAQ === index ? 'text-white' : 'text-gray-400'} />
                   </div>
                 </button>

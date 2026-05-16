@@ -89,7 +89,7 @@ const Bulit = () => {
                       <span className="text-white w-5 h-5">{feature.icon}</span>
                     </motion.div>
                     <div>
-                      <h1 className="font-bold text-slate-900 text-lg group-hover:text-blue-700 transition-colors">{feature.title}</h1>
+                      <h1 className="font-bold text-slate-900 text-lg group-hover:text-[#00b4ff] transition-colors">{feature.title}</h1>
                       <p className="text-sm md:text-base text-gray-400">
                         {feature.desc}
                       </p>

@@ -46,7 +46,7 @@ const Heroweb = () => {
         {/* Animated Badge */}
         <motion.div 
           variants={itemVariants}
-          className="inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full border border-blue-500/30 bg-gray-800/80 text-blue-400 shadow-sm backdrop-blur-sm"
+          className="inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full border border-blue-500/30 bg-gray-800/80 text-[#00b4ff] shadow-sm backdrop-blur-sm"
         >
           <motion.span 
             animate={{ opacity: [0.4, 1, 0.4] }}
@@ -86,7 +86,7 @@ const Heroweb = () => {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto text-white bg-blue-600 hover:bg-blue-500 rounded-2xl text-sm px-8 py-3.5 transition-all font-bold shadow-lg shadow-blue-900/40"
+              className="w-full sm:w-auto text-white bg-[#00b4ff] hover:bg-blue-500 rounded-2xl text-sm px-8 py-3.5 transition-all font-bold shadow-lg shadow-blue-900/40"
             >
               View Pricing
             </motion.button>

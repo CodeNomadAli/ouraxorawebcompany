@@ -34,7 +34,7 @@ const QuoteHero = () => {
             initial="hidden" animate="visible" variants={fadeInUp}
             className="text-4xl md:text-5xl font-black  text-gray-900 tracking-tight mb-4"
           >
-            Start Your <span className="text-blue-600">Transformation</span>
+            Start Your <span className="text-[#00b4ff]">Transformation</span>
           </motion.h1>
           <motion.p 
             initial="hidden" animate="visible" transition={{ delay: 0.2 }} variants={fadeInUp}
@@ -55,10 +55,10 @@ const QuoteHero = () => {
             <form className="space-y-12">
                {/* 1. Project Type */}
                <div>
-                <label className="text-xs font-black uppercase tracking-widest text-blue-600 mb-6 block">1. What are we building?</label>
+                <label className="text-xs font-black uppercase tracking-widest text-[#00b4ff] mb-6 block">1. What are we building?</label>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {["Custom Software", "Mobile App", "AI Solution", "Website", "UI/UX Design", "Consulting"].map((item) => (
-                    <button key={item} type="button" className="py-4 px-2 rounded-2xl border border-gray-200 bg-white text-gray-700 font-bold text-sm hover:border-blue-500 hover:text-blue-600 transition-all">
+                    <button key={item} type="button" className="py-4 px-2 rounded-2xl border border-gray-200 bg-white text-gray-700 font-bold text-sm hover:border-blue-500 hover:text-[#00b4ff] transition-all">
                       {item}
                     </button>
                   ))}
@@ -68,7 +68,7 @@ const QuoteHero = () => {
               {/* 2. Scope & Constraints */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-4">
-                  <label className="text-xs font-black uppercase tracking-widest text-blue-600 block">Estimated Budget</label>
+                  <label className="text-xs font-black uppercase tracking-widest text-[#00b4ff] block">Estimated Budget</label>
                   <select className="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 text-gray-700 font-medium focus:ring-2 focus:ring-blue-500 outline-none">
                     <option>Select Range</option>
                     <option>$5k - $10k</option>
@@ -76,7 +76,7 @@ const QuoteHero = () => {
                   </select>
                 </div>
                 <div className="space-y-4">
-                  <label className="text-xs font-black uppercase tracking-widest text-blue-600 block">Target Timeline</label>
+                  <label className="text-xs font-black uppercase tracking-widest text-[#00b4ff] block">Target Timeline</label>
                   <select className="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 text-gray-700 font-medium focus:ring-2 focus:ring-blue-500 outline-none">
                     <option>Select Timeline</option>
                     <option>1-3 Months</option>
@@ -87,7 +87,7 @@ const QuoteHero = () => {
 
               {/* 3. Description & File Attachment */}
               <div className="space-y-4">
-                <label className="text-xs font-black uppercase tracking-widest text-blue-600 block">Project Description</label>
+                <label className="text-xs font-black uppercase tracking-widest text-[#00b4ff] block">Project Description</label>
                 <textarea 
                   placeholder="Describe your core features..."
                   className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-5 text-gray-700 h-48 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
@@ -103,7 +103,7 @@ const QuoteHero = () => {
                   />
                   <div className="border-2 border-dashed border-gray-200 rounded-2xl p-6 flex flex-col items-center justify-center text-gray-400 bg-white group-hover:border-blue-400 transition-all">
                     {file ? (
-                      <div className="flex items-center gap-3 text-blue-600 font-bold">
+                      <div className="flex items-center gap-3 text-[#00b4ff] font-bold">
                         <Paperclip size={20} />
                         <span>{file.name}</span>
                         <button type="button" onClick={() => setFile(null)} className="text-red-500 hover:text-red-700 z-30">
@@ -112,8 +112,8 @@ const QuoteHero = () => {
                       </div>
                     ) : (
                       <>
-                        <Paperclip size={20} className="mb-2 group-hover:text-blue-500" />
-                        <span className="text-sm font-bold group-hover:text-blue-500 text-center">Attach RFP or Specs (PDF, DOCX up to 10MB)</span>
+                        <Paperclip size={20} className="mb-2 group-hover:text-[#00b4ff]" />
+                        <span className="text-sm font-bold group-hover:text-[#00b4ff] text-center">Attach RFP or Specs (PDF, DOCX up to 10MB)</span>
                       </>
                     )}
                   </div>
@@ -122,7 +122,7 @@ const QuoteHero = () => {
 
               {/* Contact Information */}
               <div className="space-y-6 pt-4 pb-10">
-                <label className="text-xs font-black uppercase tracking-widest text-blue-600 block">4. Contact Information</label>
+                <label className="text-xs font-black uppercase tracking-widest text-[#00b4ff] block">4. Contact Information</label>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <input type="text" placeholder="Full Name" className="w-full bg-white border border-gray-200 rounded-xl px-6 py-4 text-gray-700 focus:ring-2 focus:ring-blue-500 outline-none" />
                   <input type="email" placeholder="Work Email" className="w-full bg-white border border-gray-200 rounded-xl px-6 py-4 text-gray-700 focus:ring-2 focus:ring-blue-500 outline-none" />
@@ -137,7 +137,7 @@ const QuoteHero = () => {
                 </div>
                 <motion.button 
                   whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
-                  className="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white px-12 py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 shadow-xl shadow-blue-100 transition-all"
+                  className="w-full md:w-auto bg-[#00b4ff] hover:bg-blue-700 text-white px-12 py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 shadow-xl shadow-blue-100 transition-all"
                 >
                   Request Quote <Send size={20} />
                 </motion.button>
@@ -151,7 +151,7 @@ const QuoteHero = () => {
                initial="hidden" animate="visible" transition={{ delay: 0.5 }} variants={fadeInUp}
                className="bg-gray-900 rounded-[2.5rem] p-10 text-white relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 blur-3xl rounded-full"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#00b4ff]/20 blur-3xl rounded-full"></div>
               <h4 className="text-xl font-bold mb-8">What You Get</h4>
               <ul className="space-y-8">
                 {[
@@ -160,7 +160,7 @@ const QuoteHero = () => {
                   { id: 3, t: "Precise Investment", d: "Transparent pricing. No hidden fees." }
                 ].map((item) => (
                   <li key={item.id} className="flex gap-4">
-                    <span className="flex-shrink-0 w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-[11px] font-black">{item.id}</span>
+                    <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#00b4ff] flex items-center justify-center text-[11px] font-black">{item.id}</span>
                     <div>
                       <p className="font-bold text-sm tracking-wide">{item.t}</p>
                       <p className="text-xs text-gray-400 mt-2 leading-relaxed">{item.d}</p>

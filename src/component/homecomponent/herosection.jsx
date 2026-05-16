@@ -45,7 +45,7 @@ const Herosection = () => {
             className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left order-1"
           >
             {/* Badge */}
-            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-blue-500 shadow-sm w-max">
+            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-[#00b4ff] shadow-sm w-max">
               <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
               <span className="text-sm font-medium">Custom Software Solutions</span>
             </motion.div>
@@ -54,7 +54,7 @@ const Herosection = () => {
             <div className="mt-6 flex flex-col items-center lg:items-start w-full">
               <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-6xl font-bold mt-6 leading-[1.1] text-gray-900">
                 Expert <br className="hidden sm:block" /> Development for <br className="hidden sm:block" />
-                <span className="text-blue-600">Complex Apps</span>
+                <span className="text-[#00b4ff]">Complex Apps</span>
               </motion.h1>
               
               <motion.hr 
@@ -73,14 +73,14 @@ const Herosection = () => {
             {/* Buttons */}
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row mt-8 gap-5 items-center lg:items-start w-full sm:w-auto">
               <a target="_blank" href="https://calendly.com/axoraweb/30min" rel="noreferrer" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto text-white bg-blue-600 rounded-xl text-lg px-7 py-4 flex items-center justify-center gap-2 hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 active:scale-95">
+                <button className="w-full sm:w-auto text-white bg-[#00b4ff] rounded-xl text-lg px-7 py-4 flex items-center justify-center gap-2 hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 active:scale-95">
                   Book an Intro Call <span className="font-bold">→</span>
                 </button>
               </a>
               <a href="/portfolio">
                 <button className="flex items-center gap-3 group p-2 transition-transform hover:translate-x-1">
-                  <FaPlay className="text-3xl border-2 border-blue-700 p-2 rounded-full text-blue-700 group-hover:bg-blue-700 group-hover:text-white transition-all" />
-                  <span className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors text-sm">View Projects</span>
+                  <FaPlay className="text-3xl border-2 border-blue-700 p-2 rounded-full text-[#00b4ff] group-hover:bg-blue-700 group-hover:text-white transition-all" />
+                  <span className="font-bold text-gray-800 group-hover:text-[#00b4ff] transition-colors text-sm">View Projects</span>
                 </button>
               </a>
             </motion.div>
@@ -116,7 +116,7 @@ const Herosection = () => {
               >
                 {/* Browser UI */}
                 <div className="h-9 bg-[#0B0E14] flex items-center px-5 gap-1.5 border-b border-gray-800/50">
-                  <div className="w-2.5 h-2.5 bg-blue-600 rounded-full"></div>
+                  <div className="w-2.5 h-2.5 bg-[#00b4ff] rounded-full"></div>
                   <div className="w-2.5 h-2.5 bg-yellow-500 rounded-full"></div>
                   <div className="w-2.5 h-2.5 bg-[#27C93F] rounded-full"></div>
                   <div className="flex-1 flex justify-center text-[8px] text-gray-500">dashboard.axoraweb.com</div>
@@ -125,8 +125,8 @@ const Herosection = () => {
                 <div className="flex flex-1 min-h-[340px] sm:min-h-[400px]">
                   {/* Sidebar */}
                   <div className="w-[65px] sm:w-[150px] bg-[#05070A] border-r border-gray-800/50 p-4 flex flex-col items-center sm:items-start gap-8">
-                    <div className="w-6 h-6 bg-blue-600 rounded-md"></div>
-                    <div className="flex items-center gap-3 bg-blue-900/20 text-blue-500 p-2.5 rounded-xl border border-blue-800/30 w-full">
+                    <div className="w-6 h-6 bg-[#00b4ff] rounded-md"></div>
+                    <div className="flex items-center gap-3 bg-blue-900/20 text-[#00b4ff] p-2.5 rounded-xl border border-blue-800/30 w-full">
                       <FiGrid className="text-xl" />
                       <span className="hidden sm:block text-xs font-semibold">Dashboard</span>
                     </div>
@@ -163,7 +163,7 @@ const Herosection = () => {
                       {/* Active */}
                       <div className="flex justify-between items-center">
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded bg-blue-900/30 flex items-center justify-center text-blue-500 text-[10px] font-bold">A</div>
+                          <div className="w-8 h-8 rounded bg-blue-900/30 flex items-center justify-center text-[#00b4ff] text-[10px] font-bold">A</div>
                           <div className="space-y-1.5">
                             <div className="w-24 h-1.5 bg-gray-300 rounded-full"></div>
                             <div className="w-14 h-1 bg-gray-700 rounded-full"></div>
@@ -203,7 +203,7 @@ const Herosection = () => {
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                   className="bg-white p-3 sm:p-4 rounded-2xl shadow-2xl border border-gray-100 flex items-center gap-3"
                 >
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-600">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-blue-50 rounded-full flex items-center justify-center text-[#00b4ff]">
                     <FiZap className="text-xl sm:text-2xl" />
                   </div>
                   <div>

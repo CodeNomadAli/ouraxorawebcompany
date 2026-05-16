@@ -96,13 +96,13 @@ const DeliveryRoadmap = () => {
                 className="flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group"
               >
                 {/* Step Number Circle */}
-                <div className="w-20 h-20 rounded-full bg-white border-2 border-gray-100 flex items-center justify-center text-2xl font-black text-gray-900 mb-0 lg:mb-6 group-hover:border-blue-600 group-hover:text-blue-600 transition-all duration-500 shadow-sm group-hover:shadow-xl group-hover:shadow-blue-100 relative bg-white shrink-0 z-10">
+                <div className="w-20 h-20 rounded-full bg-white border-2 border-gray-100 flex items-center justify-center text-2xl font-black text-gray-900 mb-0 lg:mb-6 group-hover:border-blue-600 group-hover:text-[#00b4ff] transition-all duration-500 shadow-sm group-hover:shadow-xl group-hover:shadow-blue-100 relative bg-white shrink-0 z-10">
                    {step.number}
                 </div>
 
                 {/* Text Content */}
                 <div className="ml-8 lg:ml-0">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#00b4ff] transition-colors">
                     {step.title}
                   </h3>
                   <p className="text-gray-500 text-sm leading-relaxed max-w-[200px] lg:mx-auto">

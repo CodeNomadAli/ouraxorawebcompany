@@ -60,7 +60,7 @@ const Softbulid = () => {
 
             <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-bold mt-8 leading-tight">
               Software Built for <br />
-              <span className="text-blue-600">Business Scale</span>
+              <span className="text-[#00b4ff]">Business Scale</span>
             </motion.h1>
 
             <motion.hr 
@@ -79,7 +79,7 @@ const Softbulid = () => {
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mt-8">
               <Link to="/qoute">
-                <button className="bg-blue-600 text-white rounded-xl text-lg px-6 py-3 hover:bg-blue-500 transition-all flex items-center shadow-lg active:scale-95">
+                <button className="bg-[#00b4ff] text-white rounded-xl text-lg px-6 py-3 hover:bg-blue-500 transition-all flex items-center shadow-lg active:scale-95">
                   Start Your Project <span className="ml-2 font-bold">→</span>
                 </button>
               </Link>

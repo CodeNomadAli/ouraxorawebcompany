@@ -40,14 +40,14 @@ const Cardweb = () => {
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.2, ...premiumTransition }}
-            className="inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-blue-500 shadow-sm"
+            className="inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-[#00b4ff] shadow-sm"
           >
-            <span className="w-2 h-2 bg-blue-800 rounded-full"></span>
+            <span className="w-2 h-2 bg-[#00b4ff] rounded-full"></span>
             <span className="text-xs font-medium uppercase tracking-wider">Pricing Plans</span>
           </motion.div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold py-5 text-gray-900 leading-tight">
-            Transparent Development <span className="text-blue-600">Packages</span>
+            Transparent Development <span className="text-[#00b4ff]">Packages</span>
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl max-w-3xl text-gray-600 leading-relaxed">
@@ -78,7 +78,7 @@ const Cardweb = () => {
               <div className="space-y-4 mt-6">
                 {["Single Long-Scroll Page", "Copywriting Assistance", "Contact Form Integration", "1 Week Turnaround"].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <FaCheck className="w-4 h-4 text-blue-500 mt-1 shrink-0" />
+                    <FaCheck className="w-4 h-4 text-[#00b4ff] mt-1 shrink-0" />
                     <p className="text-sm text-gray-600 font-medium">{item}</p>
                   </div>
                 ))}
@@ -87,7 +87,7 @@ const Cardweb = () => {
 
             <motion.button 
               whileTap={{ scale: 0.95 }}
-              className="w-full bg-blue-50 group-hover:bg-blue-600 group-hover:text-white text-blue-700 font-bold rounded-2xl py-4 mt-8 transition-all"
+              className="w-full bg-blue-50 group-hover:bg-[#00b4ff] group-hover:text-white text-[#00b4ff] font-bold rounded-2xl py-4 mt-8 transition-all"
             >
               View Pricing
             </motion.button>
@@ -99,7 +99,7 @@ const Cardweb = () => {
             whileHover={{ y: -10 }}
             className="w-full min-h-[500px] p-8 border-2 rounded-[2rem] border-blue-500 bg-white shadow-2xl relative flex flex-col justify-between lg:scale-105 z-10"
           >
-            <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">Most Popular</span>
+            <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00b4ff] text-white px-5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">Most Popular</span>
             <div>
               <h1 className="font-bold text-xl text-gray-900">Corporate Website</h1>
               <p className="text-sm text-gray-400 py-3 font-medium">Full brand presence for businesses.</p>
@@ -108,7 +108,7 @@ const Cardweb = () => {
               <div className="space-y-4 mt-6">
                 {["5-8 Custom Pages", "CMS Implementation", "Basic On-Page SEO", "Blog / News Section", "Google Analytics Setup"].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <FaCheck className="w-4 h-4 text-blue-500 mt-1 shrink-0" />
+                    <FaCheck className="w-4 h-4 text-[#00b4ff] mt-1 shrink-0" />
                     <p className="text-sm text-gray-800 font-bold">{item}</p>
                   </div>
                 ))}
@@ -117,7 +117,7 @@ const Cardweb = () => {
 
             <motion.button 
               whileTap={{ scale: 0.95 }}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl py-4 mt-8 transition-all shadow-xl shadow-blue-200"
+              className="w-full bg-[#00b4ff] hover:bg-blue-700 text-white font-bold rounded-2xl py-4 mt-8 transition-all shadow-xl shadow-blue-200"
             >
               Select Package
             </motion.button>
@@ -137,7 +137,7 @@ const Cardweb = () => {
               <div className="space-y-4 mt-6">
                 {["E-commerce Functionality", "User Accounts / Logins", "3rd Party API Integrations", "Advanced Search & Filtering"].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <FaCheck className="w-4 h-4 text-blue-500 mt-1 shrink-0" />
+                    <FaCheck className="w-4 h-4 text-[#00b4ff] mt-1 shrink-0" />
                     <p className="text-sm text-gray-600 font-medium">{item}</p>
                   </div>
                 ))}

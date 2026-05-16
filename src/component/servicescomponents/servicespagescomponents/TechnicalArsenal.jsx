@@ -45,7 +45,7 @@ const TechnicalArsenal = () => {
               onClick={() => setActiveTab(tab)}
               className={`px-6 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all duration-300 border ${
                 activeTab === tab
-                  ? "bg-blue-600 text-white border-blue-600 shadow-lg shadow-blue-200"
+                  ? "bg-[#00b4ff] text-white border-blue-600 shadow-lg shadow-blue-200"
                   : "bg-gray-100 text-gray-500 border-gray-200 hover:bg-gray-200"
               }`}
             >
@@ -74,8 +74,8 @@ const TechnicalArsenal = () => {
                   className="bg-gray-100 border border-gray-200 rounded-2xl p-8 flex flex-col items-center justify-center group hover:border-blue-500 hover:bg-white hover:shadow-2xl hover:shadow-blue-100/50 transition-all duration-500"
                 >
                   {/* Blue Dot */}
-                  <div className="w-2.5 h-2.5 bg-blue-600 rounded-full mb-4 shadow-[0_0_12px_rgba(37,99,235,0.4)] transition-transform group-hover:scale-125" />
-                  <span className="text-gray-900 font-bold text-sm md:text-base tracking-wide group-hover:text-blue-600 transition-colors">
+                  <div className="w-2.5 h-2.5 bg-[#00b4ff] rounded-full mb-4 shadow-[0_0_12px_rgba(37,99,235,0.4)] transition-transform group-hover:scale-125" />
+                  <span className="text-gray-900 font-bold text-sm md:text-base tracking-wide group-hover:text-[#00b4ff] transition-colors">
                     {tech}
                   </span>
                 </motion.div>
@@ -95,7 +95,7 @@ const TechnicalArsenal = () => {
           <div className="absolute -top-24 -left-24 w-64 h-64 bg-blue-100/40 rounded-full blur-3xl pointer-events-none" />
           
           <h3 className="text-4xl md:text-5xl font-black text-gray-800 mb-6 tracking-tighter relative z-10">
-            Your Vision, Our <span className="text-blue-600">Engineering.</span>
+            Your Vision, Our <span className="text-[#00b4ff]">Engineering.</span>
           </h3>
           <p className="text-gray-500 text-sm md:text-lg mb-10 max-w-2xl mx-auto font-medium relative z-10">
             Stop struggling with off-the-shelf tools. Let's build exactly what your business needs to grow.
@@ -104,7 +104,7 @@ const TechnicalArsenal = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-2xl font-bold text-lg shadow-xl shadow-blue-200 transition-all relative z-10"
+            className="bg-[#00b4ff] hover:bg-blue-700 text-white px-10 py-4 rounded-2xl font-bold text-lg shadow-xl shadow-blue-200 transition-all relative z-10"
           >
             Get a Fixed-Price Proposal
           </motion.button>

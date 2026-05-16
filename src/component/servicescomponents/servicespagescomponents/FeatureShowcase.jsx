@@ -46,7 +46,7 @@ const FeatureShowcase = () => {
             variants={fadeInUp}
             className="order-2 lg:order-2 space-y-6"
           >
-            <p className="text-blue-600 font-bold text-xs uppercase tracking-[0.3em]">Core Expertise</p>
+            <p className="text-[#00b4ff] font-bold text-xs uppercase tracking-[0.3em]">Core Expertise</p>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-800 tracking-tight leading-tight">
               Custom Software Architecture
             </h2>
@@ -57,7 +57,7 @@ const FeatureShowcase = () => {
               {["Enterprise Resource Planning (ERP)", "SaaS Product Development (MVP to Scale)", "Legacy System Modernization"].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 font-bold text-gray-800">
                   <div className="bg-blue-100 p-1 rounded-full">
-                    <Check className="w-4 h-4 text-blue-600" />
+                    <Check className="w-4 h-4 text-[#00b4ff]" />
                   </div>
                   {item}
                 </li>
@@ -75,7 +75,7 @@ const FeatureShowcase = () => {
             variants={fadeInUp}
             className="order-2 lg:order-1 space-y-6"
           >
-            <p className="text-blue-600 font-bold text-xs uppercase tracking-[0.3em]">Innovation</p>
+            <p className="text-[#00b4ff] font-bold text-xs uppercase tracking-[0.3em]">Innovation</p>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-800 tracking-tight leading-tight">
               Artificial Intelligence & Integration
             </h2>
@@ -84,14 +84,14 @@ const FeatureShowcase = () => {
             </p>
             <div className="space-y-6 pt-4">
               <div className="flex gap-4 p-4 rounded-2xl border border-gray-100 bg-gray-50 hover:border-blue-200 transition-colors">
-                <Cpu className="text-blue-600 shrink-0" size={28} />
+                <Cpu className="text-[#00b4ff] shrink-0" size={28} />
                 <div>
                   <h4 className="font-bold text-gray-900">Generative AI Integration</h4>
                   <p className="text-sm text-gray-500">OpenAI / Claude API implementation for text & image generation.</p>
                 </div>
               </div>
               <div className="flex gap-4 p-4 rounded-2xl border border-gray-100 bg-gray-50 hover:border-blue-200 transition-colors">
-                <Globe className="text-blue-600 shrink-0" size={28} />
+                <Globe className="text-[#00b4ff] shrink-0" size={28} />
                 <div>
                   <h4 className="font-bold text-gray-900">Predictive Analytics</h4>
                   <p className="text-sm text-gray-500">Turn historical data into future actionable insights.</p>
@@ -134,7 +134,7 @@ const FeatureShowcase = () => {
             variants={fadeInUp}
             className="order-2 space-y-6"
           >
-            <p className="text-blue-600 font-bold text-xs uppercase tracking-[0.3em]">Experience</p>
+            <p className="text-[#00b4ff] font-bold text-xs uppercase tracking-[0.3em]">Experience</p>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-800 tracking-tight leading-tight">
               Mobile Apps & UI/UX Design
             </h2>
@@ -143,12 +143,12 @@ const FeatureShowcase = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
               <div className="p-5 rounded-2xl border border-gray-200 bg-white shadow-sm group hover:border-blue-500 transition-all">
-                <Smartphone className="text-blue-600 mb-3 group-hover:scale-110 transition-transform" />
+                <Smartphone className="text-[#00b4ff] mb-3 group-hover:scale-110 transition-transform" />
                 <h4 className="font-bold text-gray-900">Cross-Platform</h4>
                 <p className="text-xs text-gray-500 mt-1">React Native / Flutter apps that work on iOS & Android.</p>
               </div>
               <div className="p-5 rounded-2xl border border-gray-200 bg-white shadow-sm group hover:border-blue-500 transition-all">
-                <PenTool className="text-blue-600 mb-3 group-hover:scale-110 transition-transform" />
+                <PenTool className="text-[#00b4ff] mb-3 group-hover:scale-110 transition-transform" />
                 <h4 className="font-bold text-gray-900">Product Design</h4>
                 <p className="text-xs text-gray-500 mt-1">Wireframing, Prototyping, and Design Systems (Figma).</p>
               </div>

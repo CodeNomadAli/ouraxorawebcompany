@@ -89,13 +89,13 @@ const Wework = () => {
             >
               {[
                 { num: "01", title: "Discovery", desc: "We analyze your SKUs, customer data, and goals." },
-                { num: "02", title: "Strategy & Design", desc: "We meet to discuss scope and strategy.", color: "text-blue-600" },
-                { num: "03", title: "Development", desc: "Coding the store and integrating payment gateways.", color: "text-blue-600" },
+                { num: "02", title: "Strategy & Design", desc: "We meet to discuss scope and strategy.", color: "text-[#00b4ff]" },
+                { num: "03", title: "Development", desc: "Coding the store and integrating payment gateways.", color: "text-[#00b4ff]" },
                 { num: "04", title: "Growth", desc: "Launch, testing, and ongoing revenue optimization.", active: true },
               ].map((step, idx) => (
                 <motion.div key={idx} variants={itemVariants} className="flex flex-col items-center text-center">
                   <div className={`w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold shadow-md mb-6 outline outline-offset-4 outline-white transition-transform hover:scale-110 duration-300 ${
-                    step.active ? "bg-blue-600 text-white" : `${step.color || "text-slate-900"} bg-white border-2 border-slate-100`
+                    step.active ? "bg-[#00b4ff] text-white" : `${step.color || "text-slate-900"} bg-white border-2 border-slate-100`
                   }`}>
                     {step.num}
                   </div>
@@ -169,7 +169,7 @@ const Wework = () => {
                 variants={itemVariants}
                 className="w-full lg:w-[850px] border border-slate-100 rounded-2xl p-6 md:p-8 hover:border-blue-100 hover:shadow-lg transition-all duration-300 bg-white shadow-sm group"
               >
-                <h1 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{faq.q}</h1>
+                <h1 className="text-xl font-bold text-slate-900 group-hover:text-[#00b4ff] transition-colors">{faq.q}</h1>
                 <p className="text-base text-gray-500 mt-3 leading-relaxed">{faq.a}</p>
               </motion.div>
             ))}

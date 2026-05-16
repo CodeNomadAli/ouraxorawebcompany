@@ -42,7 +42,7 @@ const Digitalsection = () => {
         
         {/* Text Content */}
         <div className="w-full lg:flex-1 text-left order-1">
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-200 bg-blue-50 text-blue-800 shadow-sm w-max">
+          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-200 bg-blue-50 text-[#00b4ff] shadow-sm w-max">
             <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
             <span className="text-sm font-medium uppercase tracking-wider">Who We Are</span>
           </motion.div>
@@ -51,7 +51,7 @@ const Digitalsection = () => {
           <div className="mt-7 flex flex-col items-start w-full">
             <motion.h1 variants={itemVariants} className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight text-gray-900">
               Architects of <br className="hidden sm:block" />
-              <span className="text-blue-700">Digital Transformation</span>
+              <span className="text-[#00b4ff]">Digital Transformation</span>
             </motion.h1>
             
             {/* Standard Line Drawing Animation */}
@@ -71,7 +71,7 @@ const Digitalsection = () => {
 
           <motion.div variants={itemVariants} className="mt-10">
             <Link to="/about">
-              <button className="text-white bg-blue-600 rounded-xl text-sm sm:text-base px-7 py-4 flex items-center hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-100 active:scale-95 font-semibold">
+              <button className="text-white bg-[#00b4ff] rounded-xl text-sm sm:text-base px-7 py-4 flex items-center hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-100 active:scale-95 font-semibold">
                 Learn more About us
                 <span className="ml-3 font-bold">→</span>
               </button>

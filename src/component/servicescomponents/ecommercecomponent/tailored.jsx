@@ -78,7 +78,7 @@ const Tailored = () => {
             transition={premiumTransition}
             className="mt-4 md:mt-0"
           >
-            <a href="/" className="text-blue-600 font-semibold hover:underline group flex items-center gap-1">
+            <a href="/" className="text-[#00b4ff] font-semibold hover:underline group flex items-center gap-1">
               Learn More <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>
           </motion.div>
@@ -108,7 +108,7 @@ const Tailored = () => {
                 className="w-full group bg-white shadow-sm hover:shadow-2xl p-8 border border-gray-100 rounded-xl transition-all duration-300 hover:-translate-y-2"
               >
                 <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider">{card.label}</h3>
-                <h1 className="text-2xl font-bold py-3 group-hover:text-blue-600 transition-colors">{card.title}</h1>
+                <h1 className="text-2xl font-bold py-3 group-hover:text-[#00b4ff] transition-colors">{card.title}</h1>
                 <p className="text-sm text-gray-500 leading-relaxed">
                   {card.desc}
                 </p>
@@ -151,7 +151,7 @@ const Tailored = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * bIdx }}
-                className="hover:text-blue-600 cursor-default transition-colors"
+                className="hover:text-[#00b4ff] cursor-default transition-colors"
               >
                 {brand}
               </motion.h4>

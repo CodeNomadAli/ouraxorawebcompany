@@ -55,7 +55,7 @@ const Architecture = () => {
           className="text-3xl sm:text-4xl md:text-6xl font-bold py-6 sm:py-8 md:py-8 leading-snug sm:leading-snug md:leading-[1.1]"
         >
           We Are The Architects of <br />
-          <span className="text-blue-700">Digital Intelligence</span>
+          <span className="text-[#00b4ff]">Digital Intelligence</span>
         </motion.h1>
 
         {/* Description */}
@@ -80,11 +80,11 @@ const Architecture = () => {
           variants={itemVariants}
           className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-12 text-gray-400 font-bold text-base sm:text-lg md:text-xl grayscale opacity-70"
         >
-          <h4 className="hover:grayscale-0 transition-all cursor-default duration-500 hover:text-blue-600">Google Cloud</h4>
+          <h4 className="hover:grayscale-0 transition-all cursor-default duration-500 hover:text-[#00b4ff]">Google Cloud</h4>
           <h4 className="hover:grayscale-0 transition-all cursor-default duration-500 hover:text-orange-500">AWS Partner</h4>
           <h4 className="hover:grayscale-0 transition-all cursor-default duration-500 hover:text-green-600">Shopify Plus</h4>
           <h4 className="hover:grayscale-0 transition-all cursor-default duration-500 hover:text-indigo-500">Stripe</h4>
-          <h4 className="hover:grayscale-0 transition-all cursor-default duration-500 hover:text-blue-400">Microsoft Azure</h4>
+          <h4 className="hover:grayscale-0 transition-all cursor-default duration-500 hover:text-[#00b4ff]">Microsoft Azure</h4>
         </motion.div>
       </motion.div>
     </section>

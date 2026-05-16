@@ -78,11 +78,11 @@ const Trusted = () => {
               whileHover={{ y: -5 }}
               className="w-full border text-center p-8 rounded-2xl shadow-xl shadow-gray-200/50 bg-white border-gray-100 transition-all"
             >
-              <FaMailBulk className="text-blue-500 w-10 h-10 mx-auto" />
+              <FaMailBulk className="text-[#00b4ff] w-10 h-10 mx-auto" />
               <h1 className="text-xl font-bold pt-6 text-gray-900">Email Us</h1>
               <p className="text-sm text-gray-500 py-3">Best for detailed RFPs</p>
               <a href="mailto:axoraweb@gmail.com" className="inline-block">
-                <h1 className="text-blue-600 font-bold hover:underline">
+                <h1 className="text-[#00b4ff] font-bold hover:underline">
                   axoraweb@gmail.com
                 </h1>
               </a>
@@ -94,11 +94,11 @@ const Trusted = () => {
               whileHover={{ y: -5 }}
               className="w-full border text-center p-8 rounded-2xl shadow-xl shadow-gray-200/50 bg-white border-gray-100 transition-all"
             >
-              <FaPhone className="text-blue-500 w-10 h-10 mx-auto" />
+              <FaPhone className="text-[#00b4ff] w-10 h-10 mx-auto" />
               <h1 className="text-xl font-bold pt-6 text-gray-900">Call Us</h1>
               <p className="text-sm text-gray-500 py-3">Mon-Fri from 8am to 5pm</p>
               <div className="space-y-2">
-                <a href="tel:+923245237429" className="block text-blue-600 font-bold hover:underline">
+                <a href="tel:+923245237429" className="block text-[#00b4ff] font-bold hover:underline">
                   +92 324 5237429
                 </a>
               
@@ -111,7 +111,7 @@ const Trusted = () => {
               whileHover={{ y: -5 }}
               className="w-full md:col-span-2 lg:col-span-1 border text-center p-8 rounded-2xl shadow-xl shadow-gray-200/50 bg-white border-gray-100 transition-all"
             >
-              <FaMap className="text-blue-500 w-10 h-10 mx-auto" />
+              <FaMap className="text-[#00b4ff] w-10 h-10 mx-auto" />
               <h1 className="text-xl font-bold pt-6 text-gray-900">Visit HQ</h1>
               <p className="text-sm text-gray-500 py-3">Software House</p>
               <h1 className="text-gray-700 font-bold">
@@ -157,7 +157,7 @@ const Trusted = () => {
                 { id: 1, title: "Internal Review", desc: "Our tech leads analyze your requirements.", color: "bg-[#0B1221]" },
                 { id: 2, title: "Discovery Call", desc: "We meet to discuss scope and strategy.", color: "bg-[#0B1221]" },
                 { id: 3, title: "Proposal", desc: "You receive a timeline and fixed-price quote.", color: "bg-[#0B1221]" },
-                { id: 4, title: "Kickoff", desc: "We sign the contract and start coding.", color: "bg-blue-600" }
+                { id: 4, title: "Kickoff", desc: "We sign the contract and start coding.", color: "bg-[#00b4ff]" }
               ].map((step) => (
                 <motion.div 
                   key={step.id} 

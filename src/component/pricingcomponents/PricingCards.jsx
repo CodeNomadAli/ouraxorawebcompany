@@ -92,7 +92,7 @@ const PricingCards = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1, duration: 0.5 }}
-                  className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest shadow-md"
+                  className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#00b4ff] text-white px-4 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest shadow-md"
                 >
                   Most Popular
                 </motion.span>
@@ -111,7 +111,7 @@ const PricingCards = () => {
                   <h2 className={`text-3xl md:text-4xl font-bold ${plan.isFeatured ? "text-white" : "text-gray-900"}`}>
                     ${plan.priceUSD}
                   </h2>
-                  <span className={`text-[10px] md:text-xs font-bold uppercase px-1.5 py-0.5 rounded bg-opacity-10 ${plan.isFeatured ? "text-blue-400 bg-blue-400" : "text-blue-600 bg-blue-600"
+                  <span className={`text-[10px] md:text-xs font-bold uppercase px-1.5 py-0.5 rounded bg-opacity-10 ${plan.isFeatured ? "text-[#00b4ff] bg-[#00b4ff]" : "text-[#00b4ff] bg-[#00b4ff]"
                     }`}>
                     ({plan.pricePKR})
                   </span>
@@ -128,7 +128,7 @@ const PricingCards = () => {
                       transition={{ delay: 0.3 + (i * 0.1), duration: 0.5 }}
                       className="flex items-center gap-3"
                     >
-                      <FaCheck className={`w-3 h-3 shrink-0 ${plan.isFeatured ? "text-blue-500" : "text-green-500"}`} />
+                      <FaCheck className={`w-3 h-3 shrink-0 ${plan.isFeatured ? "text-[#00b4ff]" : "text-green-500"}`} />
                       <p className={`text-xs md:text-sm font-medium ${plan.isFeatured ? "text-gray-300" : "text-gray-600"}`}>
                         {feature}
                       </p>
@@ -140,7 +140,7 @@ const PricingCards = () => {
               <motion.button 
                 whileTap={{ scale: 0.95 }}
                 className={`w-full mt-8 py-3.5 rounded-xl font-bold text-base transition-all ${plan.isFeatured
-                  ? "bg-blue-600 text-white hover:bg-blue-700"
+                  ? "bg-[#00b4ff] text-white hover:bg-blue-700"
                   : "bg-gray-50 text-gray-900 border border-gray-200 hover:bg-gray-100"
                 }`}>
                 Select {plan.name.split(" ")[0]}

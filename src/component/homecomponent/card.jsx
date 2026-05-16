@@ -97,7 +97,7 @@ const Card = () => {
               className="border border-gray-200 px-6 py-8 rounded-[2rem] w-full group transition-all duration-300 hover:border-blue-700 hover:bg-gray-50 hover:shadow-2xl flex flex-col h-full"
             >
               {/* Icon Box */}
-              <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:bg-blue-400 mb-6">
+              <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:bg-[#00b4ff] mb-6">
                 {service.icon}
               </div>
 
@@ -110,7 +110,7 @@ const Card = () => {
                 <div className="space-y-3">
                   {service.features.map((feature, i) => (
                     <div key={i} className="flex items-start gap-4">
-                      <FaCheck className="w-4 h-4 text-blue-600 mt-1 shrink-0" />
+                      <FaCheck className="w-4 h-4 text-[#00b4ff] mt-1 shrink-0" />
                       <p className="text-sm text-gray-500 font-bold">{feature}</p>
                     </div>
                   ))}
@@ -120,10 +120,10 @@ const Card = () => {
               {/* Portfolio Link added here */}
               <div className="mt-8">
                 <Link to="/portfolio" className="flex items-center gap-2 group/btn inline-flex">
-                  <span className="text-blue-500 font-bold group-hover/btn:underline transition-all">
+                  <span className="text-[#00b4ff] font-bold group-hover/btn:underline transition-all">
                     Learn more
                   </span>
-                  <span className="text-blue-600 font-bold transition-transform group-hover/btn:translate-x-2">
+                  <span className="text-[#00b4ff] font-bold transition-transform group-hover/btn:translate-x-2">
                     →
                   </span>
                 </Link>
@@ -141,7 +141,7 @@ const Card = () => {
           className="w-full flex justify-center py-10 mt-14"
         >
           <Link to="/services">
-            <button className="flex items-center text-white bg-blue-600 rounded-xl text-lg px-8 py-4 hover:bg-blue-800 transition-all duration-300 shadow-lg active:scale-95 font-semibold">
+            <button className="flex items-center text-white bg-[#00b4ff] rounded-xl text-lg px-8 py-4 hover:bg-[#00b4ff] transition-all duration-300 shadow-lg active:scale-95 font-semibold">
               View All Services
               <span className="ml-3 font-bold">→</span>
             </button>

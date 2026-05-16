@@ -49,15 +49,15 @@ const Imgcard = () => {
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, ...premiumTransition }}
-              className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full border border-blue-400/30 bg-blue-800/50 text-blue-300"
+              className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full border border-blue-400/30 bg-[#00b4ff]/50 text-blue-300"
             >
-              <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+              <span className="w-2 h-2 bg-[#00b4ff] rounded-full animate-pulse"></span>
               <span className="text-[10px] font-bold uppercase tracking-wider">Our Portfolio</span>
             </motion.div>
             <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
-              Selected <span className="text-blue-400">Work</span>
+              Selected <span className="text-[#00b4ff]">Work</span>
             </h1>
-            <p className="font-medium text-blue-100/70 mt-3 text-base md:text-lg">
+            <p className="font-medium text-[#00b4ff]/70 mt-3 text-base md:text-lg">
               High-performance solutions we've engineered for global clients.
             </p>
           </div>
@@ -69,7 +69,7 @@ const Imgcard = () => {
           >
             <a
               href="#"
-              className="group flex items-center gap-2 text-white font-bold bg-blue-800/40 px-6 py-3 rounded-xl border border-blue-700/50 hover:bg-blue-700 transition-all shadow-lg"
+              className="group flex items-center gap-2 text-white font-bold bg-[#00b4ff]/40 px-6 py-3 rounded-xl border border-blue-700/50 hover:bg-blue-700 transition-all shadow-lg"
             >
               View Full Portfolio 
               <span className="group-hover:translate-x-1 transition-transform">→</span>

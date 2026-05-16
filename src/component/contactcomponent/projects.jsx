@@ -120,7 +120,7 @@ const Projects = () => {
               Let's Engineer <br /> Your
             </h1>
 
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold py-2 text-blue-600">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold py-2 text-[#00b4ff]">
               Next Breakthrough
             </h2>
 
@@ -135,7 +135,7 @@ const Projects = () => {
                 transition={{ delay: 0.3, ...premiumTransition }}
                 className="flex gap-4 items-start"
               >
-                <FaClock className="text-blue-500 w-10 h-10 mt-1 flex-shrink-0" />
+                <FaClock className="text-[#00b4ff] w-10 h-10 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-xl font-bold">Response in 24 Hours</h3>
                   <p className="text-sm text-gray-600">
@@ -150,7 +150,7 @@ const Projects = () => {
                 transition={{ delay: 0.5, ...premiumTransition }}
                 className="flex gap-4 items-start"
               >
-                <FaShieldAlt className="text-blue-500 w-10 h-10 mt-1 flex-shrink-0" />
+                <FaShieldAlt className="text-[#00b4ff] w-10 h-10 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-xl font-bold">Mutual NDA Included</h3>
                   <p className="text-sm text-gray-600">
@@ -262,7 +262,7 @@ const Projects = () => {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 disabled={loading}
-                className="w-full bg-blue-600 text-white font-bold py-5 px-6 rounded-2xl hover:bg-blue-700 transition-all duration-300 disabled:opacity-60 shadow-lg shadow-blue-200"
+                className="w-full bg-[#00b4ff] text-white font-bold py-5 px-6 rounded-2xl hover:bg-blue-700 transition-all duration-300 disabled:opacity-60 shadow-lg shadow-blue-200"
               >
                 {loading ? "Sending..." : "Request Quote"}
               </motion.button>

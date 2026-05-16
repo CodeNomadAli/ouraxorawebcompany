@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import {FaFacebook, FaEnvelope, FaLinkedin, FaGithub} from "react-icons/fa";
 const Footer = () => {
   return (
-    <section className="w-full bg-blue-500 border  text-white pt-24 pb-5 font-sans">
+    <section className="w-full bg-gray-200
+ border  text-black pt-24 pb-5 font-sans">
       {/* Container - Balanced for 768px (md) and 1700px screens */}
       <div className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-6 md:px-12 lg:px-8">
 
@@ -13,7 +14,7 @@ const Footer = () => {
           {/* Left Part: Logo & Description */}
           <div className="lg:w-1/3">
             <div className="flex gap-3 items-center">
-              <img src="/logo.png" alt="Axoraweb Logo" className=" h-16 w-20 " />
+              <img src="/logo.png" alt="Axoraweb Logo" className=" h-28 w-32 " />
             </div>
             {/* Original py-6 spacing restored for text gap */}
             <p className="text-sm text-white-400 py-6 leading-relaxed">
@@ -29,7 +30,7 @@ const Footer = () => {
                 href="https://www.facebook.com/profile.php?id=61558541441930"
                 className="group"
               >
-                <FaFacebook className="text-2xl hover:text-blue-400 text-white-400  group-hover:text-blue-900 transition-colors duration-300" />
+                <FaFacebook className="text-2xl hover:text-[#00b4ff] text-white-400  group-hover:text-[#00b4ff] transition-colors duration-300" />
               </a>
 
               {/* LinkedIn */}
@@ -39,7 +40,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/axorawebsolutionsdotcom/"
                 className="group"
               >
-                <FaLinkedin className="text-2xl text-white-400  group-hover:text-blue-900 transition-colors duration-300" />
+                <FaLinkedin className="text-2xl text-white-400  group-hover:text-[#00b4ff] transition-colors duration-300" />
               </a>
 
               {/* GitHub */}
@@ -49,12 +50,12 @@ const Footer = () => {
                 href="https://github.com/your-username"
                 className="group"
               >
-                <FaGithub className="text-2xl text-blue-400 group-hover:text-white transition-colors duration-300" />
+                <FaGithub className="text-2xl text-[#00b4ff] group-hover:text-white transition-colors duration-300" />
               </a> */}
 
               {/* Email */}
               <a href="mailto:axoraweb@gmail.com" className="group">
-                <FaEnvelope className="text-2xl text-white-400  group-hover:text-blue-900 transition-colors duration-300" />
+                <FaEnvelope className="text-2xl text-white-400  group-hover:text-[#00b4ff] transition-colors duration-300" />
               </a>
             </div>
           </div>
@@ -66,46 +67,46 @@ const Footer = () => {
             <div>
               <h3 className="text-sm font-bold mb-4 uppercase tracking-wider">Solutions</h3>
               {/* Original py-1 spacing for link gap */}
-              <p className="text-white-400 py-1 text-sm hover:text-blue-500 cursor-pointer transition">Web Development</p>
-              <p className="text-white-400 py-1 text-sm hover:text-blue-500 cursor-pointer transition">Mobile Apps</p>
-              <p className="text-white-400 py-1 text-sm hover:text-blue-500 cursor-pointer transition">UI/UX Design</p>
-              <p className="text-white-400 py-1 text-sm hover:text-blue-500 cursor-pointer transition">Cloud DevOps</p>
+              <p className="text-white-400 py-1 text-sm hover:text-[#00b4ff] cursor-pointer transition">Web Development</p>
+              <p className="text-white-400 py-1 text-sm hover:text-[#00b4ff] cursor-pointer transition">Mobile Apps</p>
+              <p className="text-white-400 py-1 text-sm hover:text-[#00b4ff] cursor-pointer transition">UI/UX Design</p>
+              <p className="text-white-400 py-1 text-sm hover:text-[#00b4ff] cursor-pointer transition">Cloud DevOps</p>
             </div>
 
             {/* Col 2: Contact */}
             <div>
               <h3 className="text-sm font-bold mb-4 uppercase tracking-wider">Contact</h3>
               <Link to="/contact">
-                <p className="text-white py-1 text-sm hover:text-blue-500 cursor-pointer transition">Contact</p>
+                <p className="text-black py-1 text-sm hover:text-[#00b4ff] cursor-pointer transition">Contact</p>
               </Link>
               <a target="_blank" rel="noopener noreferrer" href="https://wa.me/923245237429?text=Hello%20Axoraweb%20Solutions">
-                <p className="text-white-400 py-1 text-[13px] hover:text-blue-500 cursor-pointer transition">+92 324 5237429</p>
+                <p className="text-white-400 py-1 text-[13px] hover:text-[#00b4ff] cursor-pointer transition">+92 324 5237429</p>
               </a>
              
               <a href="mailto:axoraweb@gmail.com">
-                <p className="text-white-400 py-1 text-[13px] hover:text-blue-500 cursor-pointer transition">axoraweb@gmail.com</p>
+                <p className="text-white-400 py-1 text-[13px] hover:text-[#00b4ff] cursor-pointer transition">axoraweb@gmail.com</p>
               </a>
             </div>
 
             {/* Col 3: Company */}
             <div>
               <h3 className="text-sm font-bold mb-4 uppercase tracking-wider">Company</h3>
-              <Link to="/about"><p className="text-white-400 py-1 text-sm hover:text-blue-500 cursor-pointer transition">About Us</p></Link>
-              <Link to="/article"><p className="text-white-400 py-1 text-sm hover:text-blue-500 cursor-pointer transition">Articles</p></Link>
-              <Link to="/portfolio"><p className="text-white-400 py-1 text-sm hover:text-blue-500 cursor-pointer transition">Portfolio</p></Link>
+              <Link to="/about"><p className="text-white-400 py-1 text-sm hover:text-[#00b4ff] cursor-pointer transition">About Us</p></Link>
+              <Link to="/article"><p className="text-white-400 py-1 text-sm hover:text-[#00b4ff] cursor-pointer transition">Articles</p></Link>
+              <Link to="/portfolio"><p className="text-white-400 py-1 text-sm hover:text-[#00b4ff] cursor-pointer transition">Portfolio</p></Link>
             </div>
 
             {/* Col 4: Legal */}
             <div>
               <h3 className="text-sm font-bold mb-4 uppercase tracking-wider">Legal</h3>
-              <p className="text-white-400 py-1 text-sm hover:text-blue-500 cursor-pointer transition">Privacy Policy</p>
-              <p className="text-white-400 py-1 text-sm hover:text-blue-500 cursor-pointer transition">Terms & Conditions</p>
+              <p className="text-white-400 py-1 text-sm hover:text-[#00b4ff] cursor-pointer transition">Privacy Policy</p>
+              <p className="text-white-400 py-1 text-sm hover:text-[#00b4ff] cursor-pointer transition">Terms & Conditions</p>
             </div>
           </div>
         </div>
 
         {/* Bottom copyright line */}
-        <hr className="mt-16 border--800" />
+        <hr className="mt-16 border-gray-600" />
         <p className="text-sm text-white-500 text-center py-8">
           © 2026 AxoraWeb Solutions. All rights reserved.
         </p>

@@ -12,12 +12,12 @@ const Formsection = () => {
             {/* Left Info Panel */}
             <div className="relative lg:w-[500px] bg-gray-900 p-8 py-12 overflow-hidden">
               <span className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-blue-500 to-transparent"></span>
-              <button className="relative text-blue-600 bg-blue-50 text-sm px-4 py-1 border border-blue-100 rounded-2xl">
+              <button className="relative text-[#00b4ff] bg-blue-50 text-sm px-4 py-1 border border-blue-100 rounded-2xl">
                 Project Inquiry
               </button>
 
               <h1 className="relative text-3xl lg:text-4xl font-bold text-white py-4">
-                Let's architect your <span className="text-blue-500">solution.</span>
+                Let's architect your <span className="text-[#00b4ff]">solution.</span>
               </h1>
 
               <p className="relative text-gray-400 py-2">
@@ -27,7 +27,7 @@ const Formsection = () => {
               {/* Features */}
               <div className="flex gap-3 pt-10 items-start">
                 <div className="w-12 h-10 bg-gray-700 rounded-xl flex items-center justify-center">
-                  <FaCheckCircle className="text-blue-500 w-6 h-6" />
+                  <FaCheckCircle className="text-[#00b4ff] w-6 h-6" />
                 </div>
                 <div>
                   <h1 className="font-bold text-white">NDA Protected</h1>
@@ -37,7 +37,7 @@ const Formsection = () => {
 
               <div className="flex gap-3 pt-6 items-start">
                 <div className="w-12 h-10 bg-gray-700 rounded-xl flex items-center justify-center">
-                  <FaRegMessage className="text-blue-500 w-6 h-6" />
+                  <FaRegMessage className="text-[#00b4ff] w-6 h-6" />
                 </div>
                 <div>
                   <h1 className="font-bold text-white">Fast Response</h1>
@@ -50,8 +50,8 @@ const Formsection = () => {
               <p className="text-sm text-gray-500 pt-6">Direct Contact</p>
 
               <div className="flex items-center gap-3 group pt-2">
-                <FaMailBulk className="text-white group-hover:text-blue-400 w-6 h-6" />
-                <h1 className="text-white text-xl font-bold group-hover:text-blue-400">
+                <FaMailBulk className="text-white group-hover:text-[#00b4ff] w-6 h-6" />
+                <h1 className="text-white text-xl font-bold group-hover:text-[#00b4ff]">
                   axoraweb@gmail.com
                 </h1>
               </div>
@@ -161,7 +161,7 @@ focus:ring-blue-500
                 <div>
                   <button
                     type="submit"
-                    className="w-full bg-blue-500 text-white font-bold py-4 px-4 rounded-lg hover:bg-blue-600 transition-colors"
+                    className="w-full bg-blue-500 text-white font-bold py-4 px-4 rounded-lg hover:bg-[#00b4ff] transition-colors"
                   >
                     Request Quote
                   </button>

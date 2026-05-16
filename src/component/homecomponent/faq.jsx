@@ -27,7 +27,7 @@ const FAQItem = ({ question, answer, index }) => {
         onClick={() => setOpen(!open)}
       >
         <span className="text-base md:text-lg">{question}</span>
-        <span className={`bg-blue-50 text-blue-600 p-2 rounded-full transition-transform duration-500 ${open ? "rotate-180 bg-blue-600 text-white" : ""}`}>
+        <span className={`bg-blue-50 text-[#00b4ff] p-2 rounded-full transition-transform duration-500 ${open ? "rotate-180 bg-[#00b4ff] text-white" : ""}`}>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
           </svg>
@@ -88,13 +88,13 @@ const FAQ = () => {
       >
 
         {/* Badge */}
-        <motion.div variants={headerVariants} className="inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-blue-500 shadow-sm">
-          <span className="w-2 h-2 bg-blue-800 rounded-full animate-pulse"></span>
+        <motion.div variants={headerVariants} className="inline-flex items-center gap-2 mt-4 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-[#00b4ff] shadow-sm">
+          <span className="w-2 h-2 bg-[#00b4ff] rounded-full animate-pulse"></span>
           <span className="text-xs font-medium uppercase tracking-wider">Common Queries</span>
         </motion.div>
 
         <motion.h1 variants={headerVariants} className="text-3xl sm:text-4xl md:text-5xl font-bold py-5 text-gray-900 text-center leading-tight">
-          Frequently Asked <span className="text-blue-600">Questions</span>
+          Frequently Asked <span className="text-[#00b4ff]">Questions</span>
         </motion.h1>
 
         <motion.p variants={headerVariants} className="text-base sm:text-lg md:text-xl max-w-3xl mb-12 text-gray-600 text-center leading-relaxed">
@@ -136,7 +136,7 @@ const FAQ = () => {
         >
           <div className="w-full bg-gray-900 rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-14 flex flex-col md:flex-row items-center md:justify-between gap-6 md:gap-8 shadow-2xl relative overflow-hidden group">
             {/* Decoration */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#00b4ff]/10 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
 
             <div className="text-center md:text-left z-10">
               <h2 className="text-xl md:text-3xl font-bold text-white leading-tight">
@@ -153,7 +153,7 @@ const FAQ = () => {
               className="z-10 w-full md:w-auto"
             >
               <a target="_blank" rel="noreferrer" href="https://calendly.com/axoraweb/30min">
-                <button className="w-full md:w-auto bg-blue-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-xl md:rounded-2xl font-bold text-base md:text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-900/20">
+                <button className="w-full md:w-auto bg-[#00b4ff] text-white px-6 py-3 md:px-8 md:py-4 rounded-xl md:rounded-2xl font-bold text-base md:text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-900/20">
                   Chat with an Expert
                 </button>
               </a>

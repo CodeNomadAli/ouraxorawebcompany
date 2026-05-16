@@ -45,7 +45,7 @@ const Hero = () => {
         >
           <motion.button 
             variants={itemVariants}
-            className="text-blue-600 bg-gray-50 text-sm h-8 px-4 border border-gray-100 rounded-2xl mb-4"
+            className="text-[#00b4ff] bg-gray-50 text-sm h-8 px-4 border border-gray-100 rounded-2xl mb-4"
           >
             🛍️ Enterprise E-Commerce Solutions
           </motion.button>
@@ -55,7 +55,7 @@ const Hero = () => {
             className="text-4xl sm:text-5xl md:text-6xl font-bold py-4"
           >
             Commerce without <br />
-            <span className="text-blue-600">complexity.</span>
+            <span className="text-[#00b4ff]">complexity.</span>
           </motion.h1>
           
           <motion.p 
@@ -68,7 +68,7 @@ const Hero = () => {
           
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-4 py-6">
             <Link to="/contact">
-              <button className="bg-blue-600 text-white py-3 px-6 rounded-2xl hover:bg-blue-500 transition-all w-full sm:w-auto font-medium active:scale-95 shadow-lg shadow-blue-100">
+              <button className="bg-[#00b4ff] text-white py-3 px-6 rounded-2xl hover:bg-blue-500 transition-all w-full sm:w-auto font-medium active:scale-95 shadow-lg shadow-blue-100">
                 Discuss Your Project
               </button>
             </Link>
@@ -95,7 +95,7 @@ const Hero = () => {
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center mb-4 shadow-md"
           >
-            <FaBagShopping className="w-7 h-7 text-blue-500" />
+            <FaBagShopping className="w-7 h-7 text-[#00b4ff]" />
           </motion.div>
           <h1 className="font-bold text-2xl py-2">Your Storefront</h1>
           <p className="text-gray-400">Optimized for Conversion</p>
@@ -114,8 +114,8 @@ const Hero = () => {
           >
             {/* Feature 1 */}
             <motion.div variants={itemVariants} className="text-center group">
-              <div className="bg-white w-12 h-12 rounded-2xl shadow flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition-colors duration-300">
-                <FaBolt className="w-5 h-5 text-blue-500 group-hover:text-white transition-colors" />
+              <div className="bg-white w-12 h-12 rounded-2xl shadow flex items-center justify-center mx-auto mb-4 group-hover:bg-[#00b4ff] transition-colors duration-300">
+                <FaBolt className="w-5 h-5 text-[#00b4ff] group-hover:text-white transition-colors" />
               </div>
               <h1 className="text-xl font-bold py-2">Lightning Fast Performance</h1>
               <p className="text-gray-600 font-medium text-sm sm:text-base leading-relaxed">
@@ -125,8 +125,8 @@ const Hero = () => {
 
             {/* Feature 2 */}
             <motion.div variants={itemVariants} className="text-center group">
-              <div className="bg-white w-12 h-12 rounded-2xl shadow flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition-colors duration-300">
-                <FaCheckCircle className="w-5 h-5 text-blue-500 group-hover:text-white transition-colors" />
+              <div className="bg-white w-12 h-12 rounded-2xl shadow flex items-center justify-center mx-auto mb-4 group-hover:bg-[#00b4ff] transition-colors duration-300">
+                <FaCheckCircle className="w-5 h-5 text-[#00b4ff] group-hover:text-white transition-colors" />
               </div>
               <h1 className="text-xl font-bold py-2">Seamless Integrations</h1>
               <p className="text-gray-600 font-medium text-sm sm:text-base leading-relaxed">
@@ -136,8 +136,8 @@ const Hero = () => {
 
             {/* Feature 3 */}
             <motion.div variants={itemVariants} className="text-center group">
-              <div className="bg-white w-12 h-12 rounded-2xl shadow flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition-colors duration-300">
-                <FaPhone className="w-5 h-5 text-blue-500 group-hover:text-white transition-colors" />
+              <div className="bg-white w-12 h-12 rounded-2xl shadow flex items-center justify-center mx-auto mb-4 group-hover:bg-[#00b4ff] transition-colors duration-300">
+                <FaPhone className="w-5 h-5 text-[#00b4ff] group-hover:text-white transition-colors" />
               </div>
               <h1 className="text-xl font-bold py-2">Mobile-First Design</h1>
               <p className="text-gray-600 font-medium text-sm sm:text-base leading-relaxed">

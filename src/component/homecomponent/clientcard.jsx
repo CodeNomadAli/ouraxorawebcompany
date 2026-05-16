@@ -47,7 +47,7 @@ const Clientcard = () => {
               dangerouslySetInnerHTML={{ __html: client.testimonial }}
             />
             <div className="flex py-5 md:py-7 gap-5 items-center">
-              <div className="bg-blue-100 text-blue-500 w-12 h-12 flex items-center justify-center rounded-full font-bold text-lg">
+              <div className="bg-blue-100 text-[#00b4ff] w-12 h-12 flex items-center justify-center rounded-full font-bold text-lg">
                 {client.initials}
               </div>
               <div className="text-left">
@@ -65,7 +65,7 @@ const Clientcard = () => {
   <div className="w-full max-w-3xl bg-gray-900 rounded-[2.5rem] p-8 md:p-14 flex flex-col items-center text-center shadow-2xl relative overflow-hidden group mx-auto">
     
     {/* Decoration (Consistency ke liye same circle use kiya hai) */}
-    <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+    <div className="absolute top-0 right-0 w-32 h-32 bg-[#00b4ff]/10 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
     
     <div className="z-10">
       <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight">
@@ -77,7 +77,7 @@ const Clientcard = () => {
     </div>
 
     <div className="z-10 w-full md:w-auto">
-      <button className="w-full md:w-auto bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-900/20 active:scale-95">
+      <button className="w-full md:w-auto bg-[rgb(0, 180, 255)] text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-900/20 active:scale-95">
         Get Your Free Quote
       </button>
     </div>

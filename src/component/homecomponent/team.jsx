@@ -79,7 +79,7 @@ const Team = () => {
         >
           <p className="text-gray-500 uppercase tracking-[0.3em] text-[8px] md:text-[10px] mb-3 font-bold italic">Trusted by Innovative Teams</p>
           <h2 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
-            Powering the Next Generation of <span className="text-blue-500">Industry Leaders</span>
+            Powering the Next Generation of <span className="text-[#00b4ff]">Industry Leaders</span>
           </h2>
         </motion.div>
 
@@ -101,7 +101,7 @@ const Team = () => {
                          hover:border-blue-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.1)]"
             >
               <div className="flex flex-row items-center gap-2 md:gap-4 transition-all duration-300 opacity-40 group-hover:opacity-100 w-full justify-center">
-                <div className="text-gray-400 transition-colors duration-300 group-hover:text-blue-400 shrink-0">
+                <div className="text-gray-400 transition-colors duration-300 group-hover:text-[#00b4ff] shrink-0">
                   {p.icon}
                 </div>
                 <div className={`flex flex-col ${p.hasLine ? 'border-t border-gray-600 group-hover:border-blue-400 pt-1' : ''}`}>
@@ -133,7 +133,7 @@ const Team = () => {
               variants={itemVariants}
               className="flex flex-col gap-1"
             >
-              <h3 className="text-blue-500 text-2xl md:text-4xl font-extrabold tracking-tighter">
+              <h3 className="text-[#00b4ff] text-2xl md:text-4xl font-extrabold tracking-tighter">
                 <Counter value={50} />+
               </h3>
               <p className="text-gray-500 text-[8px] md:text-[10px] uppercase tracking-[0.2em] font-bold">Enterprise Clients</p>
@@ -143,7 +143,7 @@ const Team = () => {
               variants={itemVariants}
               className="flex flex-col gap-1 md:border-x border-gray-800/30 px-4"
             >
-              <h3 className="text-blue-500 text-2xl md:text-4xl font-extrabold tracking-tighter">
+              <h3 className="text-[#00b4ff] text-2xl md:text-4xl font-extrabold tracking-tighter">
                 $<Counter value={100} />M+
               </h3>
               <p className="text-gray-500 text-[8px] md:text-[10px] uppercase tracking-[0.2em] font-bold">Revenue Enabled</p>
@@ -153,7 +153,7 @@ const Team = () => {
               variants={itemVariants}
               className="flex flex-col gap-1"
             >
-              <h3 className="text-blue-500 text-2xl md:text-4xl font-extrabold tracking-tighter">
+              <h3 className="text-[#00b4ff] text-2xl md:text-4xl font-extrabold tracking-tighter">
                 <Counter value={98} />%
               </h3>
               <p className="text-gray-500 text-[8px] md:text-[10px] uppercase tracking-[0.2em] font-bold">Retention Rate</p>

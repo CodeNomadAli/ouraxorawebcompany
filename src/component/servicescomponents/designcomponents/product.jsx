@@ -63,7 +63,7 @@ const Productsec = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="button" 
-              className="bg-blue-600 text-white py-3 px-8 md:py-4 md:px-10 rounded-full font-bold text-base md:text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-200"
+              className="bg-[#00b4ff] text-white py-3 px-8 md:py-4 md:px-10 rounded-full font-bold text-base md:text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-200"
             >
               Book Discovery Call
             </motion.button>

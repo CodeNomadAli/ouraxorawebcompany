@@ -97,7 +97,7 @@ const Cardabout = () => {
           className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8"
         >
           <motion.div variants={itemVariants} className="text-center mb-10">
-            <h4 className="text-blue-600 font-bold uppercase text-sm">Social Proof</h4>
+            <h4 className="text-[#00b4ff] font-bold uppercase text-sm">Social Proof</h4>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">What Our Clients Say</h1>
           </motion.div>
 
@@ -108,10 +108,10 @@ const Cardabout = () => {
               { name: "Sophie B.", role: "Product Owner", initial: "S", text: "Their design team has a gift for making complex data look simple and beautiful." }
             ].map((client, i) => (
               <motion.div key={i} variants={itemVariants} className={`w-full p-6 shadow-sm hover:shadow-xl rounded-xl bg-white border border-gray-100 transition-all ${i === 2 ? 'md:col-span-2 lg:col-span-1' : ''}`}>
-                <p className="text-blue-600 text-lg mb-3">★★★★★</p>
+                <p className="text-[#00b4ff] text-lg mb-3">★★★★★</p>
                 <p className="text-gray-600 italic text-sm sm:text-base">"{client.text}"</p>
                 <div className="flex gap-3 mt-6 items-center">
-                  <div className="w-10 h-10 rounded-full bg-blue-200 text-blue-700 font-bold flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-blue-200 text-[#00b4ff] font-bold flex items-center justify-center">
                     {client.initial}
                   </div>
                   <div>
@@ -136,25 +136,25 @@ const Cardabout = () => {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <motion.div variants={itemVariants}>
-              <h1 className="text-3xl md:text-4xl font-extrabold text-blue-600">
+              <h1 className="text-3xl md:text-4xl font-extrabold text-[#00b4ff]">
                 <Counter value={5} />+
               </h1>
               <p className="mt-2 font-bold text-gray-600 text-sm">Years Experience</p>
             </motion.div>
             <motion.div variants={itemVariants}>
-              <h1 className="text-3xl md:text-4xl font-extrabold text-blue-600">
+              <h1 className="text-3xl md:text-4xl font-extrabold text-[#00b4ff]">
                 <Counter value={12} />
               </h1>
               <p className="mt-2 font-bold text-gray-600 text-sm">Countries Served</p>
             </motion.div>
             <motion.div variants={itemVariants}>
-              <h1 className="text-3xl md:text-4xl font-extrabold text-blue-600">
+              <h1 className="text-3xl md:text-4xl font-extrabold text-[#00b4ff]">
                 $<Counter value={50} />M+
               </h1>
               <p className="mt-2 font-bold text-gray-600 text-sm">Client Revenue</p>
             </motion.div>
             <motion.div variants={itemVariants}>
-              <h1 className="text-3xl md:text-4xl font-extrabold text-blue-600">
+              <h1 className="text-3xl md:text-4xl font-extrabold text-[#00b4ff]">
                 <Counter value={100} />%
               </h1>
               <p className="mt-2 font-bold text-gray-600 text-sm">Delivery Rate</p>
@@ -188,12 +188,12 @@ const Cardabout = () => {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all"
+              className="bg-[#00b4ff] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all"
             >
               Get the Guide
             </motion.button>
           </div>
-          <p className="mt-6 text-blue-500 font-bold">
+          <p className="mt-6 text-[#00b4ff] font-bold">
             Plus, get our "2025 Tech Stack Audit Checklist" for free.
           </p>
         </div>

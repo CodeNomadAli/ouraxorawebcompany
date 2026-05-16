@@ -66,7 +66,7 @@ const Lunch = () => {
           transition={premiumTransition}
           className="text-center mb-16 md:mb-24"
         >
-          <h2 className="text-sm font-bold text-blue-500 uppercase tracking-[0.3em] mb-4">How we work</h2>
+          <h2 className="text-sm font-bold text-[#00b4ff] uppercase tracking-[0.3em] mb-4">How we work</h2>
           <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
             From Concept to Launch in 4 Weeks
           </h1>
@@ -113,7 +113,7 @@ const Lunch = () => {
 
                 {/* Content Area */}
                 <div className="ml-8 lg:ml-0">
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#00b4ff] transition-colors">
                     {step.title}
                   </h3>
                   <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-xs">

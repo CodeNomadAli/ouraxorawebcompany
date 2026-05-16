@@ -6,13 +6,13 @@ const Clientsection = () => {
       
       <div className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-full border border-blue-700
 
--200 bg-blue-50 text-blue-500 shadow-sm">
-        <span className="w-2 h-2 bg-blue-800 rounded-full"></span>
+-200 bg-blue-50 text-[#00b4ff] shadow-sm">
+        <span className="w-2 h-2 bg-[#00b4ff] rounded-full"></span>
         <span className="text-xs font-medium">Trust & Results</span>
       </div>
 
       <h1 className="text-4xl sm:text-5xl font-bold mt-4">
-        Client Success <span className="text-blue-600">Stories</span>
+        Client Success <span className="text-[#00b4ff]">Stories</span>
       </h1>
 
       <p className="text-lg sm:text-xl mt-4 max-w-3xl">

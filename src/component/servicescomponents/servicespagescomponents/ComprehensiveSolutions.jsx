@@ -60,7 +60,7 @@ const ComprehensiveSolutions = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-blue-600 font-bold text-xs md:text-sm uppercase tracking-[0.3em] mb-3"
+            className="text-[#00b4ff] font-bold text-xs md:text-sm uppercase tracking-[0.3em] mb-3"
           >
             What We Do
           </motion.p>
@@ -91,12 +91,12 @@ const ComprehensiveSolutions = () => {
               className="group p-8 rounded-[1.5rem] border border-gray-100 bg-white shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300 flex flex-col items-start gap-4"
             >
               {/* Icon with Blue background instead of Red */}
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-[#00b4ff] group-hover:bg-[#00b4ff] group-hover:text-white transition-all duration-300">
                 {React.cloneElement(item.icon, { size: 24, strokeWidth: 2 })}
               </div>
 
               <div className="mt-2">
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 group-hover:text-[#00b4ff] transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-sm text-gray-500 mt-3 leading-relaxed font-medium">

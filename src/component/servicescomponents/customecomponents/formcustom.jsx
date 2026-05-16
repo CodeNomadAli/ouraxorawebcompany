@@ -95,13 +95,13 @@ const Formcustom = () => {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.5 }}
-                  className="text-blue-400 bg-blue-500/10 text-[10px] md:text-sm font-bold px-4 py-1.5 border border-blue-500/20 rounded-full mb-4 md:mb-6"
+                  className="text-[#00b4ff] bg-blue-500/10 text-[10px] md:text-sm font-bold px-4 py-1.5 border border-blue-500/20 rounded-full mb-4 md:mb-6"
                 >
                   Project Inquiry
                 </motion.button>
 
                 <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold text-white leading-tight">
-                  Let's architect your <span className="text-blue-500">solution.</span>
+                  Let's architect your <span className="text-[#00b4ff]">solution.</span>
                 </h1>
 
                 <p className="text-gray-400 py-4 md:py-6 text-sm md:text-lg leading-relaxed">
@@ -120,7 +120,7 @@ const Formcustom = () => {
                       transition={{ delay: 0.6 + idx * 0.2 }}
                       className="flex gap-4"
                     >
-                      <div className="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-xl flex items-center justify-center flex-shrink-0 border border-white/10 text-blue-500">
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-xl flex items-center justify-center flex-shrink-0 border border-white/10 text-[#00b4ff]">
                         {item.icon}
                       </div>
                       <div>
@@ -137,7 +137,7 @@ const Formcustom = () => {
                     <div className="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500 transition-colors">
                       <FaMailBulk className="text-white w-4 h-4" />
                     </div>
-                    <h1 className="text-white text-sm md:text-xl font-bold group-hover:text-blue-400 transition-colors">
+                    <h1 className="text-white text-sm md:text-xl font-bold group-hover:text-[#00b4ff] transition-colors">
                       axoraweb@gmail.com
                     </h1>
                   </div>
@@ -219,7 +219,7 @@ const Formcustom = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-blue-600 text-white font-bold py-4 md:py-5 px-6 rounded-2xl hover:bg-blue-700 active:scale-95 transition-all duration-300 disabled:opacity-60 shadow-lg shadow-blue-200 text-sm md:text-base"
+                    className="w-full bg-[#00b4ff] text-white font-bold py-4 md:py-5 px-6 rounded-2xl hover:bg-blue-700 active:scale-95 transition-all duration-300 disabled:opacity-60 shadow-lg shadow-blue-200 text-sm md:text-base"
                   >
                     {loading ? "Sending..." : "Request Quote"}
                   </button>

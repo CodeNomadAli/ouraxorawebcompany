@@ -72,13 +72,13 @@ const Buildsection = () => {
       >
         
         {/* Badge */}
-        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-blue-500 shadow-sm">
-          <span className="w-2 h-2 bg-blue-800 rounded-full animate-pulse"></span>
+        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-[#00b4ff] shadow-sm">
+          <span className="w-2 h-2 bg-[#00b4ff] rounded-full animate-pulse"></span>
           <span className="text-xs font-medium uppercase tracking-wider">Our Process</span>
         </motion.div>
 
         <motion.h1 variants={itemVariants} className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 text-gray-900 leading-tight">
-          How We Build Your <span className="text-blue-600">Solutions</span>
+          How We Build Your <span className="text-[#00b4ff]">Solutions</span>
         </motion.h1>
 
         <motion.p variants={itemVariants} className="text-base sm:text-lg md:text-xl mt-5 max-w-3xl mx-auto text-gray-700 leading-relaxed">
@@ -143,7 +143,7 @@ const Buildsection = () => {
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full z-20 border-2 border-white">
                   {step.id}
                 </span>
-                <div className="mx-auto w-20 h-20 bg-white group-hover:bg-blue-600 rounded-3xl shadow-xl flex items-center justify-center border border-gray-100 transition-all duration-300 group">
+                <div className="mx-auto w-20 h-20 bg-white group-hover:bg-[#00b4ff] rounded-3xl shadow-xl flex items-center justify-center border border-gray-100 transition-all duration-300 group">
                   <div className="text-gray-700 group-hover:text-white transition-colors">
                     {step.icon}
                   </div>
@@ -179,7 +179,7 @@ const Buildsection = () => {
         {/* CTA Button */}
         <motion.div variants={itemVariants} className="mt-16 pb-10">
           <a  href="/qoute">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-lg px-8 py-4 flex items-center mx-auto gap-2 transition-all active:scale-95 shadow-lg shadow-blue-100">
+            <button className="bg-[#00b4ff] hover:bg-blue-700 text-white font-bold rounded-xl text-lg px-8 py-4 flex items-center mx-auto gap-2 transition-all active:scale-95 shadow-lg shadow-blue-100">
               Book an Intro Call
               <span className="font-bold text-xl">→</span>
             </button>

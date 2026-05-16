@@ -25,7 +25,7 @@ const FAQItem = ({ question, answer, index }) => {
         onClick={() => setOpen(!open)}
       >
         <span className="text-base md:text-lg">{question}</span>
-        <span className={`bg-blue-50 text-blue-600 p-2 rounded-full transition-transform duration-500 ${open ? "rotate-180 bg-blue-600 text-white" : ""}`}>
+        <span className={`bg-blue-50 text-[#00b4ff] p-2 rounded-full transition-transform duration-500 ${open ? "rotate-180 bg-[#00b4ff] text-white" : ""}`}>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
           </svg>
@@ -77,7 +77,7 @@ const Corented = () => {
                 className="flex-shrink-0"
               >
                 <div className="flex items-center justify-center w-24 h-24 bg-blue-500/10 rounded-[30px] border border-blue-500/20">
-                  <FaShieldAlt className="text-blue-500 w-12 h-12" />
+                  <FaShieldAlt className="text-[#00b4ff] w-12 h-12" />
                 </div>
               </motion.div>
 
@@ -91,7 +91,7 @@ const Corented = () => {
                 </p>
                 <motion.h3 
                   whileHover={{ x: 10 }}
-                  className="text-blue-500 font-bold py-2 hover:text-white cursor-pointer transition-colors inline-block"
+                  className="text-[#00b4ff] font-bold py-2 hover:text-white cursor-pointer transition-colors inline-block"
                 >
                   <u className="decoration-blue-500/50 underline-offset-4">Download our Standard NDA Template</u>
                 </motion.h3>
@@ -115,13 +115,13 @@ const Corented = () => {
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ type: "spring", stiffness: 100 }}
           >
-            <FaQuoteLeft className="text-5xl sm:text-7xl text-blue-100 mx-auto mb-6" />
+            <FaQuoteLeft className="text-5xl sm:text-7xl text-[#00b4ff] mx-auto mb-6" />
           </motion.div>
           <p className="text-xl sm:text-2xl md:text-4xl font-bold py-3 leading-tight max-w-4xl mx-auto text-slate-900">
             "They were the only agency that actually read our brief before the first meeting. The project was delivered 2 weeks early and under budget."
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
-            <div className="w-16 h-16 bg-blue-50 rounded-full flex justify-center items-center font-bold text-xl text-blue-700 border-2 border-blue-100 shadow-sm">
+            <div className="w-16 h-16 bg-blue-50 rounded-full flex justify-center items-center font-bold text-xl text-[#00b4ff] border-2 border-blue-100 shadow-sm">
               DS
             </div>
             <div className="text-center sm:text-left">
@@ -190,7 +190,7 @@ const Corented = () => {
             rel="noreferrer" 
             className="inline-block mt-4"
           >
-            <button className="border-2 border-slate-300 px-8 py-4 rounded-2xl font-bold text-slate-700 hover:text-blue-600 hover:border-blue-600 hover:bg-blue-50/50 transition-all duration-300 shadow-sm">
+            <button className="border-2 border-slate-300 px-8 py-4 rounded-2xl font-bold text-slate-700 hover:text-[#00b4ff] hover:border-blue-600 hover:bg-blue-50/50 transition-all duration-300 shadow-sm">
               Book a Meeting via Calendly
             </button>
           </motion.a>

@@ -70,7 +70,7 @@ const Herodesign = () => {
               <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto bg-blue-600 text-white py-4 px-10 rounded-full hover:bg-blue-500 transition-all duration-300 shadow-lg shadow-blue-100 font-semibold"
+                className="w-full sm:w-auto bg-[#00b4ff] text-white py-4 px-10 rounded-full hover:bg-blue-500 transition-all duration-300 shadow-lg shadow-blue-100 font-semibold"
               >
                 See Our Process
               </motion.button>

@@ -50,9 +50,9 @@ const Concept = () => {
           transition={premiumTransition}
           className="w-full text-center px-4"
         >
-          <h1 className="text-sm text-blue-600 font-bold uppercase tracking-widest">Our Methodology</h1>
+          <h1 className="text-sm text-[#00b4ff] font-bold uppercase tracking-widest">Our Methodology</h1>
           <h2 className="text-4xl md:text-5xl font-bold py-4 text-slate-900">
-            From Concept to <span className="text-blue-700">Code</span>
+            From Concept to <span className="text-[#00b4ff]">Code</span>
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-base md:text-lg">
             We follow a rigorous, agile-driven process to ensure your custom software
@@ -119,7 +119,7 @@ const Concept = () => {
                     transition={{ ...premiumTransition, delay: 0.3 }}
                     className={`w-14 h-14 rounded-full flex items-center justify-center font-bold shadow-xl transition-transform hover:scale-110 duration-300 ${
                       step.active
-                        ? "bg-blue-600 text-white ring-4 ring-blue-100"
+                        ? "bg-[#00b4ff] text-white ring-4 ring-blue-100"
                         : "bg-white text-slate-400 border-2 border-gray-200"
                     }`}
                   >

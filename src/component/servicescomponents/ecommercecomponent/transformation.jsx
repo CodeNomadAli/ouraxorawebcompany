@@ -61,7 +61,7 @@ const Transformation = () => {
             {/* Mobile: py-3 px-6 text-base 
                Desktop (md+): py-4 px-8 text-lg
             */}
-            <button className="bg-blue-600 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-2xl hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-100 active:scale-95 text-base md:text-lg">
+            <button className="bg-[#00b4ff] text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-2xl hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-100 active:scale-95 text-base md:text-lg">
               Book a Free Consultation
             </button>
           </Link>

@@ -72,9 +72,9 @@ const Pretty = () => {
           >
             <motion.div 
               variants={iconVariants}
-              className="w-14 h-12 bg-blue-50 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300"
+              className="w-14 h-12 bg-blue-50 rounded-xl flex items-center justify-center group-hover:bg-[#00b4ff] transition-colors duration-300"
             >
-              <FaSearch className="text-blue-600 w-6 h-6 group-hover:text-white transition-colors" />
+              <FaSearch className="text-[#00b4ff] w-6 h-6 group-hover:text-white transition-colors" />
             </motion.div>
             <h3 className="text-2xl font-bold mt-6 mb-3 text-gray-900">UX Research</h3>
             <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
@@ -110,9 +110,9 @@ const Pretty = () => {
           >
             <motion.div 
               variants={iconVariants}
-              className="w-14 h-12 bg-blue-50 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300"
+              className="w-14 h-12 bg-blue-50 rounded-xl flex items-center justify-center group-hover:bg-[#00b4ff] transition-colors duration-300"
             >
-              <FaBolt className="text-blue-600 w-6 h-6 group-hover:text-white transition-colors" />
+              <FaBolt className="text-[#00b4ff] w-6 h-6 group-hover:text-white transition-colors" />
             </motion.div>
             <h3 className="text-2xl font-bold mt-6 mb-3 text-gray-900">Prototyping</h3>
             <p className="text-gray-500 text-sm sm:text-base leading-relaxed">

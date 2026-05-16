@@ -62,7 +62,7 @@ const Bridging = () => {
             </p>
 
             <div className="flex gap-4 items-start justify-center lg:justify-start">
-              <div className="hidden lg:block w-1.5 h-20 bg-blue-600 rounded-full flex-shrink-0"></div>
+              <div className="hidden lg:block w-1.5 h-20 bg-[#00b4ff] rounded-full flex-shrink-0"></div>
               <p className="text-gray-700 text-xl md:text-2xl italic leading-snug border-l-4 border-blue-600 lg:border-l-0 pl-4 lg:pl-0 text-left">
                 "Our mission is to democratize enterprise-grade technology for ambitious companies."
               </p>
@@ -89,32 +89,32 @@ const Bridging = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Card 1 */}
             <motion.div variants={itemVariants} className="group bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-8 rounded-2xl hover:border-blue-500 transition-all duration-300 flex flex-col items-center text-center">
-              <div className="w-14 h-14 rounded-full bg-gray-700 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <FaShieldAlt className="w-6 h-6 text-blue-500 group-hover:text-white" />
+              <div className="w-14 h-14 rounded-full bg-gray-700 flex items-center justify-center group-hover:bg-[#00b4ff] transition-colors duration-300">
+                <FaShieldAlt className="w-6 h-6 text-[#00b4ff] group-hover:text-white" />
               </div>
               <h3 className="text-white font-bold mt-6 text-lg">ISO 27001 Certified</h3>
             </motion.div>
 
             {/* Card 2 */}
             <motion.div variants={itemVariants} className="group bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-8 rounded-2xl hover:border-blue-500 transition-all duration-300 flex flex-col items-center text-center">
-              <div className="w-14 h-14 rounded-full bg-gray-700 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <FaLock className="w-6 h-6 text-blue-500 group-hover:text-white" />
+              <div className="w-14 h-14 rounded-full bg-gray-700 flex items-center justify-center group-hover:bg-[#00b4ff] transition-colors duration-300">
+                <FaLock className="w-6 h-6 text-[#00b4ff] group-hover:text-white" />
               </div>
               <h3 className="text-white font-bold mt-6 text-lg">GDPR Compliant</h3>
             </motion.div>
 
             {/* Card 3 */}
             <motion.div variants={itemVariants} className="group bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-8 rounded-2xl hover:border-blue-500 transition-all duration-300 flex flex-col items-center text-center">
-              <div className="w-14 h-14 rounded-full bg-gray-700 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <FaBolt className="w-6 h-6 text-blue-500 group-hover:text-white" />
+              <div className="w-14 h-14 rounded-full bg-gray-700 flex items-center justify-center group-hover:bg-[#00b4ff] transition-colors duration-300">
+                <FaBolt className="w-6 h-6 text-[#00b4ff] group-hover:text-white" />
               </div>
               <h3 className="text-white font-bold mt-6 text-lg">SOC 2 Type II</h3>
             </motion.div>
 
             {/* Card 4 */}
             <motion.div variants={itemVariants} className="group bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-8 rounded-2xl hover:border-blue-500 transition-all duration-300 flex flex-col items-center text-center">
-              <div className="w-14 h-14 rounded-full bg-gray-700 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                <FaCode className="w-6 h-6 text-blue-500 group-hover:text-white" />
+              <div className="w-14 h-14 rounded-full bg-gray-700 flex items-center justify-center group-hover:bg-[#00b4ff] transition-colors duration-300">
+                <FaCode className="w-6 h-6 text-[#00b4ff] group-hover:text-white" />
               </div>
               <h3 className="text-white font-bold mt-6 text-lg">Clean Code Guarantee</h3>
             </motion.div>

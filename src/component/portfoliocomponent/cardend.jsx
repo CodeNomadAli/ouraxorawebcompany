@@ -29,7 +29,7 @@ const Cardbulid = () => {
               whileHover={{ y: -10 }}
               className="border border-gray-200 p-8 shadow-sm hover:shadow-xl rounded-2xl bg-white transition-all duration-300"
             >
-              <p className="text-blue-600 text-xl mb-4">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <p className="text-[#00b4ff] text-xl mb-4">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
               <p className="text-base font-semibold py-2 text-gray-600 italic leading-relaxed">
                 "The team transformed our outdated legacy system into a sleek, AI-powered platform. Efficiency increased by 200% in the first month."
               </p>
@@ -55,7 +55,7 @@ const Cardbulid = () => {
               whileHover={{ y: -10 }}
               className="border border-gray-200 p-8 shadow-sm hover:shadow-xl rounded-2xl bg-white transition-all duration-300"
             >
-              <p className="text-blue-600 text-xl mb-4">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+              <p className="text-[#00b4ff] text-xl mb-4">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
               <p className="text-base font-semibold py-2 text-gray-600 italic leading-relaxed">
                 "Their understanding of both design and complex backend logic is rare. They didn't just build what we asked for, they improved upon it."
               </p>
@@ -108,7 +108,7 @@ const Cardbulid = () => {
               <motion.button 
                 whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(59, 130, 246, 0.5)" }}
                 whileTap={{ scale: 0.95 }}
-                className="text-white bg-blue-600 rounded-xl text-lg px-8 py-4 hover:bg-blue-500 transition-all font-semibold shadow-lg shadow-blue-900/20"
+                className="text-white bg-[#00b4ff] rounded-xl text-lg px-8 py-4 hover:bg-blue-500 transition-all font-semibold shadow-lg shadow-blue-900/20"
               >
               Get an Estimate
             </motion.button>

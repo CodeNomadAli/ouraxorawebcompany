@@ -56,7 +56,7 @@ const Bulid = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="text-blue-600 bg-blue-50 text-sm h-8 px-4 border border-blue-200 rounded-2xl mb-6"
+            className="text-[#00b4ff] bg-blue-50 text-sm h-8 px-4 border border-blue-200 rounded-2xl mb-6"
           >
             Award Winning Agency
           </motion.button>
@@ -69,7 +69,7 @@ const Bulid = () => {
             className="text-3xl sm:text-5xl md:text-6xl font-bold py-4 leading-[1.1] text-gray-900 tracking-tight"
           >
             We Build Digital <br className="hidden md:block" />
-            <span className="text-blue-600">Masterpieces</span>
+            <span className="text-[#00b4ff]">Masterpieces</span>
           </motion.h1>
 
           <motion.p 
@@ -94,7 +94,7 @@ const Bulid = () => {
               <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto bg-blue-600 text-white py-3.5 px-8 rounded-2xl hover:bg-blue-500 transition-all font-semibold shadow-lg shadow-blue-100"
+                className="w-full sm:w-auto bg-[#00b4ff] text-white py-3.5 px-8 rounded-2xl hover:bg-blue-500 transition-all font-semibold shadow-lg shadow-blue-100"
               >
                 View Our Work
               </motion.button>
@@ -131,7 +131,7 @@ const Bulid = () => {
               >
                 <motion.h2 
                   whileHover={{ scale: 1.1 }}
-                  className="text-4xl lg:text-5xl font-extrabold text-blue-600 transition-colors"
+                  className="text-4xl lg:text-5xl font-extrabold text-[#00b4ff] transition-colors"
                 >
                   {stat.isStatic ? (
                     stat.value

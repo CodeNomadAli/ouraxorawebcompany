@@ -51,7 +51,7 @@ const Mainsection = () => {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 font-bold transition-colors shadow-md"
+              className="bg-[#00b4ff] text-white px-8 py-3 rounded-md hover:bg-blue-700 font-bold transition-colors shadow-md"
             >
               Add
             </motion.button>
@@ -89,7 +89,7 @@ const Mainsection = () => {
               <div className="flex flex-col md:flex-row gap-6 p-6">
                 <motion.div 
                   whileHover={{ scale: 1.05 }}
-                  className="bg-blue-600 w-24 h-24 md:w-32 md:h-32 rounded-lg text-white font-bold text-2xl flex items-center justify-center flex-shrink-0 mx-auto md:mx-0 shadow-lg"
+                  className="bg-[#00b4ff] w-24 h-24 md:w-32 md:h-32 rounded-lg text-white font-bold text-2xl flex items-center justify-center flex-shrink-0 mx-auto md:mx-0 shadow-lg"
                 >
                   www
                 </motion.div>
@@ -106,12 +106,12 @@ const Mainsection = () => {
                       </div>
                       
                       <div className="text-right mt-4 md:mt-0 w-full md:w-auto">
-                        <h1 className="text-blue-600 font-bold text-2xl">Rs278</h1>
+                        <h1 className="text-[#00b4ff] font-bold text-2xl">Rs278</h1>
                         <h2 className="line-through text-sm text-gray-500">₨15,447</h2>
                         <motion.p 
                           animate={{ opacity: [0.5, 1, 0.5] }}
                           transition={{ repeat: Infinity, duration: 2 }}
-                          className="text-blue-600 text-xs font-bold bg-blue-50 px-2 py-0.5 rounded inline-block mt-1"
+                          className="text-[#00b4ff] text-xs font-bold bg-blue-50 px-2 py-0.5 rounded inline-block mt-1"
                         >
                           98% off
                         </motion.p>
@@ -134,7 +134,7 @@ const Mainsection = () => {
                 </div>
               </div>
 
-              <div className="bg-blue-50 px-6 py-2 text-[10px] font-bold text-blue-800 uppercase tracking-widest border-y border-gray-100">
+              <div className="bg-blue-50 px-6 py-2 text-[10px] font-bold text-[#00b4ff] uppercase tracking-widest border-y border-gray-100">
                 Configure Your Domain
               </div>
 
@@ -142,7 +142,7 @@ const Mainsection = () => {
               <div className="p-6">
                 <div className="flex flex-col md:flex-row justify-between items-start gap-6">
                   <div className="flex gap-4 items-start">
-                    <div className="w-12 h-6 bg-blue-600 rounded-full flex items-center px-1 shrink-0 mt-1">
+                    <div className="w-12 h-6 bg-[#00b4ff] rounded-full flex items-center px-1 shrink-0 mt-1">
                       <div className="w-4 h-4 bg-white rounded-full ml-auto shadow-sm"></div>
                     </div>
                     <div className="flex-1">
@@ -152,7 +152,7 @@ const Mainsection = () => {
                   </div>
                   <div className="text-right">
                     <div className="text-xl font-bold text-slate-900">Rs1,999</div>
-                    <div className="text-sm font-bold text-blue-500">39% off</div>
+                    <div className="text-sm font-bold text-[#00b4ff]">39% off</div>
                   </div>
                 </div>
               </div>
@@ -170,7 +170,7 @@ const Mainsection = () => {
                       className="p-6 border-2 border-dashed border-blue-200 bg-white rounded-xl flex flex-col md:flex-row justify-between items-center gap-6"
                     >
                       <div className="flex gap-4 items-center">
-                        <FaMailBulk size={24} className="text-blue-500"/>
+                        <FaMailBulk size={24} className="text-[#00b4ff]"/>
                         <h2 className="text-lg font-bold text-slate-900">Professional Email Pro Light</h2>
                       </div>
                       <motion.button
@@ -191,7 +191,7 @@ const Mainsection = () => {
                     >
                       <div className="flex flex-col md:flex-row gap-6 justify-between items-center">
                         <div className="flex gap-4 items-center">
-                           <div className="bg-blue-600 p-3 rounded-lg text-white shadow-lg">
+                           <div className="bg-[#00b4ff] p-3 rounded-lg text-white shadow-lg">
                              <FaMailBulk size={20} />
                            </div>
                            <h1 className="text-lg font-bold text-slate-900">Email Pro Light Activated</h1>
@@ -222,7 +222,7 @@ const Mainsection = () => {
                 <h1 className="text-2xl font-bold text-slate-900 mb-6">Order Summary</h1>
                 <div className="flex justify-between items-center mb-6 pb-6 border-b border-gray-200">
                   <h1 className="text-xl font-bold text-slate-900">Subtotal</h1>
-                  <h3 className="text-3xl font-black text-blue-600">₨4,905</h3>
+                  <h3 className="text-3xl font-black text-[#00b4ff]">₨4,905</h3>
                 </div>
                 
                 <div className="space-y-4">
@@ -236,7 +236,7 @@ const Mainsection = () => {
                   <motion.button 
                     whileHover={{ scale: 1.02, backgroundColor: "#1d4ed8" }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-blue-100 text-lg uppercase"
+                    className="w-full bg-[#00b4ff] text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-blue-100 text-lg uppercase"
                   >
                     Checkout
                   </motion.button>
@@ -248,7 +248,7 @@ const Mainsection = () => {
                 whileHover={{ y: -5 }}
                 className="bg-white border border-gray-100 p-5 rounded-xl flex items-center gap-4 shadow-sm"
               >
-                <FaCheckCircle className="text-blue-500 text-2xl shrink-0" />
+                <FaCheckCircle className="text-[#00b4ff] text-2xl shrink-0" />
                 <div>
                   <h1 className="font-bold text-slate-900 text-sm">Quality Guaranteed</h1>
                   <p className="text-xs text-gray-500">24/7/365 support available.</p>

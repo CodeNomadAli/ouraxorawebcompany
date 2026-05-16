@@ -46,7 +46,7 @@ const Featured = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, ...premiumTransition }}
-                className="text-xs md:text-sm text-blue-600 font-bold uppercase tracking-[0.2em] mb-4"
+                className="text-xs md:text-sm text-[#00b4ff] font-bold uppercase tracking-[0.2em] mb-4"
               >
                 Featured Case Study
               </motion.h4>
@@ -58,7 +58,7 @@ const Featured = () => {
                 transition={{ delay: 0.4, ...premiumTransition }}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-gray-900 leading-[1.1] tracking-tight"
               >
-                Revolutionizing Logistics with <span className="text-blue-600">AI-Driven Routing</span>
+                Revolutionizing Logistics with <span className="text-[#00b4ff]">AI-Driven Routing</span>
               </motion.h1>
               
               <motion.p 
@@ -104,7 +104,7 @@ const Featured = () => {
               >
                 <button className="group relative w-full sm:w-auto px-10 py-4 bg-gray-900 text-white font-bold rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-200 active:scale-95">
                   <span className="relative z-10">Read Full Story</span>
-                  <div className="absolute inset-0 bg-blue-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                  <div className="absolute inset-0 bg-[#00b4ff] translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                 </button>
               </motion.div>
             </motion.div>

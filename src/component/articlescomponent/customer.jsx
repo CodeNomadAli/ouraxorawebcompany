@@ -133,8 +133,8 @@ const Customer = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`rounded-full text-xs sm:text-sm px-4 py-2 border transition-all duration-200 font-medium ${
                   selectedCategory === cat
-                    ? "bg-blue-600 text-white border-blue-600 shadow-lg shadow-blue-200"
-                    : "bg-white text-gray-600 border-gray-200 hover:border-blue-400 hover:text-blue-600"
+                    ? "bg-[#00b4ff] text-white border-blue-600 shadow-lg shadow-blue-200"
+                    : "bg-white text-gray-600 border-gray-200 hover:border-blue-400 hover:text-[#00b4ff]"
                 }`}
               >
                 {cat}
@@ -176,7 +176,7 @@ const Customer = () => {
               initial={{ x: -20, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="inline-block bg-blue-600 text-white text-[10px] uppercase tracking-widest font-bold px-3 py-1 rounded-md mb-4"
+              className="inline-block bg-[#00b4ff] text-white text-[10px] uppercase tracking-widest font-bold px-3 py-1 rounded-md mb-4"
             >
               Featured Post
             </motion.span>
@@ -232,7 +232,7 @@ const Customer = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute top-4 left-4">
-                      <span className="bg-white/90 backdrop-blur-sm text-blue-600 text-[10px] font-bold uppercase px-2 py-1 rounded shadow-sm">
+                      <span className="bg-white/90 backdrop-blur-sm text-[#00b4ff] text-[10px] font-bold uppercase px-2 py-1 rounded shadow-sm">
                         {article.category}
                       </span>
                     </div>
@@ -241,7 +241,7 @@ const Customer = () => {
                     <div className="flex items-center gap-2 mb-3">
                       <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">{article.date}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 group-hover:underline decoration-blue-400 underline-offset-4 transition-all leading-snug">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-[#00b4ff] group-hover:underline decoration-blue-400 underline-offset-4 transition-all leading-snug">
                       {article.title}
                     </h3>
                     <p className="text-gray-500 text-sm leading-relaxed line-clamp-3">
@@ -264,12 +264,12 @@ const Customer = () => {
         className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-4 sm:px-6 md:px-6 lg:px-8 py-16"
       >
         <div className="w-full bg-slate-900 rounded-[2.5rem] p-8 md:p-16 text-center relative overflow-hidden shadow-2xl">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#00b4ff]/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-600/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
 
             <div className="relative z-10 max-w-3xl mx-auto">
                 <h2 className="text-3xl md:text-5xl text-white font-bold mb-6">
-                  Stay Ahead of the <span className="text-blue-500">Tech Curve</span>
+                  Stay Ahead of the <span className="text-[#00b4ff]">Tech Curve</span>
                 </h2>
                 <p className="text-gray-400 text-lg mb-10">
                   Join 5,000+ industry professionals getting our weekly deep dives into engineering and AI.
@@ -285,7 +285,7 @@ const Customer = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         type="submit"
-                        className="px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-all shadow-lg shadow-blue-900/20"
+                        className="px-10 py-4 bg-[#00b4ff] hover:bg-blue-700 text-white font-bold rounded-2xl transition-all shadow-lg shadow-blue-900/20"
                     >
                         Subscribe
                     </motion.button>

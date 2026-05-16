@@ -53,7 +53,7 @@ const PartnersSection = () => {
           whileInView={{ width: "64px" }} // w-16 = 64px
           viewport={{ once: true }}
           transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut" }}
-          className="h-1 bg-blue-600 mx-auto mb-8 rounded-full"
+          className="h-1 bg-[#00b4ff] mx-auto mb-8 rounded-full"
         ></motion.div>
 
         {/* Subtext */}

@@ -94,7 +94,7 @@ const Card = () => {
                 className={`rounded-full text-sm font-semibold px-6 py-2.5 border-2 transition-all duration-300 ${
                   filter === cat 
                   ? "bg-black text-white border-black shadow-lg" 
-                  : "bg-white text-gray-600 border-gray-200 hover:border-blue-600 hover:text-blue-600"
+                  : "bg-white text-gray-600 border-gray-200 hover:border-blue-600 hover:text-[#00b4ff]"
                 }`}
               >
                 {cat}
@@ -133,7 +133,7 @@ const Card = () => {
                       <motion.button 
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        className="px-6 py-2 bg-white text-black font-bold rounded-full hover:bg-blue-600 hover:text-white transition-all transform translate-y-4 group-hover:translate-y-0 duration-500"
+                        className="px-6 py-2 bg-white text-black font-bold rounded-full hover:bg-[#00b4ff] hover:text-white transition-all transform translate-y-4 group-hover:translate-y-0 duration-500"
                       >
                         View Case Study
                       </motion.button>
@@ -142,8 +142,8 @@ const Card = () => {
 
                   {/* Content */}
                   <div className="p-6 md:p-8">
-                    <h5 className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">{card.category}</h5>
-                    <h1 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3">
+                    <h5 className="text-xs font-bold text-[#00b4ff] uppercase tracking-widest mb-2">{card.category}</h5>
+                    <h1 className="text-2xl font-bold text-gray-900 group-hover:text-[#00b4ff] transition-colors mb-3">
                       {card.title}
                     </h1>
                     <p className="text-gray-500 text-sm leading-relaxed mb-6">
@@ -155,7 +155,7 @@ const Card = () => {
                       {card.tags.map((tag, idx) => (
                         <span
                           key={idx}
-                          className="text-[10px] font-bold text-gray-400 bg-gray-50 px-3 py-1 rounded-full border border-gray-100 group-hover:border-blue-100 group-hover:text-blue-400 transition-all"
+                          className="text-[10px] font-bold text-gray-400 bg-gray-50 px-3 py-1 rounded-full border border-gray-100 group-hover:border-blue-100 group-hover:text-[#00b4ff] transition-all"
                         >
                           {tag}
                         </span>

@@ -43,7 +43,7 @@ const PricingDetails = () => {
           {/* Left Side - Details */}
           <div className="flex-1 p-8 md:p-12 text-white">
             <div className="flex items-center gap-4 mb-6">
-              <span className="bg-blue-600/20 text-blue-400 text-[10px] font-bold px-3 py-1 rounded-full border border-blue-600/30 uppercase tracking-widest">
+              <span className="bg-[#00b4ff]/20 text-[#00b4ff] text-[10px] font-bold px-3 py-1 rounded-full border border-blue-600/30 uppercase tracking-widest">
                 Official Estimate
               </span>
               <span className="flex items-center gap-1.5 text-emerald-400 text-xs font-medium">
@@ -87,7 +87,7 @@ const PricingDetails = () => {
                   whileInView={{ width: "30%" }}
                   viewport={{ once: true }}
                   transition={{ duration: 1, ease: "easeOut" }}
-                  className="h-full bg-blue-600 border-r border-slate-900"
+                  className="h-full bg-[#00b4ff] border-r border-slate-900"
                 ></motion.div>
                 <motion.div 
                   initial={{ width: 0 }}
@@ -103,14 +103,14 @@ const PricingDetails = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 border-t border-slate-800">
               <div className="flex gap-4 items-start">
-                <div className="p-2 bg-slate-800 rounded-lg text-blue-400"><Copyright size={20} /></div>
+                <div className="p-2 bg-slate-800 rounded-lg text-[#00b4ff]"><Copyright size={20} /></div>
                 <div>
                   <h4 className="text-sm font-bold">100% IP Ownership</h4>
                   <p className="text-xs text-slate-500">You own the code. No vendor lock-in.</p>
                 </div>
               </div>
               <div className="flex gap-4 items-start">
-                <div className="p-2 bg-slate-800 rounded-lg text-blue-400"><ShieldCheck size={20} /></div>
+                <div className="p-2 bg-slate-800 rounded-lg text-[#00b4ff]"><ShieldCheck size={20} /></div>
                 <div>
                   <h4 className="text-sm font-bold">Mutual NDA Signed</h4>
                   <p className="text-xs text-slate-500">Your idea is legally protected.</p>
@@ -137,7 +137,7 @@ const PricingDetails = () => {
                   <motion.button 
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-900/20"
+                    className="w-full bg-[#00b4ff] hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-900/20"
                   >
                     Get Official Quote
                   </motion.button>
@@ -176,7 +176,7 @@ const PricingDetails = () => {
                 transition={{ ...premiumTransition, delay: index * 0.1 }}
                 className="p-8 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:shadow-slate-100 transition-all duration-300 group"
               >
-                <h4 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">{faq.question}</h4>
+                <h4 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-[#00b4ff] transition-colors">{faq.question}</h4>
                 <p className="text-slate-600 leading-relaxed text-sm md:text-base">{faq.answer}</p>
               </motion.div>
             ))}

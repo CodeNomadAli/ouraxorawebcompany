@@ -44,9 +44,9 @@ const Software = () => {
         {/* Badge - Clean & Centered */}
         <motion.div 
           variants={itemVariants}
-          className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-blue-500 shadow-sm transition-transform hover:scale-105"
+          className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-[#00b4ff] shadow-sm transition-transform hover:scale-105"
         >
-          <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
+          <span className="w-2 h-2 bg-[#00b4ff] rounded-full animate-pulse"></span>
           <span className="text-xs font-bold uppercase tracking-wider">Our Expertise</span>
         </motion.div>
 
@@ -55,10 +55,10 @@ const Software = () => {
           variants={itemVariants}
           className="text-3xl sm:text-4xl md:text-5xl font-black mt-6 flex flex-wrap items-center justify-center gap-3 text-gray-900 leading-tight"
         >
-          <FaCode className="text-blue-600 shrink-0" /> 
+          <FaCode className="text-[#00b4ff] shrink-0" /> 
           <span>Expert Software</span>
           <span className="relative inline-block">
-            <span className="text-blue-600">Solutions</span>
+            <span className="text-[#00b4ff]">Solutions</span>
             {/* Animated Underline Effect */}
             <motion.div 
               initial={{ width: 0 }}

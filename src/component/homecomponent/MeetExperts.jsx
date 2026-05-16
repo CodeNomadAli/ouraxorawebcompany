@@ -69,15 +69,15 @@ const MeetExperts = () => {
         
         {/* Badge Color Updated to Blue */}
         <motion.div variants={itemVariants} className="flex justify-center mb-6">
-          <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-100 bg-blue-50 text-blue-600 shadow-sm">
-            <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-pulse"></span>
+          <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-100 bg-blue-50 text-[#00b4ff] shadow-sm">
+            <span className="w-1.5 h-1.5 bg-[#00b4ff] rounded-full animate-pulse"></span>
             <span className="text-[10px] font-bold uppercase tracking-wider">The Minds Behind Axoraweb Solutions</span>
           </div>
         </motion.div>
 
         {/* Heading Color Updated to Blue */}
         <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-black text-[#05070A] mb-6">
-          Meet Our <span className="text-blue-600 relative inline-block">
+          Meet Our <span className="text-[#00b4ff] relative inline-block">
             Experts
             <motion.div 
               initial={{ width: 0 }}
@@ -108,7 +108,7 @@ const MeetExperts = () => {
               <div className="px-2 pb-4">
                 <h3 className="text-xl font-bold text-gray-900 text-center">{exp.name}</h3>
                 {/* Role Color Updated to Blue */}
-                <p className="text-[9px] text-blue-600 font-black uppercase tracking-[0.15em] mt-1 mb-4 text-center">{exp.role}</p>
+                <p className="text-[9px] text-[#00b4ff] font-black uppercase tracking-[0.15em] mt-1 mb-4 text-center">{exp.role}</p>
                 <p className="text-xs text-gray-400 leading-relaxed text-center">
                   {exp.desc}
                 </p>
@@ -120,7 +120,7 @@ const MeetExperts = () => {
         {/* Bottom Link Updated to Blue */}
         <motion.div variants={itemVariants} className="mt-20">
           <p className="text-gray-400 italic text-sm mb-4">Want to join our growing team of innovators?</p>
-          <a href="#" className="text-blue-600 font-bold text-sm hover:underline inline-flex items-center gap-2 group">
+          <a href="#" className="text-[#00b4ff] font-bold text-sm hover:underline inline-flex items-center gap-2 group">
             View Open Positions 
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </a>

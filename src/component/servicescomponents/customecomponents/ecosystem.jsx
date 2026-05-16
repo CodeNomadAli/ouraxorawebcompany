@@ -43,7 +43,7 @@ const Ecosystem = () => {
           className="w-full text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900">
-            The <span className="text-blue-600">Complete</span> Ecosystem
+            The <span className="text-[#00b4ff]">Complete</span> Ecosystem
           </h1>
           <p className="text-base md:text-lg py-4 text-gray-500 max-w-2xl mx-auto">
             We don't just build isolated apps; we build interconnected systems.
@@ -81,7 +81,7 @@ const Ecosystem = () => {
           {/* Column 2 - Main Featured Center */}
           <motion.div variants={itemVariants} className="w-full order-1 lg:order-2 flex">
             <div className="bg-blue-900 p-8 md:p-10 rounded-2xl flex flex-col w-full shadow-2xl shadow-blue-900/20 group">
-              <div className="w-16 h-16 bg-blue-800 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-500">
+              <div className="w-16 h-16 bg-[#00b4ff] rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-500">
                 <FaMobile className="w-6 h-6 text-white" />
               </div>
               <h1 className="text-2xl font-bold text-white mb-4">Mobile Applications</h1>
@@ -103,7 +103,7 @@ const Ecosystem = () => {
                     className="flex items-center gap-3 group"
                   >
                     <div className="w-6 h-6 bg-blue-700/50 rounded-full flex items-center justify-center">
-                      <FaCheck className="text-blue-400 text-xs" />
+                      <FaCheck className="text-[#00b4ff] text-xs" />
                     </div>
                     <p className="text-sm md:text-base text-gray-100 font-semibold group-hover:text-white transition-colors">{text}</p>
                   </motion.div>

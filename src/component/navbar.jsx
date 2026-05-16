@@ -20,20 +20,20 @@ function Navbar() {
 
           {/* LOGO - Left aligned */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-            <img src="/logo.png" alt="Logo" className="rounded-full h-12 w-12 md:h-20 md:w-24" />
+            <img src="/logo.png" alt="Logo" className="rounded-full h-12 w-12 md:h-32 md:w-36" />
           </Link>
 
           {/* DESKTOP MENU - Perfectly Centered */}
           <ul className="hidden lg:flex absolute left-[45%] -translate-x-1/2 items-center gap-6 xl:gap-10 text-gray-600 font-medium">
-            <li className="hover:text-blue-500 text-sm whitespace-nowrap transition-colors"><Link to="/">Home</Link></li>
+            <li className="hover:text-[#00b4ff] text-sm whitespace-nowrap transition-colors"><Link to="/">Home</Link></li>
             
-            <li className="relative group text-sm hover:text-blue-500 py-7 transition-colors">
+            <li className="relative group text-sm hover:text-[#00b4ff] py-7 transition-colors">
               <span className="cursor-pointer">Services</span>
               <div className="absolute top-[70px] left-1/2 -translate-x-1/2 w-[90vw] max-w-[800px] bg-white rounded-2xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   {servicesDropdown.map((service, index) => (
                     <Link key={index} to={service.path} className="flex gap-4 p-3 rounded-xl hover:bg-gray-50 transition">
-                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex-shrink-0 flex items-center justify-center text-blue-600 font-bold">
+                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex-shrink-0 flex items-center justify-center text-[#00b4ff] font-bold">
                         {service.icon}
                       </div>
                       <div>
@@ -46,13 +46,13 @@ function Navbar() {
               </div>
             </li>
 
-            <li className="hover:text-blue-500 text-sm whitespace-nowrap transition-colors">
+            <li className="hover:text-[#00b4ff] text-sm whitespace-nowrap transition-colors">
               <Link to="/pricing">Pricing</Link>
             </li>
-            <li className="hover:text-blue-500 text-sm whitespace-nowrap transition-colors"><Link to="/portfolio">Portfolio</Link></li>
-            <li className="hover:text-blue-500 text-sm whitespace-nowrap transition-colors"><Link to="/article">Articles</Link></li>
-            <li className="hover:text-blue-500 text-sm whitespace-nowrap transition-colors"><Link to="/about">About Us</Link></li>
-            <li className="hover:text-blue-500 text-sm whitespace-nowrap transition-colors"><Link to="/contact">Contact</Link></li>
+            <li className="hover:text-[#00b4ff] text-sm whitespace-nowrap transition-colors"><Link to="/portfolio">Portfolio</Link></li>
+            <li className="hover:text-[#00b4ff] text-sm whitespace-nowrap transition-colors"><Link to="/article">Articles</Link></li>
+            <li className="hover:text-[#00b4ff] text-sm whitespace-nowrap transition-colors"><Link to="/about">About Us</Link></li>
+            <li className="hover:text-[#00b4ff] text-sm whitespace-nowrap transition-colors"><Link to="/contact">Contact</Link></li>
           </ul>
 
           {/* RIGHT SIDE BUTTON - Updated Height & Styling */}
@@ -62,13 +62,13 @@ function Navbar() {
   {/* Phone Number */}
   <a
   href="tel:+923242537429"
-  className="hidden lg:flex items-center gap-2 text-sm font-semibold  hover:text-blue-600 transition"
+  className="hidden lg:flex items-center gap-2 text-sm font-semibold  hover:text-[#00b4ff] transition"
 >
-  <FaPhoneAlt className="text-blue-600 text-xl" />
+  <FaPhoneAlt className="text-[#00b4ff] text-xl" />
   +92 324 5237429
 </a>
   <Link to="/contact" className="hidden lg:block">
-    <button className="bg-blue-600 text-white px-6 py-2.5 rounded-2xl hover:bg-blue-700 hover:shadow-lg transition-all text-sm font-semibold tracking-wide h-11 flex items-center justify-center">
+    <button className="bg-[#00b4ff] text-white px-6 py-2.5 rounded-2xl hover:bg-blue-700 hover:shadow-lg transition-all text-sm font-semibold tracking-wide h-11 flex items-center justify-center">
       Get Free Quote
     </button>
   </Link>
@@ -89,7 +89,7 @@ function Navbar() {
               <li><Link to="/" onClick={() => setOpen(false)} className="block py-1">Home</Link></li>
               
               <li>
-                <p className="font-bold text-blue-600">Services</p>
+                <p className="font-bold text-[#00b4ff]">Services</p>
                 <ul className="ml-4 mt-2 space-y-2 border-l-2 border-gray-100 pl-4">
                   {servicesDropdown.map((service, index) => (
                     <li key={index}><Link to={service.path} onClick={() => setOpen(false)} className="text-sm">{service.title}</Link></li>
@@ -106,7 +106,7 @@ function Navbar() {
               
               <li className="mt-2">
                 <Link to="/contact" onClick={() => setOpen(false)}>
-                  <button className="w-full bg-blue-600 text-white py-3 rounded-2xl font-bold shadow-md active:scale-95 transition-transform">
+                  <button className="w-full bg-[#00b4ff] text-white py-3 rounded-2xl font-bold shadow-md active:scale-95 transition-transform">
                     Get Free Quote
                   </button>
                 </Link>
