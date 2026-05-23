@@ -20,7 +20,7 @@ function Navbar() {
 
           {/* LOGO - Left aligned */}
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-            <img src="/logo.png" alt="Logo" className="rounded-full h-12 w-12 md:h-32 md:w-36" />
+            <img src="/logo.png" alt="Logo" className="rounded-full h-24 w-22 md:h-36 md:w-40" />
           </Link>
 
           {/* DESKTOP MENU - Perfectly Centered */}
